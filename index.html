@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EiferOne — Cybersecurity Consultancy | Penetration Testing & Security Audits</title>
+<title>EiferOne — Cybersecurity Consultancy | Penetration Testing &amp; Security Audits</title>
 <meta name="description" content="EiferOne is a UK-based cybersecurity consultancy specialising in penetration testing, security audits, network assessments, and compliance consulting. Free technical overview — no obligations.">
 <meta name="keywords" content="penetration testing, cybersecurity consultancy, security audit, OWASP, ISO 27001, Cyber Essentials, PCI-DSS, network assessment, UK cybersecurity">
 <meta name="author" content="EiferOne Ltd">
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#080809">
+<meta name="theme-color" content="#0d0d10">
 <link rel="canonical" href="https://eiferone.com/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://eiferone.com/">
-<meta property="og:title" content="EiferOne — Cybersecurity Consultancy | Penetration Testing & Security Audits">
+<meta property="og:title" content="EiferOne — Cybersecurity Consultancy | Penetration Testing &amp; Security Audits">
 <meta property="og:description" content="Professional cybersecurity consultancy specialising in penetration testing, security audits, and compliance consulting. Free technical overview available.">
 <meta property="og:image" content="https://eiferone.com/assets/og-image.png">
 <meta property="og:site_name" content="EiferOne">
@@ -26,733 +26,412 @@
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Bebas+Neue&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Bebas+Neue&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet"></noscript>
 
+<!-- Shared design system -->
+<link rel="stylesheet" href="./shared.css">
+
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"EiferOne Ltd","url":"https://eiferone.com","logo":"https://eiferone.com/assets/footerlogo.png","description":"EiferOne is a UK-based cybersecurity consultancy specialising in penetration testing, security audits, network assessments, and compliance consulting.","address":{"@type":"PostalAddress","streetAddress":"80 Kingsway North, Hollington","addressCountry":"GB"},"contactPoint":{"@type":"ContactPoint","telephone":"+44-7804-474366","email":"info@eiferone.com","contactType":"customer service"},"sameAs":["https://linkedin.com/company/eiferone","https://github.com/eiferone"],"foundingDate":"2025","areaServed":"GB"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is penetration testing and why does my business need it?","acceptedAnswer":{"@type":"Answer","text":"Penetration testing is a simulated cyberattack by security professionals to find vulnerabilities before real attackers can. It is required for Cyber Essentials Plus, ISO 27001, SOC 2, and PCI-DSS compliance."}},{"@type":"Question","name":"How long does a security audit or penetration test take?","acceptedAnswer":{"@type":"Answer","text":"A focused web app test takes 3–5 days. A full infrastructure or ISO 27001 gap analysis takes 5–10 days. We provide a fixed timeline in the Statement of Work before work begins."}},{"@type":"Question","name":"What is included in the free website overview?","acceptedAnswer":{"@type":"Answer","text":"SSL/TLS config, exposed security headers, technology stack, DNS checks, and obvious misconfigurations. Delivered within 24 hours, completely free and no commitment required."}},{"@type":"Question","name":"Does EiferOne work with small businesses?","acceptedAnswer":{"@type":"Answer","text":"Yes. Our Starter package from £499 is designed for SMEs and startups who need professional security testing without a large budget."}},{"@type":"Question","name":"What frameworks does EiferOne test against?","acceptedAnswer":{"@type":"Answer","text":"OWASP Top 10, NIST CSF, CIS Benchmarks, ISO/IEC 27001, Cyber Essentials & Plus, SOC 2, and PCI-DSS."}},{"@type":"Question","name":"Will testing cause downtime?","acceptedAnswer":{"@type":"Answer","text":"In the vast majority of cases, no. We use targeted techniques that minimise disruption and agree rules of engagement upfront. Out-of-hours testing available for sensitive environments."}}]}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ItemList","name":"EiferOne Cybersecurity Services","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"Service","name":"Penetration Testing","provider":{"@type":"Organization","name":"EiferOne Ltd"}}},{"@type":"ListItem","position":2,"item":{"@type":"Service","name":"Security Audits","provider":{"@type":"Organization","name":"EiferOne Ltd"}}},{"@type":"ListItem","position":3,"item":{"@type":"Service","name":"Network Assessment","provider":{"@type":"Organization","name":"EiferOne Ltd"}}},{"@type":"ListItem","position":4,"item":{"@type":"Service","name":"Application Security","provider":{"@type":"Organization","name":"EiferOne Ltd"}}},{"@type":"ListItem","position":5,"item":{"@type":"Service","name":"Identity & Access Review","provider":{"@type":"Organization","name":"EiferOne Ltd"}}},{"@type":"ListItem","position":6,"item":{"@type":"Service","name":"Compliance Consulting","provider":{"@type":"Organization","name":"EiferOne Ltd"}}}]}
-</script>
 
 <style>
-  /* ═══ TOKENS ═══ */
-  :root {
-    --black:   #080809;
-    --dark:    #0f0f11;
-    --card:    #1a1a1e;
-    --border:  #252528;
-    --border2: #323236;
-    --accent:  #e0e0e8;
-    --accent2: #a0a0b0;
-    --white:   #f4f4f6;
-    --text:    #b0b0be;
-    --muted:   #505060;
-    --silver:  #787890;
-    --dim:     rgba(255,255,255,0.04);
-    --nav-h:   64px;
-  }
+/* ── PAGE-SPECIFIC STYLES ─────────────────────────────── */
 
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
+/* HERO */
+#hero {
+  min-height: 100vh;
+  display: grid; grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 7rem 5% 4rem;
+  position: relative; overflow: hidden; gap: 2rem;
+}
+#hero::before {
+  content: ''; position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.022) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 90% 90% at 50% 50%, black 20%, transparent 100%);
+}
+.hero-content { position: relative; z-index: 2; max-width: 600px; }
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-family: 'Share Tech Mono', monospace; font-size: 0.72rem; color: var(--silver);
+  background: rgba(255,255,255,0.05); border: 1px solid var(--border2);
+  padding: 0.3rem 0.8rem; border-radius: 2px; margin-bottom: 1.5rem;
+  animation: fadeUp 0.6s ease forwards;
+}
+.hero-tag::before {
+  content: ''; width: 6px; height: 6px;
+  background: var(--accent2); border-radius: 50%;
+  animation: blink 2s infinite;
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.2} }
 
-  body {
-    background: var(--black);
-    color: var(--text);
-    font-family: 'Barlow', sans-serif;
-    font-weight: 300;
-    line-height: 1.7;
-    overflow-x: hidden;
-  }
+.hero-sub {
+  font-size: 1rem; color: var(--silver); max-width: 460px;
+  margin-bottom: 2.5rem; line-height: 1.8;
+  animation: fadeUp 0.7s 0.2s ease both;
+}
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; animation: fadeUp 0.7s 0.3s ease both; }
 
-  @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-      scroll-behavior: auto !important;
-    }
-  }
+.hero-stats {
+  display: flex; gap: 2.5rem; margin-top: 3.5rem;
+  padding-top: 2.5rem; border-top: 1px solid var(--border);
+  animation: fadeUp 0.7s 0.4s ease both; flex-wrap: wrap;
+}
+.stat-val {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.2rem; letter-spacing: 0.04em; color: var(--white);
+}
+.stat-label {
+  font-size: 0.72rem; color: var(--muted);
+  text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.1rem;
+}
+@keyframes fadeUp { from{opacity:0;transform:translateY(22px)} to{opacity:1;transform:translateY(0)} }
 
-  ::-webkit-scrollbar { width: 3px; }
-  ::-webkit-scrollbar-track { background: var(--dark); }
-  ::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
+/* Hero bird */
+.hero-bird {
+  position: relative; z-index: 2;
+  display: flex; align-items: center; justify-content: center;
+  animation: fadeUp 0.9s 0.2s ease both;
+}
+.bird-glow { position:absolute; width:620px; height:620px; border-radius:50%; background:radial-gradient(circle,rgba(255,255,255,0.035) 0%,transparent 70%); animation:glowPulse 5s ease-in-out infinite; }
+.bird-glow2 { position:absolute; width:480px; height:480px; border-radius:50%; border:1px solid rgba(255,255,255,0.055); animation:glowPulse 5s 1.5s ease-in-out infinite; }
+.bird-glow3 { position:absolute; width:340px; height:340px; border-radius:50%; border:1px solid rgba(255,255,255,0.08); animation:glowPulse 5s 3s ease-in-out infinite; }
+@keyframes glowPulse { 0%,100%{transform:scale(1);opacity:.5} 50%{transform:scale(1.05);opacity:1} }
+.bird-frame { position:absolute; width:560px; height:560px; z-index:2; pointer-events:none; }
+.bird-frame::before,.bird-frame::after,.bird-frame span::before,.bird-frame span::after { content:''; position:absolute; width:20px; height:20px; border-color:var(--border2); border-style:solid; }
+.bird-frame::before  { top:0; left:0;   border-width:1px 0 0 1px; }
+.bird-frame::after   { top:0; right:0;  border-width:1px 1px 0 0; }
+.bird-frame span::before { bottom:0; left:0;  border-width:0 0 1px 1px; }
+.bird-frame span::after  { bottom:0; right:0; border-width:0 1px 1px 0; }
+.bird-img-wrap {
+  position:relative; z-index:3;
+  animation:birdFloat 7s ease-in-out infinite;
+  filter:drop-shadow(0 0 50px rgba(255,255,255,0.09)) drop-shadow(0 24px 70px rgba(0,0,0,0.75));
+  transform-style: preserve-3d;
+  transition: filter 0.15s ease;
+  will-change: transform;
+}
+@keyframes birdFloat { 0%,100%{transform:translateY(0) rotateX(0) rotateY(0)} 50%{transform:translateY(-16px) rotateX(0) rotateY(0)} }
+.bird-img-wrap img { width:520px; height:520px; object-fit:contain; }
+.bird-scanline { position:absolute; left:0; right:0; height:1px; background:linear-gradient(90deg,transparent,rgba(255,255,255,0.12),transparent); animation:scanMove 5s linear infinite; z-index:4; }
+@keyframes scanMove { 0%{top:5%} 100%{top:95%} }
 
-  body::after {
-    content: '';
-    position: fixed; inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-    pointer-events: none; z-index: 9999; opacity: 0.35;
-  }
+/* ACK SLIDER */
+#ack {
+  background: var(--dark); padding: 2.5rem 0;
+  border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+.ack-label {
+  text-align: center; font-family: 'Share Tech Mono', monospace;
+  font-size: 0.68rem; color: var(--muted);
+  text-transform: uppercase; letter-spacing: 0.18em;
+  margin-bottom: 1.8rem; padding: 0 5%;
+}
+.slider-outer {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg,transparent 0%,black 8%,black 92%,transparent 100%);
+  mask-image: linear-gradient(90deg,transparent 0%,black 8%,black 92%,transparent 100%);
+}
+.slider-track { display:flex; gap:3.5rem; align-items:center; width:max-content; animation:slideLeft 38s linear infinite; }
+.slider-track:hover { animation-play-state:paused; }
+@keyframes slideLeft { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+.slider-track img { height:36px; width:auto; min-width:60px; flex-shrink:0; border-radius:4px; transition:transform 0.3s cubic-bezier(0.34,1.56,0.64,1),filter 0.3s ease; }
+.slider-track img:hover { transform:scale(1.1); filter:drop-shadow(0 4px 16px rgba(255,255,255,0.15)); }
 
-  /* ═══ NAV ═══ */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 0 5%;
-    height: var(--nav-h);
-    background: rgba(8,8,9,0.92);
-    backdrop-filter: blur(18px);
-    border-bottom: 1px solid var(--border);
-  }
+/* ABOUT */
+#about { background: var(--dark); }
+.about-grid { max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center; }
+.about-text p { color:var(--silver); font-size:0.975rem; margin-bottom:1rem; }
+.about-stats { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+.about-stat {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 3px; padding: 1.4rem; transition: border-color 0.2s;
+}
+.about-stat:hover { border-color: var(--border2); }
+.about-stat-label { font-family:'Share Tech Mono',monospace; font-size:0.68rem; color:var(--muted); margin-bottom:0.4rem; text-transform:uppercase; letter-spacing:0.08em; }
+.about-stat-val { font-family:'Bebas Neue',sans-serif; font-size:1.8rem; letter-spacing:0.04em; color:var(--white); }
+.about-stat-sub { font-size:0.78rem; color:var(--muted); margin-top:0.2rem; }
 
-  .logo-wrap { display: flex; align-items: center; text-decoration: none; }
-  .logo-img { height: 38px; width: auto; }
+/* SERVICES */
+#services { background: var(--dark); }
+.services-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
 
-  .nav-links { display: flex; gap: 1.8rem; list-style: none; align-items: center; }
-  .nav-links a {
-    color: var(--muted); text-decoration: none;
-    font-size: 0.78rem; font-weight: 500;
-    letter-spacing: 0.1em; text-transform: uppercase;
-    transition: color 0.2s;
-  }
-  .nav-links a:hover { color: var(--white); }
+.service-card-wrap {
+  background: none; border: none; padding: 0;
+  text-align: left; cursor: pointer; width: 100%;
+  font-family: inherit; display: block;
+}
+.service-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 3px; overflow: hidden;
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+  display: flex; flex-direction: column; height: 100%;
+  position: relative;
+}
+.service-card::after {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px;
+  background: var(--border2); transition: background 0.25s, width 0.25s;
+}
+.service-card-wrap:hover .service-card,
+.service-card-wrap:focus-visible .service-card {
+  border-color: var(--border2); transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+}
+.service-card-wrap:hover .service-card::after { background: var(--silver); width: 3px; }
+.service-card-wrap:focus-visible .service-card { outline: 2px solid var(--accent2); outline-offset: 2px; }
 
-  /* ── Services dropdown ── */
-  .nav-dropdown { position: relative; }
-  .nav-dropdown > a { display: flex; align-items: center; gap: 0.3rem; cursor: pointer; }
-  .nav-dropdown > a::after {
-    content: ''; width: 0; height: 0;
-    border-left: 4px solid transparent; border-right: 4px solid transparent;
-    border-top: 4px solid var(--muted);
-    transition: transform 0.2s, border-top-color 0.2s;
-    flex-shrink: 0; margin-top: 1px;
-  }
-  .nav-dropdown:hover > a::after,
-  .nav-dropdown.open > a::after { transform: rotate(180deg); border-top-color: var(--white); }
+.service-header {
+  padding: 1.2rem 1.5rem;
+  background: linear-gradient(135deg, #171720, #1e1e28);
+  border-bottom: 1px solid var(--border);
+  display: flex; justify-content: space-between; align-items: center;
+}
+.service-type { font-family:'Share Tech Mono',monospace; font-size:0.7rem; color:var(--muted); }
+.service-badge {
+  font-size: 0.65rem; font-weight: 600; padding: 0.18rem 0.55rem; border-radius: 2px;
+  font-family: 'Share Tech Mono', monospace; white-space: nowrap;
+}
+.badge-red    { background:rgba(180,50,50,0.14);  color:#c87070; border:1px solid rgba(180,50,50,0.28); }
+.badge-amber  { background:rgba(180,130,0,0.12);  color:#c09030; border:1px solid rgba(180,130,0,0.28); }
+.badge-blue   { background:rgba(60,100,180,0.12); color:#7090d0; border:1px solid rgba(60,100,180,0.28); }
+.badge-purple { background:rgba(100,60,160,0.12); color:#9070c0; border:1px solid rgba(100,60,160,0.28); }
+.badge-teal   { background:rgba(40,130,120,0.12); color:#50b0a0; border:1px solid rgba(40,130,120,0.28); }
+.badge-grey   { background:rgba(160,160,180,0.10);color:var(--silver); border:1px solid rgba(160,160,180,0.22); }
 
-  .dropdown-menu {
-    display: none;
-    position: absolute; top: calc(100% + 0.75rem); left: 50%;
-    transform: translateX(-50%);
-    background: rgba(15,15,17,0.98); backdrop-filter: blur(20px);
-    border: 1px solid var(--border2); border-radius: 4px;
-    min-width: 240px; padding: 0.5rem 0;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
-    animation: dropIn 0.2s ease;
-  }
-  .nav-dropdown:hover .dropdown-menu,
-  .nav-dropdown.open .dropdown-menu { display: block; }
+.service-body { padding: 1.5rem; flex: 1; }
+.service-title { margin-bottom: 0.5rem; }
+.service-desc { font-size:0.875rem; color:var(--silver); line-height:1.65; }
+.service-footer {
+  padding: 0.9rem 1.5rem; border-top: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between;
+  font-size: 0.72rem; font-family: 'Share Tech Mono', monospace; color: var(--muted);
+  background: rgba(0,0,0,0.12); transition: background 0.2s;
+}
+.service-card-wrap:hover .service-footer { background: rgba(255,255,255,0.025); }
+.service-action {
+  display: flex; align-items: center; gap: 0.45rem;
+  font-size: 0.7rem; color: var(--silver); transition: color 0.2s, gap 0.2s;
+}
+.service-card-wrap:hover .service-action { color: var(--white); gap: 0.65rem; }
 
-  @keyframes dropIn {
-    from { opacity: 0; transform: translateX(-50%) translateY(-8px); }
-    to   { opacity: 1; transform: translateX(-50%) translateY(0); }
-  }
+/* MODAL */
+.modal-overlay {
+  display: none; position: fixed; inset: 0; z-index: 2000;
+  background: rgba(0,0,0,0.82); backdrop-filter: blur(8px);
+  align-items: center; justify-content: center; padding: 2rem;
+}
+.modal-overlay.active { display: flex; animation: overlayIn 0.25s ease; }
+@keyframes overlayIn { from{opacity:0} to{opacity:1} }
+.modal-box {
+  background: var(--dark); border: 1px solid var(--border2);
+  border-radius: 6px; max-width: 600px; width: 100%; padding: 2.5rem;
+  position: relative; animation: modalIn 0.3s cubic-bezier(0.34,1.56,0.64,1);
+  max-height: 90vh; overflow-y: auto;
+}
+@keyframes modalIn { from{opacity:0;transform:scale(0.9) translateY(20px)} to{opacity:1;transform:scale(1) translateY(0)} }
+.modal-close {
+  position: absolute; top: 1rem; right: 1rem;
+  background: transparent; border: 1px solid var(--border);
+  color: var(--muted); width: 32px; height: 32px; border-radius: 50%;
+  cursor: pointer; font-size: 1rem; display: flex; align-items: center; justify-content: center;
+  transition: border-color 0.2s, color 0.2s;
+}
+.modal-close:hover { border-color: var(--silver); color: var(--white); }
+.modal-close:focus-visible { outline: 2px solid var(--accent2); outline-offset: 2px; }
+.modal-tag { font-family:'Share Tech Mono',monospace; font-size:0.68rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.15em; margin-bottom:0.75rem; }
+.modal-title { font-family:'Bebas Neue',sans-serif; font-size:2rem; letter-spacing:0.04em; color:var(--white); margin-bottom:1rem; line-height:1; }
+.modal-desc { font-size:0.9rem; color:var(--silver); margin-bottom:1.5rem; line-height:1.8; }
+.modal-benefits { list-style:none; margin-bottom:2rem; }
+.modal-benefits li { font-size:0.875rem; color:var(--text); padding:0.5rem 0; border-bottom:1px solid var(--border); display:flex; align-items:flex-start; gap:0.75rem; }
+.modal-benefits li::before { content:'›'; color:var(--silver); flex-shrink:0; font-family:'Share Tech Mono',monospace; font-size:0.75rem; margin-top:0.1rem; }
+.modal-benefits li:last-child { border-bottom:none; }
 
-  .dropdown-menu a {
-    display: flex; align-items: center; gap: 0.75rem;
-    padding: 0.65rem 1.2rem;
-    color: var(--text) !important; font-size: 0.82rem !important;
-    text-transform: none !important; letter-spacing: 0.02em !important;
-    font-weight: 400 !important;
-    border-bottom: 1px solid var(--border);
-    transition: background 0.15s, color 0.15s, padding-left 0.15s !important;
-  }
-  .dropdown-menu a:last-child { border-bottom: none; }
-  .dropdown-menu a:hover { background: var(--dim); color: var(--white) !important; padding-left: 1.5rem; }
-  .dropdown-menu a .dmicon { color: var(--muted); flex-shrink: 0; }
+/* PORTFOLIO */
+#portfolio { background: var(--black); }
+.portfolio-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:1.5rem; }
+.portfolio-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 3px; overflow: hidden; transition: border-color 0.25s;
+}
+.portfolio-card:hover { border-color: var(--border2); }
+.portfolio-header {
+  padding: 1.4rem 1.5rem;
+  background: linear-gradient(135deg, #111118, #181820);
+  border-bottom: 1px solid var(--border);
+  display: flex; justify-content: space-between; align-items: center;
+}
+.portfolio-type { font-family:'Share Tech Mono',monospace; font-size:0.7rem; color:var(--muted); }
+.severity { font-size:0.68rem; font-weight:600; padding:0.2rem 0.6rem; border-radius:2px; font-family:'Share Tech Mono',monospace; }
+.severity.critical { background:rgba(220,50,50,0.14); color:#e06060; border:1px solid rgba(220,50,50,0.28); }
+.severity.high     { background:rgba(200,140,0,0.12);  color:#d4a020; border:1px solid rgba(200,140,0,0.28); }
+.severity.medium   { background:rgba(160,160,180,0.10); color:#9898b8; border:1px solid rgba(160,160,180,0.22); }
+.portfolio-body { padding: 1.5rem; }
+.portfolio-title { margin-bottom: 0.5rem; }
+.portfolio-desc { font-size:0.875rem; color:var(--silver); line-height:1.65; }
+.portfolio-meta { padding:1rem 1.5rem; border-top:1px solid var(--border); display:flex; gap:1.5rem; font-size:0.72rem; color:var(--muted); font-family:'Share Tech Mono',monospace; flex-wrap:wrap; }
+.portfolio-readonly {
+  padding: 0.6rem 1.5rem; background: rgba(0,0,0,0.18); border-top: 1px solid var(--border);
+  font-family: 'Share Tech Mono', monospace; font-size: 0.62rem; color: var(--muted);
+  letter-spacing: 0.08em; display: flex; align-items: center; gap: 0.4rem;
+}
 
-  /* ── HCI FIX: Single primary nav CTA — only one "contact" entry point in nav ── */
-  .nav-cta {
-    background: var(--white) !important;
-    color: var(--black) !important;
-    padding: 0.45rem 1.2rem;
-    border-radius: 2px;
-    font-family: 'Barlow Condensed', sans-serif !important;
-    font-weight: 700 !important;
-    font-size: 0.78rem !important;
-    letter-spacing: 0.08em !important;
-    transition: background 0.2s, box-shadow 0.2s !important;
-  }
-  .nav-cta:hover {
-    background: var(--accent) !important;
-    color: var(--black) !important;
-    box-shadow: 0 0 20px rgba(255,255,255,0.12) !important;
-  }
+/* AUDIT SAMPLE */
+#audit { background: var(--dark); }
+.audit-report { background:var(--black); border:1px solid var(--border); border-radius:4px; overflow:hidden; font-family:'Share Tech Mono',monospace; }
+.audit-topbar { background:#0d0d12; padding:0.7rem 1.5rem; display:flex; align-items:center; gap:1.5rem; border-bottom:1px solid var(--border); }
+.audit-dots { display:flex; gap:6px; }
+.audit-dots span { width:11px; height:11px; border-radius:50%; }
+.audit-dots span:nth-child(1){background:#3a3a42} .audit-dots span:nth-child(2){background:#2e2e36} .audit-dots span:nth-child(3){background:#242430}
+.audit-topbar-title { font-size:0.72rem; color:var(--muted); }
+.audit-summary-bar { display:none; background:#0d0d12; border-bottom:1px solid var(--border); padding:0.75rem 1.5rem; font-size:0.68rem; color:var(--muted); font-family:'Share Tech Mono',monospace; gap:1rem; align-items:center; flex-wrap:wrap; }
+.audit-summary-bar span { color:var(--text); }
+.audit-body { display:grid; grid-template-columns:1fr 2fr; }
+.audit-sidebar { background:#0d0d12; border-right:1px solid var(--border); padding:1.5rem; }
+.audit-sidebar h4 { font-size:0.62rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:1rem; }
+.audit-nav a { display:flex; align-items:center; gap:0.5rem; font-size:0.72rem; color:var(--muted); text-decoration:none; padding:0.45rem 0.5rem; border-radius:2px; margin-bottom:0.2rem; transition:color 0.2s,background 0.2s; }
+.audit-nav a.active,.audit-nav a:hover { color:var(--white); background:var(--dim); }
+.audit-nav a::before { content:'//'; color:var(--border2); font-size:0.62rem; }
+.audit-nav a.active::before { color:var(--silver); }
+.audit-score-box { margin-top:2rem; border:1px solid var(--border); border-radius:3px; padding:1.25rem; text-align:center; }
+.score-num { font-family:'Bebas Neue',sans-serif; font-size:2.8rem; letter-spacing:0.04em; color:var(--white); }
+.score-label { font-size:0.62rem; color:var(--muted); text-transform:uppercase; margin-top:0.2rem; }
+.audit-main { padding:1.5rem; overflow:auto; }
+.audit-section-title { font-family:'Barlow Condensed',sans-serif; font-size:0.9rem; font-weight:700; color:var(--white); letter-spacing:0.06em; text-transform:uppercase; margin-bottom:1rem; padding-bottom:0.5rem; border-bottom:1px solid var(--border); }
+.chart-row { display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; margin-bottom:1.5rem; }
+.chart-item { background:var(--card); border:1px solid var(--border); border-radius:3px; padding:1rem; text-align:center; }
+.chart-item-num { font-family:'Bebas Neue',sans-serif; font-size:1.8rem; letter-spacing:0.04em; }
+.chart-item-label { font-size:0.62rem; color:var(--muted); margin-top:0.15rem; }
+.chart-item.c{color:#d06060} .chart-item.h{color:#c09030} .chart-item.m{color:#808098} .chart-item.l{color:#505065}
+.finding { background:var(--card); border:1px solid var(--border); border-radius:3px; padding:1.25rem; margin-bottom:1rem; position:relative; overflow:hidden; }
+.finding::before { content:''; position:absolute; left:0; top:0; bottom:0; width:2px; }
+.finding.critical::before{background:#c06060} .finding.high::before{background:#b09030} .finding.medium::before{background:#606075}
+.finding-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; }
+.finding-name { font-size:0.78rem; color:var(--white); }
+.finding-desc { font-size:0.7rem; color:var(--silver); line-height:1.65; }
+.finding-code { background:rgba(0,0,0,0.45); border:1px solid var(--border); border-radius:2px; padding:0.7rem; margin-top:0.75rem; font-size:0.68rem; color:var(--silver); overflow-x:auto; }
+.terminal-line { opacity:0; animation:fadeIn 0.5s forwards; }
+.terminal-line:nth-child(1){animation-delay:.2s} .terminal-line:nth-child(2){animation-delay:.5s}
+.terminal-line:nth-child(3){animation-delay:.8s} .terminal-line:nth-child(4){animation-delay:1.1s}
+@keyframes fadeIn { to{opacity:1} }
 
-  /* ── Hamburger ── */
-  .nav-hamburger {
-    display: none; flex-direction: column; justify-content: center;
-    gap: 5px; background: transparent; border: 1px solid var(--border);
-    padding: 0.5rem 0.6rem; border-radius: 2px; cursor: pointer; z-index: 1100;
-  }
-  .nav-hamburger span {
-    display: block; width: 20px; height: 1.5px; background: var(--accent2);
-    transition: transform 0.3s, opacity 0.3s;
-  }
-  .nav-hamburger[aria-expanded="true"] span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
-  .nav-hamburger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
-  .nav-hamburger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+/* PRICING */
+#pricing { background: var(--black); }
+.pricing-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; align-items:stretch; }
+.pricing-card { background:var(--card); border:1px solid var(--border); border-radius:3px; padding:2.5rem; position:relative; transition:border-color 0.3s,transform 0.3s; display:flex; flex-direction:column; }
+.pricing-card:hover { transform:translateY(-4px); border-color:var(--border2); }
+.pricing-card.featured { border-color:var(--silver); box-shadow:0 0 40px rgba(255,255,255,0.04); }
+.featured-badge { position:absolute; top:-1px; left:50%; transform:translateX(-50%); background:var(--white); color:var(--black); font-size:0.62rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding:0.22rem 1rem; border-radius:0 0 3px 3px; font-family:'Share Tech Mono',monospace; }
+.plan-name { font-family:'Share Tech Mono',monospace; font-size:0.72rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.12em; margin-bottom:0.5rem; }
+.plan-price { font-family:'Bebas Neue',sans-serif; font-size:3rem; letter-spacing:0.04em; color:var(--white); margin-bottom:0.2rem; }
+.plan-price span { font-size:1rem; font-family:'Barlow',sans-serif; font-weight:300; color:var(--muted); }
+.plan-desc { font-size:0.875rem; color:var(--silver); margin-bottom:2rem; }
+.plan-features { list-style:none; margin-bottom:2rem; flex:1; }
+.plan-features li { font-size:0.875rem; color:var(--text); padding:0.5rem 0; border-bottom:1px solid var(--border); display:flex; align-items:center; gap:0.75rem; }
+.plan-features li::before { content:'›'; color:var(--silver); font-size:0.72rem; flex-shrink:0; }
+.plan-features li.no { color:var(--muted); }
+.plan-features li.no::before { content:'×'; color:var(--border2); }
+.btn-plan {
+  display: block; text-align: center; padding: 0.85rem; border-radius: 2px;
+  font-size: 0.875rem; font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  text-decoration: none; transition: all 0.2s;
+  border: 1px solid var(--border); color: var(--text);
+}
+.btn-plan:hover { border-color: var(--silver); color: var(--white); }
+.btn-plan-featured { background: var(--white); color: var(--black); border-color: var(--white); }
+.btn-plan-featured:hover { box-shadow: 0 0 24px rgba(255,255,255,0.15); background: var(--accent); color: var(--black); }
+.btn-plan-enterprise { border-color: var(--silver); color: var(--silver); }
+.btn-plan-enterprise:hover { border-color: var(--white); color: var(--white); background: rgba(255,255,255,0.04); }
 
-  .mobile-nav {
-    display: none; position: fixed;
-    top: var(--nav-h); left: 0; right: 0;
-    background: rgba(8,8,9,0.98); backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--border); z-index: 999;
-    padding: 1.5rem 5%; animation: mobileNavIn 0.25s ease;
-  }
-  .mobile-nav.open { display: block; }
-  @keyframes mobileNavIn { from{opacity:0;transform:translateY(-8px)} to{opacity:1;transform:translateY(0)} }
-  .mobile-nav ul { list-style: none; }
-  .mobile-nav ul li a {
-    display: block; padding: 0.85rem 0; color: var(--text);
-    text-decoration: none; font-size: 0.95rem; letter-spacing: 0.06em;
-    text-transform: uppercase; border-bottom: 1px solid var(--border); transition: color 0.2s;
-  }
-  .mobile-nav ul li:last-child a { border-bottom: none; }
-  .mobile-nav ul li a:hover { color: var(--white); }
-  /* HCI FIX: mobile CTA is distinct — solid white, prominent */
-  .mobile-nav-cta {
-    display: block; margin-top: 1.25rem; text-align: center;
-    background: var(--white); color: var(--black) !important;
-    padding: 0.9rem; border-radius: 2px;
-    font-family: 'Barlow Condensed', sans-serif; font-weight: 700;
-    font-size: 0.95rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none;
-  }
+/* FAQ */
+#faq { background: var(--dark); }
+.faq-list { max-width: 820px; }
+.faq-item { border:1px solid var(--border); border-radius:3px; margin-bottom:0.7rem; overflow:hidden; transition:border-color 0.2s; }
+.faq-item:has(.faq-q[aria-expanded="true"]) { border-color:var(--border2); }
+.faq-q { width:100%; background:var(--card); border:none; padding:1.2rem 1.5rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; cursor:pointer; text-align:left; color:var(--white); font-family:'Barlow Condensed',sans-serif; font-size:1rem; font-weight:600; letter-spacing:0.03em; text-transform:uppercase; transition:background 0.2s; }
+.faq-q:hover { background:#252530; }
+.faq-q:focus-visible { outline:2px solid var(--accent2); outline-offset:-2px; }
+.faq-icon { flex-shrink:0; color:var(--muted); transition:transform 0.3s; }
+.faq-q[aria-expanded="true"] .faq-icon { transform:rotate(180deg); color:var(--silver); }
+.faq-a { max-height:0; overflow:hidden; transition:max-height 0.35s ease,padding 0.3s ease; padding:0 1.5rem; background:var(--black); }
+.faq-a.open { max-height:400px; padding:1.2rem 1.5rem; }
+.faq-a p { font-size:0.9rem; color:var(--silver); margin:0; line-height:1.8; }
+.faq-a p strong { color:var(--text); }
+.faq-a p a { color:var(--accent2); }
 
-  /* ═══ SHARED BUTTONS ═══ */
-  .btn-primary {
-    display: inline-flex; align-items: center; gap: 0.5rem;
-    background: var(--white); color: var(--black);
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 700; font-size: 0.9rem; letter-spacing: 0.08em;
-    text-transform: uppercase; padding: 0.85rem 2rem; border-radius: 2px;
-    text-decoration: none; transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
-    box-shadow: 0 0 24px rgba(255,255,255,0.08);
-  }
-  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 40px rgba(255,255,255,0.14); background: var(--accent); }
+/* CONTACT */
+#contact { background: var(--dark); }
+.contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:start; }
+.contact-info h3 { font-family:'Bebas Neue',sans-serif; font-size:1.8rem; letter-spacing:0.04em; color:var(--white); margin-bottom:1rem; }
+.contact-info p { color:var(--silver); font-size:0.95rem; margin-bottom:2rem; }
+.contact-detail { display:flex; align-items:flex-start; gap:1rem; margin-bottom:1.2rem; padding:1rem; background:var(--card); border:1px solid var(--border); border-radius:3px; transition:border-color 0.2s; }
+.contact-detail:hover { border-color:var(--border2); }
+.contact-detail svg { color:var(--silver); flex-shrink:0; margin-top:2px; }
+.contact-detail-label { color:var(--muted); font-size:0.7rem; text-transform:uppercase; font-family:'Share Tech Mono',monospace; margin-bottom:0.2rem; letter-spacing:0.06em; }
+.contact-detail-text { 
+  font-size: 0.875rem; 
+  color: var(--text); 
+}
 
-  .btn-ghost {
-    display: inline-flex; align-items: center; gap: 0.5rem;
-    border: 1px solid var(--border2); color: var(--text);
-    font-size: 0.9rem; padding: 0.85rem 2rem; border-radius: 2px;
-    text-decoration: none; transition: border-color 0.2s, color 0.2s;
-  }
-  .btn-ghost:hover { border-color: var(--accent2); color: var(--white); }
+.contact-detail-text a {
+  color: var(--text);        /* same as normal text */
+  text-decoration: none;     /* remove underline */
+}
 
-  /* ═══ LAYOUT ═══ */
-  section { padding: 6rem 5%; }
-  .section-tag {
-    font-family: 'Share Tech Mono', monospace; font-size: 0.7rem;
-    color: var(--muted); text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 0.6rem;
-  }
-  h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(2.2rem, 4.5vw, 3.5rem);
-    letter-spacing: 0.03em; color: var(--white); line-height: 1; margin-bottom: 1rem;
-  }
-  .section-lead { font-size: 1rem; color: var(--silver); max-width: 560px; margin-bottom: 3rem; }
-  .divider-line { height: 1px; background: linear-gradient(90deg, transparent, var(--border), transparent); }
+.contact-detail-text a:hover {
+  text-decoration: underline; /* optional hover effect */
+}.contact-promise { margin-top:2rem; background:rgba(255,255,255,0.025); border:1px solid var(--border); border-radius:3px; padding:1.4rem; }
+.contact-promise h4 { font-family:'Share Tech Mono',monospace; font-size:0.68rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.12em; margin-bottom:1rem; }
+.contact-promise li { list-style:none; font-size:0.85rem; color:var(--text); padding:0.4rem 0; display:flex; align-items:flex-start; gap:0.65rem; border-bottom:1px solid var(--border); }
+.contact-promise li:last-child { border-bottom:none; }
+.contact-promise li::before { content:'›'; color:var(--silver); font-size:0.72rem; flex-shrink:0; margin-top:0.1rem; }
+.contact-form-panel { background:var(--card); border:1px solid var(--border); border-radius:3px; padding:2rem; }
+.contact-form-title { font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:1.1rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--white); margin-bottom:1.5rem; padding-bottom:0.75rem; border-bottom:1px solid var(--border); }
+.form-group { margin-bottom:1.2rem; }
+.form-label { display:block; font-size:0.7rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.08em; font-family:'Share Tech Mono',monospace; margin-bottom:0.5rem; }
+.form-input,.form-textarea,.form-select { width:100%; background:var(--dark); border:1px solid var(--border); border-radius:2px; padding:0.75rem 1rem; color:var(--text); font-family:'Barlow',sans-serif; font-size:0.9rem; outline:none; transition:border-color 0.2s; }
+.form-input:focus,.form-textarea:focus,.form-select:focus { border-color:var(--silver); }
+.form-input.error,.form-textarea.error,.form-select.error { border-color:#c06060; }
+.field-error { display:none; font-family:'Share Tech Mono',monospace; font-size:0.65rem; color:#c07070; margin-top:0.35rem; }
+.field-error.visible { display:block; }
+.form-textarea { resize:vertical; min-height:120px; }
+.form-select option { background:var(--card); }
+.form-submit { width:100%; background:var(--white); color:var(--black); border:none; padding:0.95rem; font-size:0.95rem; font-weight:700; font-family:'Barlow Condensed',sans-serif; letter-spacing:0.08em; text-transform:uppercase; border-radius:2px; cursor:pointer; transition:box-shadow 0.2s,transform 0.2s,background 0.2s; }
+.form-submit:hover { box-shadow:0 0 24px rgba(255,255,255,0.14); transform:translateY(-1px); background:var(--accent); }
+.form-submit:disabled { opacity:0.6; cursor:not-allowed; transform:none; }
+.form-note { font-size:0.7rem; color:var(--muted); text-align:center; margin-top:0.75rem; font-family:'Share Tech Mono',monospace; }
 
-  /* ═══ HERO ═══ */
-  #hero {
-    min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr;
-    align-items: center; padding: 7rem 5% 4rem;
-    position: relative; overflow: hidden; gap: 2rem;
-  }
-  #hero::before {
-    content: ''; position: absolute; inset: 0;
-    background-image:
-      linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
-    background-size: 64px 64px;
-    mask-image: radial-gradient(ellipse 90% 90% at 50% 50%, black 20%, transparent 100%);
-  }
-  .hero-content { position: relative; z-index: 2; max-width: 600px; }
-  .hero-tag {
-    display: inline-flex; align-items: center; gap: 0.5rem;
-    font-family: 'Share Tech Mono', monospace; font-size: 0.72rem; color: var(--silver);
-    background: rgba(255,255,255,0.04); border: 1px solid var(--border2);
-    padding: 0.3rem 0.8rem; border-radius: 2px; margin-bottom: 1.5rem;
-    animation: fadeUp 0.6s ease forwards;
-  }
-  .hero-tag::before {
-    content: ''; width: 6px; height: 6px;
-    background: var(--accent2); border-radius: 50%; animation: blink 2s infinite;
-  }
-  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.2} }
-
-  h1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(3.2rem, 6.5vw, 5.5rem);
-    line-height: 0.95; letter-spacing: 0.02em; color: var(--white);
-    margin-bottom: 1.5rem; animation: fadeUp 0.7s 0.1s ease both;
-  }
-  h1 em { color: var(--accent); font-style: normal; }
-
-  .hero-sub {
-    font-size: 1rem; color: var(--silver); max-width: 460px;
-    margin-bottom: 2.5rem; line-height: 1.8; animation: fadeUp 0.7s 0.2s ease both;
-  }
-
-  /* HCI FIX: Hero has ONE primary action + one secondary. No duplicate "consult" buttons. */
-  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; animation: fadeUp 0.7s 0.3s ease both; }
-
-  .hero-stats {
-    display: flex; gap: 2.5rem; margin-top: 3.5rem;
-    padding-top: 2.5rem; border-top: 1px solid var(--border);
-    animation: fadeUp 0.7s 0.4s ease both;
-  }
-  .stat-val { font-family: 'Bebas Neue', sans-serif; font-size: 2.2rem; letter-spacing: 0.04em; color: var(--white); }
-  .stat-label { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.1rem; }
-
-  @keyframes fadeUp { from{opacity:0;transform:translateY(22px)} to{opacity:1;transform:translateY(0)} }
-
-  /* ── Bird ── */
-  .hero-bird {
-    position: relative; z-index: 2;
-    display: flex; align-items: center; justify-content: center;
-    animation: fadeUp 0.9s 0.2s ease both;
-  }
-  .bird-glow { position:absolute; width:500px; height:500px; border-radius:50%; background:radial-gradient(circle,rgba(255,255,255,0.04) 0%,transparent 70%); animation:glowPulse 5s ease-in-out infinite; }
-  .bird-glow2 { position:absolute; width:380px; height:380px; border-radius:50%; border:1px solid rgba(255,255,255,0.05); animation:glowPulse 5s 1.5s ease-in-out infinite; }
-  .bird-glow3 { position:absolute; width:260px; height:260px; border-radius:50%; border:1px solid rgba(255,255,255,0.08); animation:glowPulse 5s 3s ease-in-out infinite; }
-  @keyframes glowPulse { 0%,100%{transform:scale(1);opacity:.5} 50%{transform:scale(1.05);opacity:1} }
-  .bird-frame { position:absolute; width:440px; height:440px; z-index:2; pointer-events:none; }
-  .bird-frame::before,.bird-frame::after,.bird-frame span::before,.bird-frame span::after { content:''; position:absolute; width:18px; height:18px; border-color:var(--border2); border-style:solid; }
-  .bird-frame::before  { top:0; left:0;   border-width:1px 0 0 1px; }
-  .bird-frame::after   { top:0; right:0;  border-width:1px 1px 0 0; }
-  .bird-frame span::before { bottom:0; left:0;  border-width:0 0 1px 1px; }
-  .bird-frame span::after  { bottom:0; right:0; border-width:0 1px 1px 0; }
-  .bird-img-wrap { position:relative; z-index:3; animation:birdFloat 7s ease-in-out infinite; filter:drop-shadow(0 0 40px rgba(255,255,255,0.08)) drop-shadow(0 20px 60px rgba(0,0,0,0.8)); }
-  @keyframes birdFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-14px)} }
-  .bird-img-wrap img { width:420px; height:420px; object-fit:contain; }
-  .bird-scanline { position:absolute; left:0; right:0; height:1px; background:linear-gradient(90deg,transparent,rgba(255,255,255,0.15),transparent); animation:scanMove 5s linear infinite; z-index:4; }
-  @keyframes scanMove { 0%{top:5%} 100%{top:95%} }
-
-  /* ═══ ACK SLIDER ═══ */
-  #ack { background:var(--dark); padding:2.5rem 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border); overflow:hidden; }
-  .ack-label { text-align:center; font-family:'Share Tech Mono',monospace; font-size:0.68rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.18em; margin-bottom:1.8rem; padding:0 5%; }
-  .slider-outer { overflow:hidden; -webkit-mask-image:linear-gradient(90deg,transparent 0%,black 8%,black 92%,transparent 100%); mask-image:linear-gradient(90deg,transparent 0%,black 8%,black 92%,transparent 100%); }
-  .slider-track { display:flex; gap:3.5rem; align-items:center; width:max-content; animation:slideLeft 38s linear infinite; }
-  .slider-track:hover { animation-play-state:paused; }
-  @keyframes slideLeft { from{transform:translateX(0)} to{transform:translateX(-50%)} }
-  .slider-track img { height:36px; width:auto; min-width:60px; flex-shrink:0; border-radius:4px; transition:transform 0.3s cubic-bezier(0.34,1.56,0.64,1),filter 0.3s ease; }
-  .slider-track img:hover { transform:scale(1.1); filter:drop-shadow(0 4px 16px rgba(255,255,255,0.18)); }
-
-  /* ═══ ABOUT STATS ═══ */
-  .about-stat { background:var(--card); border:1px solid var(--border); border-radius:3px; padding:1.4rem; transition:border-color 0.2s; }
-  .about-stat:hover { border-color:var(--border2); }
-  .about-stat-label { font-family:'Share Tech Mono',monospace; font-size:0.68rem; color:var(--muted); margin-bottom:0.4rem; text-transform:uppercase; letter-spacing:0.08em; }
-  .about-stat-val { font-family:'Bebas Neue',sans-serif; font-size:1.8rem; letter-spacing:0.04em; color:var(--white); }
-  .about-stat-sub { font-size:0.78rem; color:var(--muted); margin-top:0.2rem; }
-
-  /* ═══ SERVICES — HCI FIXES ═══ */
-  /*
-    Changes:
-    1. Cards have a visible "clickable" treatment: left-border accent on hover + cursor + 
-       persistent "View details →" affordance (not just on hover).
-    2. Removed the generic "Explore" text — replaced with explicit action label.
-    3. Card type badge visually differentiated per category using colour coding.
-  */
-  #services { background: var(--dark); }
-  .services-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
-  @media (max-width:900px) { .services-grid { grid-template-columns:repeat(2,1fr); } }
-  @media (max-width:560px) { .services-grid { grid-template-columns:1fr; } }
-
-  .service-card-wrap {
-    background: none; border: none; padding: 0;
-    text-align: left; cursor: pointer; width: 100%; font-family: inherit;
-    display: block;
-  }
-  .service-card {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 3px; overflow: hidden;
-    transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
-    display: flex; flex-direction: column; height: 100%;
-    position: relative;
-  }
-  /* HCI FIX: left-accent bar always visible, brightens on hover — clear interactive affordance */
-  .service-card::after {
-    content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px;
-    background: var(--border2); transition: background 0.25s, width 0.25s;
-  }
-  .service-card-wrap:hover .service-card,
-  .service-card-wrap:focus-visible .service-card {
-    border-color: var(--border2); transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(0,0,0,0.4);
-    outline: none;
-  }
-  .service-card-wrap:hover .service-card::after { background: var(--silver); width: 3px; }
-  .service-card-wrap:focus-visible .service-card { outline: 2px solid var(--accent2); outline-offset: 2px; }
-
-  .service-header {
-    padding: 1.2rem 1.5rem;
-    background: linear-gradient(135deg, #111113, #161619);
-    border-bottom: 1px solid var(--border);
-    display: flex; justify-content: space-between; align-items: center;
-  }
-  .service-type { font-family:'Share Tech Mono',monospace; font-size:0.7rem; color:var(--muted); }
-
-  /* HCI FIX: colour-coded category badges so cards are visually distinct, not identical */
-  .service-badge {
-    font-size: 0.65rem; font-weight: 600; padding: 0.18rem 0.55rem; border-radius: 2px;
-    font-family: 'Share Tech Mono', monospace; white-space: nowrap;
-  }
-  .badge-red    { background:rgba(180,50,50,0.12);  color:#c06060; border:1px solid rgba(180,50,50,0.25); }
-  .badge-amber  { background:rgba(180,130,0,0.10);  color:#b08020; border:1px solid rgba(180,130,0,0.25); }
-  .badge-blue   { background:rgba(60,100,180,0.10); color:#6080c0; border:1px solid rgba(60,100,180,0.25); }
-  .badge-purple { background:rgba(100,60,160,0.10); color:#8060b0; border:1px solid rgba(100,60,160,0.25); }
-  .badge-teal   { background:rgba(40,130,120,0.10); color:#40a090; border:1px solid rgba(40,130,120,0.25); }
-  .badge-grey   { background:rgba(160,160,180,0.08);color:var(--silver); border:1px solid rgba(160,160,180,0.2); }
-
-  .service-body { padding: 1.5rem; flex: 1; }
-  .service-title { font-family:'Barlow Condensed',sans-serif; font-size:1.05rem; font-weight:700; letter-spacing:0.03em; color:var(--white); margin-bottom:0.5rem; text-transform:uppercase; }
-  .service-desc { font-size:0.875rem; color:var(--silver); line-height:1.65; }
-
-  /* HCI FIX: action row always shows "View details →" text — visible affordance on all devices */
-  .service-footer {
-    padding: 0.9rem 1.5rem;
-    border-top: 1px solid var(--border);
-    display: flex; align-items: center; justify-content: space-between;
-    font-size: 0.72rem; font-family: 'Share Tech Mono', monospace;
-    color: var(--muted);
-    background: rgba(0,0,0,0.15);
-    transition: background 0.2s;
-  }
-  .service-card-wrap:hover .service-footer { background: rgba(255,255,255,0.02); }
-  .service-action {
-    display: flex; align-items: center; gap: 0.45rem;
-    font-size: 0.7rem; color: var(--silver);
-    transition: color 0.2s, gap 0.2s;
-  }
-  .service-card-wrap:hover .service-action { color: var(--white); gap: 0.65rem; }
-
-  /* ═══ MODAL ═══ */
-  .modal-overlay {
-    display: none; position: fixed; inset: 0; z-index: 2000;
-    background: rgba(0,0,0,0.85); backdrop-filter: blur(8px);
-    align-items: center; justify-content: center; padding: 2rem;
-  }
-  .modal-overlay.active { display: flex; animation: overlayIn 0.25s ease; }
-  @keyframes overlayIn { from{opacity:0} to{opacity:1} }
-
-  .modal-box {
-    background: var(--dark); border: 1px solid var(--border2); border-radius: 6px;
-    max-width: 600px; width: 100%; padding: 2.5rem;
-    position: relative; animation: modalIn 0.3s cubic-bezier(0.34,1.56,0.64,1);
-    max-height: 90vh; overflow-y: auto;
-  }
-  @keyframes modalIn { from{opacity:0;transform:scale(0.9) translateY(20px)} to{opacity:1;transform:scale(1) translateY(0)} }
-
-  .modal-close {
-    position: absolute; top: 1rem; right: 1rem;
-    background: transparent; border: 1px solid var(--border);
-    color: var(--muted); width: 32px; height: 32px; border-radius: 50%;
-    cursor: pointer; font-size: 1rem; display: flex; align-items: center; justify-content: center;
-    transition: border-color 0.2s, color 0.2s;
-  }
-  .modal-close:hover { border-color: var(--silver); color: var(--white); }
-  .modal-close:focus-visible { outline: 2px solid var(--accent2); outline-offset: 2px; }
-
-  .modal-tag { font-family:'Share Tech Mono',monospace; font-size:0.68rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.15em; margin-bottom:0.75rem; }
-  .modal-title { font-family:'Bebas Neue',sans-serif; font-size:2rem; letter-spacing:0.04em; color:var(--white); margin-bottom:1rem; line-height:1; }
-  .modal-desc { font-size:0.9rem; color:var(--silver); margin-bottom:1.5rem; line-height:1.8; }
-  .modal-benefits { list-style:none; margin-bottom:2rem; }
-  .modal-benefits li { font-size:0.875rem; color:var(--text); padding:0.5rem 0; border-bottom:1px solid var(--border); display:flex; align-items:flex-start; gap:0.75rem; }
-  .modal-benefits li::before { content:'→'; color:var(--silver); flex-shrink:0; font-family:'Share Tech Mono',monospace; font-size:0.75rem; margin-top:0.1rem; }
-  .modal-benefits li:last-child { border-bottom:none; }
-
-  /* HCI FIX: modal CTA is specific to the service, not generic "Request this service" repeated for every service.
-     Label is set dynamically in JS per service. */
-  .modal-cta { display: inline-flex; align-items: center; gap: 0.5rem; }
-
-  /* ═══ PORTFOLIO — HCI FIX ═══ */
-  /*
-    Portfolio cards are READ-ONLY case studies. They deliberately look different from 
-    interactive service cards: no hover lift, no cursor:pointer, no action footer.
-    A "static" visual language (flat, no transform) signals "informational, not clickable".
-  */
-  #portfolio { background: var(--black); }
-  .portfolio-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:1.5rem; }
-
-  .portfolio-card {
-    background: var(--card); border: 1px solid var(--border); border-radius: 3px; overflow: hidden;
-    /* No transform on hover — intentionally static to differentiate from service cards */
-    transition: border-color 0.25s;
-  }
-  .portfolio-card:hover { border-color: var(--border2); }
-
-  .portfolio-header {
-    padding: 1.4rem 1.5rem;
-    background: linear-gradient(135deg, #0e0e10, #141417);
-    border-bottom: 1px solid var(--border);
-    display: flex; justify-content: space-between; align-items: center;
-  }
-  .portfolio-type { font-family:'Share Tech Mono',monospace; font-size:0.7rem; color:var(--muted); }
-  .severity { font-size:0.68rem; font-weight:600; padding:0.2rem 0.6rem; border-radius:2px; font-family:'Share Tech Mono',monospace; }
-  .severity.critical { background:rgba(220,50,50,0.12); color:#e05050; border:1px solid rgba(220,50,50,0.25); }
-  .severity.high     { background:rgba(200,140,0,0.1);  color:#cc9900; border:1px solid rgba(200,140,0,0.25); }
-  .severity.medium   { background:rgba(160,160,180,0.08); color:#8888a8; border:1px solid rgba(160,160,180,0.2); }
-
-  .portfolio-body { padding: 1.5rem; }
-  .portfolio-title { font-family:'Barlow Condensed',sans-serif; font-size:1.05rem; font-weight:700; letter-spacing:0.03em; color:var(--white); margin-bottom:0.5rem; text-transform:uppercase; }
-  .portfolio-desc { font-size:0.875rem; color:var(--silver); line-height:1.65; }
-  .portfolio-meta { padding:1rem 1.5rem; border-top:1px solid var(--border); display:flex; gap:1.5rem; font-size:0.72rem; color:var(--muted); font-family:'Share Tech Mono',monospace; flex-wrap:wrap; }
-
-  /* HCI FIX: explicit "read-only" label at bottom of portfolio cards so users know they aren't clickable */
-  .portfolio-readonly {
-    padding: 0.6rem 1.5rem;
-    background: rgba(0,0,0,0.2);
-    border-top: 1px solid var(--border);
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 0.62rem;
-    color: var(--muted);
-    letter-spacing: 0.08em;
-    display: flex; align-items: center; gap: 0.4rem;
-  }
-
-  /* ═══ AUDIT SAMPLE ═══ */
-  #audit { background: var(--dark); }
-  .audit-report { background:var(--black); border:1px solid var(--border); border-radius:4px; overflow:hidden; font-family:'Share Tech Mono',monospace; }
-  .audit-topbar { background:#0b0b0d; padding:0.7rem 1.5rem; display:flex; align-items:center; gap:1.5rem; border-bottom:1px solid var(--border); }
-  .audit-dots { display:flex; gap:6px; }
-  .audit-dots span { width:11px; height:11px; border-radius:50%; }
-  .audit-dots span:nth-child(1){background:#444} .audit-dots span:nth-child(2){background:#333} .audit-dots span:nth-child(3){background:#2a2a2a}
-  .audit-topbar-title { font-size:0.72rem; color:var(--muted); }
-  .audit-summary-bar { display:none; background:#0b0b0d; border-bottom:1px solid var(--border); padding:0.75rem 1.5rem; font-size:0.68rem; color:var(--muted); font-family:'Share Tech Mono',monospace; gap:1rem; align-items:center; flex-wrap:wrap; }
-  .audit-summary-bar span { color:var(--text); }
-  .audit-body { display:grid; grid-template-columns:1fr 2fr; }
-  .audit-sidebar { background:#0b0b0d; border-right:1px solid var(--border); padding:1.5rem; }
-  .audit-sidebar h4 { font-size:0.62rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:1rem; }
-  .audit-nav a { display:flex; align-items:center; gap:0.5rem; font-size:0.72rem; color:var(--muted); text-decoration:none; padding:0.45rem 0.5rem; border-radius:2px; margin-bottom:0.2rem; transition:color 0.2s,background 0.2s; }
-  .audit-nav a.active,.audit-nav a:hover { color:var(--white); background:var(--dim); }
-  .audit-nav a::before { content:'//'; color:var(--border2); font-size:0.62rem; }
-  .audit-nav a.active::before { color:var(--silver); }
-  .audit-score-box { margin-top:2rem; border:1px solid var(--border); border-radius:3px; padding:1.25rem; text-align:center; }
-  .score-num { font-family:'Bebas Neue',sans-serif; font-size:2.8rem; letter-spacing:0.04em; color:var(--white); }
-  .score-label { font-size:0.62rem; color:var(--muted); text-transform:uppercase; margin-top:0.2rem; }
-  .audit-main { padding:1.5rem; overflow:auto; }
-  .audit-section-title { font-family:'Barlow Condensed',sans-serif; font-size:0.9rem; font-weight:700; color:var(--white); letter-spacing:0.06em; text-transform:uppercase; margin-bottom:1rem; padding-bottom:0.5rem; border-bottom:1px solid var(--border); }
-  .chart-row { display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; margin-bottom:1.5rem; }
-  .chart-item { background:var(--card); border:1px solid var(--border); border-radius:3px; padding:1rem; text-align:center; }
-  .chart-item-num { font-family:'Bebas Neue',sans-serif; font-size:1.8rem; letter-spacing:0.04em; }
-  .chart-item-label { font-size:0.62rem; color:var(--muted); margin-top:0.15rem; }
-  .chart-item.c{color:#c05050} .chart-item.h{color:#b08020} .chart-item.m{color:#707088} .chart-item.l{color:#404055}
-  .finding { background:var(--card); border:1px solid var(--border); border-radius:3px; padding:1.25rem; margin-bottom:1rem; position:relative; overflow:hidden; }
-  .finding::before { content:''; position:absolute; left:0; top:0; bottom:0; width:2px; }
-  .finding.critical::before{background:#c05050} .finding.high::before{background:#b08020} .finding.medium::before{background:#505068}
-  .finding-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; }
-  .finding-name { font-size:0.78rem; color:var(--white); }
-  .finding-desc { font-size:0.7rem; color:var(--silver); line-height:1.65; }
-  .finding-code { background:rgba(0,0,0,0.5); border:1px solid var(--border); border-radius:2px; padding:0.7rem; margin-top:0.75rem; font-size:0.68rem; color:var(--silver); overflow-x:auto; }
-  .terminal-line { opacity:0; animation:fadeIn 0.5s forwards; }
-  .terminal-line:nth-child(1){animation-delay:.2s} .terminal-line:nth-child(2){animation-delay:.5s}
-  .terminal-line:nth-child(3){animation-delay:.8s} .terminal-line:nth-child(4){animation-delay:1.1s}
-  @keyframes fadeIn { to{opacity:1} }
-
-  /* ═══ PRICING — HCI FIX ═══ */
-  /*
-    Each tier's CTA button now has a unique, descriptive label:
-      Starter    → "Start at £499"
-      Pro        → "Get Professional Assessment"  
-      Enterprise → "Discuss Enterprise Needs"
-    This eliminates three identical "Get Started" buttons that gave no contextual signal.
-  */
-  #pricing { background: var(--black); }
-  .pricing-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; align-items:stretch; }
-  @media (max-width:900px) { .pricing-grid { grid-template-columns:1fr; max-width:440px; } }
-  .pricing-card { background:var(--card); border:1px solid var(--border); border-radius:3px; padding:2.5rem; position:relative; transition:border-color 0.3s,transform 0.3s; display:flex; flex-direction:column; }
-  .pricing-card:hover { transform:translateY(-4px); border-color:var(--border2); }
-  .pricing-card.featured { border-color:var(--silver); box-shadow:0 0 40px rgba(255,255,255,0.04); }
-  .featured-badge { position:absolute; top:-1px; left:50%; transform:translateX(-50%); background:var(--white); color:var(--black); font-size:0.62rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding:0.22rem 1rem; border-radius:0 0 3px 3px; font-family:'Share Tech Mono',monospace; }
-  .plan-name { font-family:'Share Tech Mono',monospace; font-size:0.72rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.12em; margin-bottom:0.5rem; }
-  .plan-price { font-family:'Bebas Neue',sans-serif; font-size:3rem; letter-spacing:0.04em; color:var(--white); margin-bottom:0.2rem; }
-  .plan-price span { font-size:1rem; font-family:'Barlow',sans-serif; font-weight:300; color:var(--muted); }
-  .plan-desc { font-size:0.875rem; color:var(--silver); margin-bottom:2rem; }
-  .plan-features { list-style:none; margin-bottom:2rem; flex:1; }
-  .plan-features li { font-size:0.875rem; color:var(--text); padding:0.5rem 0; border-bottom:1px solid var(--border); display:flex; align-items:center; gap:0.75rem; }
-  .plan-features li::before { content:'✓'; color:var(--silver); font-size:0.72rem; flex-shrink:0; }
-  .plan-features li.no { color:var(--muted); }
-  .plan-features li.no::before { content:'–'; color:var(--border2); }
-
-  /* HCI FIX: distinct button styles per tier */
-  .btn-plan {
-    display: block; text-align: center; padding: 0.85rem; border-radius: 2px;
-    font-size: 0.875rem; font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
-    text-decoration: none; transition: all 0.2s;
-    border: 1px solid var(--border); color: var(--text);
-  }
-  .btn-plan:hover { border-color: var(--silver); color: var(--white); }
-  .btn-plan-featured { background: var(--white); color: var(--black); border-color: var(--white); }
-  .btn-plan-featured:hover { box-shadow: 0 0 24px rgba(255,255,255,0.15); background: var(--accent); color: var(--black); }
-  .btn-plan-enterprise { border-color: var(--silver); color: var(--silver); }
-  .btn-plan-enterprise:hover { border-color: var(--white); color: var(--white); background: rgba(255,255,255,0.04); }
-
-  /* ═══ FAQ ═══ */
-  .faq-list { max-width: 820px; }
-  .faq-item { border:1px solid var(--border); border-radius:3px; margin-bottom:0.7rem; overflow:hidden; transition:border-color 0.2s; }
-  .faq-item:has(.faq-q[aria-expanded="true"]) { border-color:var(--border2); }
-  .faq-q { width:100%; background:var(--card); border:none; padding:1.2rem 1.5rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; cursor:pointer; text-align:left; color:var(--white); font-family:'Barlow Condensed',sans-serif; font-size:1rem; font-weight:600; letter-spacing:0.03em; text-transform:uppercase; transition:background 0.2s; }
-  .faq-q:hover { background:#1e1e22; }
-  .faq-q:focus-visible { outline:2px solid var(--accent2); outline-offset:-2px; }
-  .faq-icon { flex-shrink:0; color:var(--muted); transition:transform 0.3s; }
-  .faq-q[aria-expanded="true"] .faq-icon { transform:rotate(180deg); color:var(--silver); }
-  .faq-a { max-height:0; overflow:hidden; transition:max-height 0.35s ease,padding 0.3s ease; padding:0 1.5rem; background:var(--black); }
-  .faq-a.open { max-height:400px; padding:1.2rem 1.5rem; }
-  .faq-a p { font-size:0.9rem; color:var(--silver); margin:0; line-height:1.8; }
-  .faq-a p strong { color:var(--text); }
-  .faq-a p a { color:var(--accent2); }
-
-  /* ═══ CONTACT — HCI FIX ═══ */
-  /*
-    The contact section no longer has a redundant scan banner CTA sitting above a form 
-    that does the same thing. The scan banner is replaced by a clear value proposition 
-    strip that contextualises the form without duplicating it.
-    The about section CTA ("Speak to Our Team") is removed — funnelled here instead.
-  */
-  #contact { background: var(--dark); }
-  .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:start; }
-  .contact-info h3 { font-family:'Bebas Neue',sans-serif; font-size:1.8rem; letter-spacing:0.04em; color:var(--white); margin-bottom:1rem; }
-  .contact-info p { color:var(--silver); font-size:0.95rem; margin-bottom:2rem; }
-  .contact-detail { display:flex; align-items:flex-start; gap:1rem; margin-bottom:1.2rem; padding:1rem; background:var(--card); border:1px solid var(--border); border-radius:3px; transition:border-color 0.2s; }
-  .contact-detail:hover { border-color:var(--border2); }
-  .contact-detail svg { color:var(--silver); flex-shrink:0; margin-top:2px; }
-  .contact-detail-label { color:var(--muted); font-size:0.7rem; text-transform:uppercase; font-family:'Share Tech Mono',monospace; margin-bottom:0.2rem; letter-spacing:0.06em; }
-  .contact-detail-text { font-size:0.875rem; color:var(--text); }
-
-  /* HCI FIX: "What you'll receive" checklist replaces the circular scan banner CTA */
-  .contact-promise {
-    margin-top: 2rem;
-    background: rgba(255,255,255,0.02);
-    border: 1px solid var(--border);
-    border-radius: 3px;
-    padding: 1.4rem;
-  }
-  .contact-promise h4 {
-    font-family: 'Share Tech Mono', monospace; font-size: 0.68rem;
-    color: var(--muted); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 1rem;
-  }
-  .contact-promise li {
-    list-style: none; font-size: 0.85rem; color: var(--text);
-    padding: 0.4rem 0; display: flex; align-items: flex-start; gap: 0.65rem;
-    border-bottom: 1px solid var(--border);
-  }
-  .contact-promise li:last-child { border-bottom: none; }
-  .contact-promise li::before { content: '✓'; color: var(--silver); font-size: 0.72rem; flex-shrink: 0; margin-top: 0.1rem; }
-
-  .contact-form-panel { background:var(--black); border:1px solid var(--border); border-radius:3px; padding:2rem; }
-  .contact-form-title { font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:1.1rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--white); margin-bottom:1.5rem; padding-bottom:0.75rem; border-bottom:1px solid var(--border); }
-
-  .form-group { margin-bottom:1.2rem; }
-  .form-label { display:block; font-size:0.7rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.08em; font-family:'Share Tech Mono',monospace; margin-bottom:0.5rem; }
-  .form-input,.form-textarea,.form-select { width:100%; background:var(--card); border:1px solid var(--border); border-radius:2px; padding:0.75rem 1rem; color:var(--text); font-family:'Barlow',sans-serif; font-size:0.9rem; outline:none; transition:border-color 0.2s; }
-  .form-input:focus,.form-textarea:focus,.form-select:focus { border-color:var(--silver); }
-  .form-input.error,.form-textarea.error,.form-select.error { border-color:#c05050; }
-  .field-error { display:none; font-family:'Share Tech Mono',monospace; font-size:0.65rem; color:#c06060; margin-top:0.35rem; }
-  .field-error.visible { display:block; }
-  .form-textarea { resize:vertical; min-height:120px; }
-  .form-select option { background:var(--card); }
-  .form-submit { width:100%; background:var(--white); color:var(--black); border:none; padding:0.95rem; font-size:0.95rem; font-weight:700; font-family:'Barlow Condensed',sans-serif; letter-spacing:0.08em; text-transform:uppercase; border-radius:2px; cursor:pointer; transition:box-shadow 0.2s,transform 0.2s,background 0.2s; }
-  .form-submit:hover { box-shadow:0 0 24px rgba(255,255,255,0.15); transform:translateY(-1px); background:var(--accent); }
-  .form-submit:disabled { opacity:0.6; cursor:not-allowed; transform:none; }
-  .form-note { font-size:0.7rem; color:var(--muted); text-align:center; margin-top:0.75rem; font-family:'Share Tech Mono',monospace; }
-
-  /* ═══ FOOTER — HCI FIX ═══ */
-  /*
-    Footer service links now deep-link to individual service modal anchors via data attrs,
-    and the "Company" column is cleaned up (no circular self-links to same-page sections).
-  */
-  footer { background:#050506; border-top:1px solid var(--border); padding:3rem 5% 2rem; }
-  .footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1fr 1fr; gap:2.5rem; margin-bottom:2.5rem; }
-  .footer-brand p { font-size:0.85rem; color:var(--muted); margin-top:0.75rem; line-height:1.7; max-width:280px; }
-  .footer-logo-img { height:42px; width:auto; }
-  .footer-col h4 { font-family:'Share Tech Mono',monospace; font-size:0.68rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.12em; margin-bottom:1rem; }
-  .footer-col a { display:flex; align-items:center; gap:0.5rem; color:var(--muted); text-decoration:none; font-size:0.85rem; margin-bottom:0.5rem; transition:color 0.2s; cursor:pointer; }
-  .footer-col a:hover { color:var(--white); }
-  .footer-social-icon { width:16px; height:16px; flex-shrink:0; }
-  .footer-bottom { border-top:1px solid var(--border); padding-top:1.5rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; font-size:0.78rem; color:var(--muted); font-family:'Share Tech Mono',monospace; }
-  .footer-bottom-links { display:flex; gap:1.5rem; }
-  .footer-bottom-links a { color:var(--muted); text-decoration:none; }
-  .footer-bottom-links a:hover { color:var(--white); }
-
-  /* ═══ RESPONSIVE ═══ */
-  @media (max-width:1024px) { .footer-grid { grid-template-columns:1fr 1fr 1fr; } }
-  @media (max-width:900px)  { #hero { grid-template-columns:1fr; } .hero-bird { display:none; } }
-  @media (max-width:768px)  {
-    .nav-links { display:none; visibility:hidden; pointer-events:none; }
-    .nav-hamburger { display:flex; }
-    .contact-grid { grid-template-columns:1fr; gap:2rem; }
-    .audit-body { grid-template-columns:1fr; }
-    .audit-sidebar { display:none; }
-    .audit-summary-bar { display:flex; }
-    .chart-row { grid-template-columns:1fr 1fr; }
-    .hero-stats { gap:1.5rem; flex-wrap:wrap; }
-    .footer-grid { grid-template-columns:1fr 1fr; }
-  }
+/* ── RESPONSIVE ─────────────────────────────────────── */
+@media (max-width: 900px) {
+  #hero { grid-template-columns: 1fr; }
+  .hero-bird { display: none; }
+  .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .services-grid { grid-template-columns: repeat(2,1fr); }
+  .pricing-grid { grid-template-columns: 1fr; max-width: 440px; }
+}
+@media (max-width: 768px) {
+  .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .audit-body { grid-template-columns: 1fr; }
+  .audit-sidebar { display: none; }
+  .audit-summary-bar { display: flex; }
+  .chart-row { grid-template-columns: 1fr 1fr; }
+  .hero-stats { gap: 1.5rem; }
+}
+@media (max-width: 560px) {
+  .services-grid { grid-template-columns: 1fr; }
+  .about-stats { grid-template-columns: 1fr; }
+  .hero-actions { flex-direction: column; }
+  .hero-actions a { width: 100%; justify-content: center; }
+}
 </style>
 </head>
 <body>
+<!-- Nav + Footer injected by components.js -->
 
-<!-- ═══ NAV ═══ -->
-<!--
-  HCI FIX: Nav has ONE contact CTA ("Free Consult" → solid white button).
-  The old ghost-border nav CTA has been upgraded to a filled button for clarity.
-  No other nav items trigger the contact form — clean single entry point.
--->
-<nav role="navigation" aria-label="Main navigation">
-  <a href="#hero" class="logo-wrap" aria-label="EiferOne Home">
-    <img src="./assets/footerlogo.png" alt="EiferOne cybersecurity consultancy logo" class="logo-img" width="120" height="38">
-  </a>
-
-  <ul class="nav-links" role="menubar">
-    <li role="none"><a href="#about" role="menuitem">About</a></li>
-    <li class="nav-dropdown" role="none" id="servicesDropdown">
-      <a href="#services" role="menuitem" aria-haspopup="true" aria-expanded="false" id="servicesNavLink">Services</a>
-      <div class="dropdown-menu" role="menu" aria-label="Services submenu">
-        <a role="menuitem" data-service="pentest">
-          <svg class="dmicon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Penetration Testing
-        </a>
-        <a role="menuitem" data-service="audit">
-          <svg class="dmicon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>Security Audits
-        </a>
-        <a role="menuitem" data-service="network">
-          <svg class="dmicon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Network Assessment
-        </a>
-        <a role="menuitem" data-service="appsec">
-          <svg class="dmicon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>Application Security
-        </a>
-        <a role="menuitem" data-service="iam">
-          <svg class="dmicon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Identity & Access Review
-        </a>
-        <a role="menuitem" data-service="compliance">
-          <svg class="dmicon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4-7 4z"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>Compliance Consulting
-        </a>
-      </div>
-    </li>
-    <li role="none"><a href="#portfolio" role="menuitem">Portfolio</a></li>
-    <li role="none"><a href="#faq" role="menuitem">FAQ</a></li>
-    <li role="none"><a href="#pricing" role="menuitem">Pricing</a></li>
-    <li role="none"><a href="team.html" role="menuitem">Team</a></li>
-    <li role="none"><a href="#contact" class="nav-cta" role="menuitem">Free Consult</a></li>
-  </ul>
-
-  <button class="nav-hamburger" id="navHamburger" aria-expanded="false" aria-controls="mobileNav" aria-label="Open navigation menu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-
-<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" aria-hidden="true">
-  <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#portfolio">Portfolio</a></li>
-    <li><a href="#audit">Sample Audit</a></li>
-    <li><a href="#pricing">Pricing</a></li>
-    <li><a href="#faq">FAQ</a></li>
-    <li><a href="team.html">Team</a></li>
-  </ul>
-  <a href="#contact" class="mobile-nav-cta">Get Free Consultation →</a>
-</nav>
-
-<!-- ═══ HERO ═══ -->
-<!--
-  HCI FIX: Two actions only — primary (contact form) + secondary (sample audit).
-  No "Speak to Our Team" duplicated below in the About section.
-  Stats remain as trust signals, not interactive.
--->
+<!-- HERO -->
 <section id="hero" aria-label="Hero section">
   <div class="hero-content">
     <div class="hero-tag" aria-label="Company type">Cybersecurity Consultancy</div>
@@ -779,12 +458,12 @@
     <div class="bird-frame"><span></span></div>
     <div class="bird-scanline"></div>
     <div class="bird-img-wrap">
-      <img src="./assets/Hompage bird.png" alt="" width="420" height="420">
+      <img src="./assets/Hompage bird.png" alt="" width="520" height="520" loading="eager">
     </div>
   </div>
 </section>
 
-<!-- ═══ ACK SLIDER ═══ -->
+<!-- ACK SLIDER -->
 <section id="ack" aria-label="Acknowledgements from leading organisations">
   <div class="ack-label">Acknowledged by leading organisations worldwide for vulnerability reporting</div>
   <div class="slider-outer" role="list" aria-label="Organisation acknowledgement logos">
@@ -831,242 +510,137 @@
     </div>
   </div>
 </section>
+
 <div class="divider-line" role="separator"></div>
 
-<!-- ═══ ABOUT ═══ -->
-<!--
-  HCI FIX: Removed "Speak to Our Team" CTA from About section.
-  About is informational — single responsibility. Contact is handled in #contact only.
--->
-<section id="about" style="background:var(--dark);padding:5rem 5%;" aria-labelledby="about-heading">
-  <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;">
-    <div>
+<!-- ABOUT -->
+<section id="about" aria-labelledby="about-heading">
+  <div class="about-grid">
+    <div class="about-text">
       <div class="section-tag">// Who We Are</div>
-      <h2 id="about-heading" style="margin-bottom:1.25rem;">A Consultancy<br>Built on Expertise</h2>
-      <p style="color:var(--silver);font-size:0.975rem;margin-bottom:1rem;">EiferOne Ltd is a cybersecurity consultancy founded to give businesses access to the same calibre of security testing that enterprise organisations rely on — at a price point that works for growing companies.</p>
-      <p style="color:var(--silver);font-size:0.975rem;margin-bottom:1rem;">We don't run automated scanners and call it a test. Every engagement is led by experienced security professionals who write reports you can actually act on.</p>
-      <p style="color:var(--silver);font-size:0.975rem;">Our team has conducted assessments across finance, healthcare, technology, and e-commerce sectors, working against <strong style="color:var(--white)">OWASP Top 10, ISO 27001, Cyber Essentials, NIST, and PCI-DSS</strong>.</p>
+      <h2 id="about-heading">A Consultancy<br>Built on Expertise</h2>
+      <p>EiferOne Ltd is a cybersecurity consultancy founded to give businesses access to the same calibre of security testing that enterprise organisations rely on — at a price point that works for growing companies.</p>
+      <p>We don't run automated scanners and call it a test. Every engagement is led by experienced security professionals who write reports you can actually act on.</p>
+      <p>Our team has conducted assessments across finance, healthcare, technology, and e-commerce sectors, working against <strong style="color:var(--white)">OWASP Top 10, ISO 27001, Cyber Essentials, NIST, and PCI-DSS</strong>.</p>
     </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
-      <div class="about-stat"><div class="about-stat-label">Founded</div><div class="about-stat-val">2025</div><div class="about-stat-sub">England & Wales</div></div>
+    <div class="about-stats">
+      <div class="about-stat"><div class="about-stat-label">Founded</div><div class="about-stat-val">2025</div><div class="about-stat-sub">England &amp; Wales</div></div>
       <div class="about-stat"><div class="about-stat-label">Response</div><div class="about-stat-val">24hr</div><div class="about-stat-sub">Guaranteed reply</div></div>
       <div class="about-stat"><div class="about-stat-label">Frameworks</div><div class="about-stat-val">10+</div><div class="about-stat-sub">OWASP · ISO · NIST</div></div>
       <div class="about-stat" style="border-left:2px solid var(--border2);"><div class="about-stat-label">Free Offer</div><div class="about-stat-val" style="font-size:1.1rem;line-height:1.2;">Website<br>Overview</div><div class="about-stat-sub">No obligations</div></div>
     </div>
   </div>
 </section>
+
 <div class="divider-line" role="separator"></div>
 
-<!-- ═══ SERVICES ═══ -->
-<!--
-  HCI FIXES:
-  1. Cards now have a persistent left-accent bar + "View details →" footer — clickable on touch too.
-  2. Each card has a colour-coded category badge (red=offensive, amber=governance, blue=infra, etc.)
-     so 6 cards are visually distinct, not a uniform grey grid.
-  3. Removed generic "Explore" — replaced with "View details →" which communicates the action.
--->
+<!-- SERVICES -->
 <section id="services" aria-labelledby="services-heading">
   <div class="section-tag">// What We Do</div>
   <h2 id="services-heading">Our Security Services</h2>
   <p class="section-lead">From rapid vulnerability assessments to comprehensive red team engagements — click any service to see what's included.</p>
   <div class="services-grid" role="list">
-
     <div role="listitem">
       <button class="service-card-wrap" data-service="pentest" aria-label="Penetration Testing — click for details">
         <div class="service-card">
-          <div class="service-header">
-            <span class="service-type">Offensive Security</span>
-            <span class="service-badge badge-red">VAPT / Web / Network</span>
-          </div>
-          <div class="service-body">
-            <h3 class="service-title">Penetration Testing</h3>
-            <p class="service-desc">Simulated real-world attacks on your infrastructure, web applications, and APIs to expose exploitable vulnerabilities before malicious actors do.</p>
-          </div>
-          <div class="service-footer">
-            <span>OWASP · PTES · CVSSv3</span>
-            <span class="service-action">
-              View details
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </span>
-          </div>
+          <div class="service-header"><span class="service-type">Offensive Security</span><span class="service-badge badge-red">VAPT / Web / Network</span></div>
+          <div class="service-body"><h3 class="service-title">Penetration Testing</h3><p class="service-desc">Simulated real-world attacks on your infrastructure, web applications, and APIs to expose exploitable vulnerabilities before malicious actors do.</p></div>
+          <div class="service-footer"><span>OWASP · PTES · CVSSv3</span><span class="service-action">View details <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></div>
         </div>
       </button>
     </div>
-
     <div role="listitem">
       <button class="service-card-wrap" data-service="audit" aria-label="Security Audits — click for details">
         <div class="service-card">
-          <div class="service-header">
-            <span class="service-type">Governance & Risk</span>
-            <span class="service-badge badge-amber">ISO 27001 / NIST / CIS</span>
-          </div>
-          <div class="service-body">
-            <h3 class="service-title">Security Audits</h3>
-            <p class="service-desc">In-depth review of your security controls, policies, and architecture against ISO 27001, NIST, and CIS benchmarks.</p>
-          </div>
-          <div class="service-footer">
-            <span>ISO · NIST · CIS Controls</span>
-            <span class="service-action">
-              View details
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </span>
-          </div>
+          <div class="service-header"><span class="service-type">Governance &amp; Risk</span><span class="service-badge badge-amber">ISO 27001 / NIST / CIS</span></div>
+          <div class="service-body"><h3 class="service-title">Security Audits</h3><p class="service-desc">In-depth review of your security controls, policies, and architecture against ISO 27001, NIST, and CIS benchmarks.</p></div>
+          <div class="service-footer"><span>ISO · NIST · CIS Controls</span><span class="service-action">View details <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></div>
         </div>
       </button>
     </div>
-
     <div role="listitem">
       <button class="service-card-wrap" data-service="network" aria-label="Network Assessment — click for details">
         <div class="service-card">
-          <div class="service-header">
-            <span class="service-type">Infrastructure</span>
-            <span class="service-badge badge-blue">Perimeter / Internal / Cloud</span>
-          </div>
-          <div class="service-body">
-            <h3 class="service-title">Network Assessment</h3>
-            <p class="service-desc">Evaluation of your network perimeter, internal segmentation, firewall rules, and traffic flow to identify misconfigurations and exposure.</p>
-          </div>
-          <div class="service-footer">
-            <span>Firewall · AD · Cloud</span>
-            <span class="service-action">
-              View details
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </span>
-          </div>
+          <div class="service-header"><span class="service-type">Infrastructure</span><span class="service-badge badge-blue">Perimeter / Internal / Cloud</span></div>
+          <div class="service-body"><h3 class="service-title">Network Assessment</h3><p class="service-desc">Evaluation of your network perimeter, internal segmentation, firewall rules, and traffic flow to identify misconfigurations and exposure.</p></div>
+          <div class="service-footer"><span>Firewall · AD · Cloud</span><span class="service-action">View details <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></div>
         </div>
       </button>
     </div>
-
     <div role="listitem">
       <button class="service-card-wrap" data-service="appsec" aria-label="Application Security — click for details">
         <div class="service-card">
-          <div class="service-header">
-            <span class="service-type">Application Security</span>
-            <span class="service-badge badge-purple">OWASP / DAST / SAST</span>
-          </div>
-          <div class="service-body">
-            <h3 class="service-title">Application Security</h3>
-            <p class="service-desc">OWASP Top-10 focused testing for web and mobile applications, including source code review, business logic flaws, and authentication bypass analysis.</p>
-          </div>
-          <div class="service-footer">
-            <span>Web · Mobile · API</span>
-            <span class="service-action">
-              View details
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </span>
-          </div>
+          <div class="service-header"><span class="service-type">Application Security</span><span class="service-badge badge-purple">OWASP / DAST / SAST</span></div>
+          <div class="service-body"><h3 class="service-title">Application Security</h3><p class="service-desc">OWASP Top-10 focused testing for web and mobile applications, including source code review, business logic flaws, and authentication bypass analysis.</p></div>
+          <div class="service-footer"><span>Web · Mobile · API</span><span class="service-action">View details <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></div>
         </div>
       </button>
     </div>
-
     <div role="listitem">
-      <button class="service-card-wrap" data-service="iam" aria-label="Identity & Access Review — click for details">
+      <button class="service-card-wrap" data-service="iam" aria-label="Identity and Access Review — click for details">
         <div class="service-card">
-          <div class="service-header">
-            <span class="service-type">Identity Security</span>
-            <span class="service-badge badge-teal">IAM / AD / Entra ID</span>
-          </div>
-          <div class="service-body">
-            <h3 class="service-title">Identity & Access Review</h3>
-            <p class="service-desc">Audit of user privileges, MFA posture, and Active Directory / Entra ID configuration to eliminate credential-based risk.</p>
-          </div>
-          <div class="service-footer">
-            <span>AD · MFA · Zero Trust</span>
-            <span class="service-action">
-              View details
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </span>
-          </div>
+          <div class="service-header"><span class="service-type">Identity Security</span><span class="service-badge badge-teal">IAM / AD / Entra ID</span></div>
+          <div class="service-body"><h3 class="service-title">Identity &amp; Access Review</h3><p class="service-desc">Audit of user privileges, MFA posture, and Active Directory / Entra ID configuration to eliminate credential-based risk.</p></div>
+          <div class="service-footer"><span>AD · MFA · Zero Trust</span><span class="service-action">View details <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></div>
         </div>
       </button>
     </div>
-
     <div role="listitem">
       <button class="service-card-wrap" data-service="compliance" aria-label="Compliance Consulting — click for details">
         <div class="service-card">
-          <div class="service-header">
-            <span class="service-type">Regulatory Compliance</span>
-            <span class="service-badge badge-grey">GDPR / Cyber Essentials / SOC 2</span>
-          </div>
-          <div class="service-body">
-            <h3 class="service-title">Compliance Consulting</h3>
-            <p class="service-desc">Gap analysis and roadmap support for GDPR, Cyber Essentials, SOC 2, PCI-DSS, and ISO 27001 certification.</p>
-          </div>
-          <div class="service-footer">
-            <span>ISO · PCI-DSS · SOC 2</span>
-            <span class="service-action">
-              View details
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </span>
-          </div>
+          <div class="service-header"><span class="service-type">Regulatory Compliance</span><span class="service-badge badge-grey">GDPR / Cyber Essentials / SOC 2</span></div>
+          <div class="service-body"><h3 class="service-title">Compliance Consulting</h3><p class="service-desc">Gap analysis and roadmap support for GDPR, Cyber Essentials, SOC 2, PCI-DSS, and ISO 27001 certification.</p></div>
+          <div class="service-footer"><span>ISO · PCI-DSS · SOC 2</span><span class="service-action">View details <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></div>
         </div>
       </button>
     </div>
-
   </div>
 </section>
+
+<!-- SERVICE MODALS -->
+<div class="modal-overlay" id="serviceModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-box">
+    <button class="modal-close" id="modalClose" aria-label="Close modal">✕</button>
+    <div class="modal-tag" id="modalTag"></div>
+    <div class="modal-title" id="modalTitle"></div>
+    <div class="modal-desc" id="modalDesc"></div>
+    <ul class="modal-benefits" id="modalBenefits"></ul>
+    <a href="#contact" class="btn-primary modal-cta" id="modalCta"></a>
+  </div>
+</div>
+
 <div class="divider-line" role="separator"></div>
 
-<!-- ═══ PORTFOLIO ═══ -->
-<!--
-  HCI FIX: Portfolio cards are clearly read-only case studies.
-  Visual diff from service cards:
-  - No transform on hover (no lift)
-  - No clickable left-accent bar
-  - "// Case study — read only" label at bottom
-  - Darker header gradient
-  This prevents users from expecting a modal when clicking portfolio cards.
--->
+<!-- PORTFOLIO -->
 <section id="portfolio" aria-labelledby="portfolio-heading">
   <div class="section-tag">// Case Studies</div>
   <h2 id="portfolio-heading">Our Work</h2>
   <p class="section-lead">Anonymised engagements showcasing the types of vulnerabilities we've uncovered and remediated for our clients.</p>
   <div class="portfolio-grid">
-
     <article class="portfolio-card">
       <div class="portfolio-header"><span class="portfolio-type">Web App Pentest</span><span class="severity critical">Critical</span></div>
-      <div class="portfolio-body">
-        <h3 class="portfolio-title">SQL Injection in Financial Portal</h3>
-        <p class="portfolio-desc">Discovered unauthenticated SQL injection in a fintech customer portal, allowing full database extraction including encrypted card data. Remediation and re-test delivered within 5 days.</p>
-      </div>
+      <div class="portfolio-body"><h3 class="portfolio-title">SQL Injection in Financial Portal</h3><p class="portfolio-desc">Discovered unauthenticated SQL injection in a fintech customer portal, allowing full database extraction including encrypted card data. Remediation and re-test delivered within 5 days.</p></div>
       <div class="portfolio-meta"><span>Sector: Finance</span><span>Duration: 5 days</span><span>Findings: 14</span></div>
-      <div class="portfolio-readonly">
-        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-        // Case study — anonymised
-      </div>
+      <div class="portfolio-readonly"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg> // Case study — anonymised</div>
     </article>
-
     <article class="portfolio-card">
       <div class="portfolio-header"><span class="portfolio-type">Network Assessment</span><span class="severity high">High</span></div>
-      <div class="portfolio-body">
-        <h3 class="portfolio-title">Unpatched Internal SMB Exposure</h3>
-        <p class="portfolio-desc">Internal network assessment revealed unpatched EternalBlue-vulnerable machines on clinical networks, with lateral movement paths to patient record systems.</p>
-      </div>
+      <div class="portfolio-body"><h3 class="portfolio-title">Unpatched Internal SMB Exposure</h3><p class="portfolio-desc">Internal network assessment revealed unpatched EternalBlue-vulnerable machines on clinical networks, with lateral movement paths to patient record systems.</p></div>
       <div class="portfolio-meta"><span>Sector: Healthcare</span><span>Duration: 3 days</span><span>Findings: 9</span></div>
-      <div class="portfolio-readonly">
-        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-        // Case study — anonymised
-      </div>
+      <div class="portfolio-readonly"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg> // Case study — anonymised</div>
     </article>
-
     <article class="portfolio-card">
       <div class="portfolio-header"><span class="portfolio-type">Security Audit</span><span class="severity medium">Medium</span></div>
-      <div class="portfolio-body">
-        <h3 class="portfolio-title">ISO 27001 Gap Analysis — SaaS Startup</h3>
-        <p class="portfolio-desc">Pre-certification audit for a Series A SaaS company identified 23 control gaps. Client achieved ISO 27001 certification within 4 months of our roadmap delivery.</p>
-      </div>
+      <div class="portfolio-body"><h3 class="portfolio-title">ISO 27001 Gap Analysis — SaaS Startup</h3><p class="portfolio-desc">Pre-certification audit for a Series A SaaS company identified 23 control gaps. Client achieved ISO 27001 certification within 4 months of our roadmap delivery.</p></div>
       <div class="portfolio-meta"><span>Sector: Technology</span><span>Duration: 7 days</span><span>Findings: 23</span></div>
-      <div class="portfolio-readonly">
-        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-        // Case study — anonymised
-      </div>
+      <div class="portfolio-readonly"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg> // Case study — anonymised</div>
     </article>
-
   </div>
 </section>
+
 <div class="divider-line" role="separator"></div>
 
-<!-- ═══ AUDIT SAMPLE ═══ -->
+<!-- AUDIT SAMPLE -->
 <section id="audit" aria-labelledby="audit-heading">
   <div class="section-tag">// Sample Report</div>
   <h2 id="audit-heading">What an Audit Looks Like</h2>
@@ -1077,18 +651,18 @@
       <div class="audit-topbar-title">eiferone_report_Client_A_WebApp_2025.pdf — EiferOne Security Assessment</div>
     </div>
     <div class="audit-summary-bar" aria-label="Report summary">
-      Risk Score: <span>61 / 100</span> &nbsp;·&nbsp; Critical: <span style="color:#c05050">3</span> &nbsp;·&nbsp; High: <span style="color:#b08020">1</span> &nbsp;·&nbsp; Medium: <span style="color:#707088">8</span> &nbsp;·&nbsp; Low: <span>3</span>
+      Risk Score: <span>61 / 100</span> &nbsp;·&nbsp; Critical: <span style="color:#d06060">3</span> &nbsp;·&nbsp; High: <span style="color:#c09030">1</span> &nbsp;·&nbsp; Medium: <span style="color:#808098">8</span> &nbsp;·&nbsp; Low: <span>3</span>
     </div>
     <div class="audit-body">
       <div class="audit-sidebar" role="navigation" aria-label="Report sections">
         <h4>Navigation</h4>
         <div class="audit-nav">
           <a href="#" class="active">Executive Summary</a>
-          <a href="#">Scope & Methodology</a>
+          <a href="#">Scope &amp; Methodology</a>
           <a href="#">Critical Findings</a>
           <a href="#">High Findings</a>
           <a href="#">Medium Findings</a>
-          <a href="#">Low & Info</a>
+          <a href="#">Low &amp; Info</a>
           <a href="#">Remediation Plan</a>
           <a href="#">Re-test Results</a>
           <a href="#">Appendices</a>
@@ -1096,7 +670,7 @@
         <div class="audit-score-box">
           <div class="score-num">61</div>
           <div class="score-label">Risk Score / 100</div>
-          <div style="font-size:0.62rem;color:#c05050;margin-top:0.5rem;">⚠ CRITICAL RISK</div>
+          <div style="font-size:0.62rem;color:#d06060;margin-top:0.5rem;">● CRITICAL RISK</div>
         </div>
       </div>
       <div class="audit-main">
@@ -1113,28 +687,28 @@
           <div class="finding-code">
             <div class="terminal-line"># Proof of Concept (sanitised)</div>
             <div class="terminal-line">POST /cargaPost.php  →  payload: 1' AND SLEEP(5)--</div>
-            <div class="terminal-line">→ Server response delayed ~6.0 seconds (confirmed execution)</div>
-            <div class="terminal-line">→ Remediation: Parameterised queries / prepared statements (PDO or MySQLi)</div>
+            <div class="terminal-line">↳ Server response delayed ~6.0 seconds (confirmed execution)</div>
+            <div class="terminal-line">↳ Remediation: Parameterised queries / prepared statements (PDO or MySQLi)</div>
           </div>
         </div>
         <div class="finding critical">
-          <div class="finding-header"><span class="finding-name">EF-002 — Tautology SQL Injection & Mass Data Exfiltration (buscaExpositores.php)</span><span class="severity critical">CRITICAL</span></div>
+          <div class="finding-header"><span class="finding-name">EF-002 — Tautology SQL Injection &amp; Mass Data Exfiltration</span><span class="severity critical">CRITICAL</span></div>
           <div class="finding-desc">The <code>palabrasClave</code> POST parameter accepts unsanitised input. Injecting <code>' OR '1'='1</code> forced a tautology, returning the full database recordset in a single XML response. CVSSv3: 9.8.</div>
           <div class="finding-code">
             <div class="terminal-line">POST /backend/xpos/php/ajax/buscaExpositores.php</div>
             <div class="terminal-line">palabrasClave=' OR '1'='1  →  Full recordset returned in XML</div>
-            <div class="terminal-line">→ UNION SELECT confirmed — table enumeration possible</div>
-            <div class="terminal-line">→ Remediation: Prepared statements, WAF rules, full code audit</div>
+            <div class="terminal-line">↳ UNION SELECT confirmed — table enumeration possible</div>
+            <div class="terminal-line">↳ Remediation: Prepared statements, WAF rules, full code audit</div>
           </div>
         </div>
         <div class="finding critical">
-          <div class="finding-header"><span class="finding-name">EF-003 — Broken Access Control / IDOR & PII Exposure (cargaExpositor.php)</span><span class="severity critical">CRITICAL</span></div>
+          <div class="finding-header"><span class="finding-name">EF-003 — Broken Access Control / IDOR &amp; PII Exposure</span><span class="severity critical">CRITICAL</span></div>
           <div class="finding-desc">Sequential <code>id</code> parameter accepted with no authorisation check. Iterating the ID returns full user profiles including emails, phone numbers, and password hashes without authentication. CVSSv3: 9.1.</div>
           <div class="finding-code">
             <div class="terminal-line">GET /backend/xpos/php/ajax/cargaExpositor.php?id=1</div>
-            <div class="terminal-line">→ Full profile returned: email, phone, password hash</div>
-            <div class="terminal-line">→ All records accessible — no authentication required</div>
-            <div class="terminal-line">→ Remediation: Server-side authorisation checks on all object references</div>
+            <div class="terminal-line">↳ Full profile returned: email, phone, password hash</div>
+            <div class="terminal-line">↳ All records accessible — no authentication required</div>
+            <div class="terminal-line">↳ Remediation: Server-side authorisation checks on all object references</div>
           </div>
         </div>
         <div class="audit-section-title">High Findings</div>
@@ -1142,36 +716,28 @@
           <div class="finding-header"><span class="finding-name">EF-004 — WAF Bypass via Origin IP Exposure</span><span class="severity high">HIGH</span></div>
           <div class="finding-desc">Origin server directly reachable via public IP, bypassing Cloudflare WAF, DDoS protection, and rate limiting entirely. CVSSv3: 7.5.</div>
           <div class="finding-code">
-            <div class="terminal-line">→ Origin IP responds normally to direct HTTP requests</div>
-            <div class="terminal-line">→ Cloudflare security headers absent in direct response</div>
-            <div class="terminal-line">→ Remediation: Restrict inbound to Cloudflare IP ranges only</div>
+            <div class="terminal-line">↳ Origin IP responds normally to direct HTTP requests</div>
+            <div class="terminal-line">↳ Cloudflare security headers absent in direct response</div>
+            <div class="terminal-line">↳ Remediation: Restrict inbound to Cloudflare IP ranges only</div>
           </div>
         </div>
         <div class="finding medium" style="opacity:0.55;pointer-events:none;">
-          <div class="finding-header"><span class="finding-name">EF-005 — Virtual Host Routing Bypass + 8 further findings...</span><span class="severity medium">MEDIUM</span></div>
+          <div class="finding-header"><span class="finding-name">EF-005 — Virtual Host Routing Bypass + 8 further findings…</span><span class="severity medium">MEDIUM</span></div>
           <div class="finding-desc" style="font-style:italic;">Full report includes 8 medium and 3 low severity findings with remediation roadmap, compliance mapping, and a free re-test. Contact us to receive a full sample report.</div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 <div class="divider-line" role="separator"></div>
 
-<!-- ═══ PRICING ═══ -->
-<!--
-  HCI FIX: Three tiers, three distinct button labels:
-  - Starter:    "Start at £499"          (price-anchored, low commitment)
-  - Pro:        "Get Professional Assessment"  (outcome-focused)
-  - Enterprise: "Discuss Enterprise Needs"     (signals conversation, not purchase)
-  Previously all three said "Get Started" — identical labels, zero signal.
-  Visual treatment also differentiates: ghost / filled-white / ghost-silver.
--->
+<!-- PRICING -->
 <section id="pricing" aria-labelledby="pricing-heading">
   <div class="section-tag">// Transparent Pricing</div>
   <h2 id="pricing-heading">Simple, Clear Packages</h2>
   <p class="section-lead">No hidden fees. Every engagement includes a detailed report with remediation guidance and a free re-test within 30 days.</p>
   <div class="pricing-grid">
-
     <div class="pricing-card">
       <div class="plan-name">Starter</div>
       <div class="plan-price">£499 <span>/ engagement</span></div>
@@ -1188,7 +754,6 @@
       </ul>
       <a href="#contact" class="btn-plan">Start at £499</a>
     </div>
-
     <div class="pricing-card featured">
       <div class="featured-badge">Most Popular</div>
       <div class="plan-name">Professional</div>
@@ -1206,7 +771,6 @@
       </ul>
       <a href="#contact" class="btn-plan btn-plan-featured">Get Professional Assessment</a>
     </div>
-
     <div class="pricing-card">
       <div class="plan-name">Enterprise</div>
       <div class="plan-price">Custom <span>/ engagement</span></div>
@@ -1223,526 +787,343 @@
       </ul>
       <a href="#contact" class="btn-plan btn-plan-enterprise">Discuss Enterprise Needs</a>
     </div>
-
   </div>
 </section>
+
 <div class="divider-line" role="separator"></div>
 
-<!-- ═══ FAQ ═══ -->
-<section id="faq" style="background:var(--dark);" aria-labelledby="faq-heading">
+<!-- FAQ -->
+<section id="faq" aria-labelledby="faq-heading">
   <div class="section-tag">// Common Questions</div>
   <h2 id="faq-heading">Frequently Asked Questions</h2>
-  <p class="section-lead">Everything you need to know about working with EiferOne — straight answers, no jargon.</p>
   <div class="faq-list">
     <div class="faq-item">
-      <button class="faq-q" aria-expanded="false"><span>What is penetration testing and why does my business need it?</span><svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
-      <div class="faq-a" role="region"><p>Penetration testing is a simulated cyberattack by security professionals to find vulnerabilities before real attackers can. Required for <strong>Cyber Essentials Plus, ISO 27001, SOC 2, and PCI-DSS</strong>.</p></div>
+      <button class="faq-q" aria-expanded="false">What is penetration testing and why does my business need it?<svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+      <div class="faq-a"><p>Penetration testing is a simulated cyberattack by security professionals to find vulnerabilities before real attackers can. <strong>It is required for Cyber Essentials Plus, ISO 27001, SOC 2, and PCI-DSS compliance.</strong></p></div>
     </div>
     <div class="faq-item">
-      <button class="faq-q" aria-expanded="false"><span>How long does a security audit or penetration test take?</span><svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
-      <div class="faq-a" role="region"><p>A focused web app test takes <strong>3–5 days</strong>. A full infrastructure or ISO 27001 gap analysis takes <strong>5–10 days</strong>. We provide a fixed timeline in the Statement of Work before work begins.</p></div>
+      <button class="faq-q" aria-expanded="false">How long does a security audit or penetration test take?<svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+      <div class="faq-a"><p>A focused web app test takes <strong>3–5 days</strong>. A full infrastructure or ISO 27001 gap analysis takes <strong>5–10 days</strong>. We provide a fixed timeline in the Statement of Work before work begins.</p></div>
     </div>
     <div class="faq-item">
-      <button class="faq-q" aria-expanded="false"><span>What is included in the free website overview?</span><svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
-      <div class="faq-a" role="region"><p>SSL/TLS config, exposed security headers, technology stack, DNS checks, and obvious misconfigurations. Delivered within 24 hours, completely free and no commitment required.</p></div>
+      <button class="faq-q" aria-expanded="false">What is included in the free website overview?<svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+      <div class="faq-a"><p>SSL/TLS config, exposed security headers, technology stack, DNS checks, and obvious misconfigurations. <strong>Delivered within 24 hours, completely free and no commitment required.</strong></p></div>
     </div>
     <div class="faq-item">
-      <button class="faq-q" aria-expanded="false"><span>Does EiferOne work with small businesses?</span><svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
-      <div class="faq-a" role="region"><p>Yes. Our <strong>Starter package from £499</strong> is designed for SMEs and startups who need professional security testing without a large budget.</p></div>
+      <button class="faq-q" aria-expanded="false">Does EiferOne work with small businesses?<svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+      <div class="faq-a"><p>Yes. Our <strong>Starter package from £499</strong> is designed for SMEs and startups who need professional security testing without a large budget.</p></div>
     </div>
     <div class="faq-item">
-      <button class="faq-q" aria-expanded="false"><span>What frameworks does EiferOne test against?</span><svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
-      <div class="faq-a" role="region"><p><strong>OWASP Top 10</strong>, <strong>NIST CSF</strong>, <strong>CIS Benchmarks</strong>, <strong>ISO/IEC 27001</strong>, <strong>Cyber Essentials &amp; Plus</strong>, <strong>SOC 2</strong>, and <strong>PCI-DSS</strong>.</p></div>
+      <button class="faq-q" aria-expanded="false">What frameworks does EiferOne test against?<svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+      <div class="faq-a"><p>OWASP Top 10, NIST CSF, CIS Benchmarks, ISO/IEC 27001, Cyber Essentials &amp; Plus, SOC 2, and PCI-DSS.</p></div>
     </div>
     <div class="faq-item">
-      <button class="faq-q" aria-expanded="false"><span>Will testing cause downtime?</span><svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
-      <div class="faq-a" role="region"><p>In the vast majority of cases, no. We use targeted techniques that minimise disruption and agree rules of engagement upfront. Out-of-hours testing available for sensitive environments.</p></div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-q" aria-expanded="false"><span>What does the final report look like?</span><svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
-      <div class="faq-a" role="region"><p>Executive summary, full technical findings with severity ratings, proof-of-concept evidence, and prioritised remediation roadmap. See the <a href="#audit">Sample Audit</a> above. Free re-test included.</p></div>
+      <button class="faq-q" aria-expanded="false">Will testing cause downtime?<svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+      <div class="faq-a"><p>In the vast majority of cases, no. We use targeted techniques that minimise disruption and agree rules of engagement upfront. <strong>Out-of-hours testing available</strong> for sensitive environments.</p></div>
     </div>
   </div>
 </section>
+
 <div class="divider-line" role="separator"></div>
 
-<!-- ═══ CONTACT ═══ -->
-<!--
-  HCI FIX:
-  - Scan banner (which was a CTA sitting on top of the form it was calling to action on) 
-    is replaced by a "What you'll receive" checklist — adds value without circular redundancy.
-  - Form title is contextual: "Send us your details" rather than repeating the section heading.
-  - No additional CTAs inside the contact section — the form IS the action.
--->
+<!-- CONTACT -->
 <section id="contact" aria-labelledby="contact-heading">
   <div class="section-tag">// Get In Touch</div>
-  <h2 id="contact-heading">Start With a Free<br>Technical Overview</h2>
-  <p class="section-lead">Share your website URL and we'll deliver a no-obligation security overview within 24 hours.</p>
-
+  <h2 id="contact-heading">Start Your Free Consultation</h2>
   <div class="contact-grid">
     <div class="contact-info">
-      <h3>Let's Talk Security</h3>
-      <p>Whether you need a one-off assessment or an ongoing security partnership, we'll help you understand your risk and take action.</p>
-
+      <h3>Let's Discuss Your Security</h3>
+      <p>Whether you need a quick website overview or a comprehensive penetration test, we'll give you honest advice and a fixed quote — no pushy sales calls.</p>
       <div class="contact-detail">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.08 2.18 2 2 0 012.07 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-        <div>
-          <div class="contact-detail-label">Phone</div>
-          <div class="contact-detail-text"><a href="tel:+447804474366" style="color:inherit;text-decoration:none;">+44 7804 474366</a></div>
-        </div>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <div><div class="contact-detail-label">Email</div><div class="contact-detail-text"><a href="mailto:info@eiferone.com">info@eiferone.com</a></div></div>
       </div>
       <div class="contact-detail">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        <div>
-          <div class="contact-detail-label">Email</div>
-          <div class="contact-detail-text"><a href="mailto:info@eiferone.com" style="color:inherit;text-decoration:none;">info@eiferone.com</a></div>
-        </div>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.08 2.18 2 2 0 012.07 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <div><div class="contact-detail-label">Phone</div><div class="contact-detail-text">+44 7804 474 366</div></div>
       </div>
       <div class="contact-detail">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        <div>
-          <div class="contact-detail-label">Location</div>
-          <div class="contact-detail-text">80 Kingsway North, Hollington, England</div>
-        </div>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div><div class="contact-detail-label">Location</div><div class="contact-detail-text">England &amp; Wales, United Kingdom</div></div>
       </div>
-
-      <!-- HCI FIX: "What you'll receive" replaces redundant scan-banner CTA -->
       <div class="contact-promise">
-        <h4>// What you'll receive</h4>
+        <h4>// What You'll Receive</h4>
         <ul>
-          <li>SSL/TLS configuration review</li>
-          <li>Exposed security headers check</li>
-          <li>Technology stack fingerprint</li>
-          <li>DNS & subdomain checks</li>
-          <li>Obvious misconfiguration report</li>
-          <li>Delivered within 24 hours, free</li>
+          <li>Free website security overview within 24 hours</li>
+          <li>Fixed-price quote — no hidden fees</li>
+          <li>Plain-English findings report</li>
+          <li>Remediation guidance included</li>
+          <li>Free re-test within 30–60 days</li>
         </ul>
       </div>
     </div>
-
     <div class="contact-form-panel">
-      <div class="contact-form-title">// Send us your details</div>
-
-      <div id="form-success" style="display:none;text-align:center;padding:3rem 1rem;">
-        <div style="width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,0.05);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--white)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-        </div>
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:0.04em;color:var(--white);margin-bottom:0.5rem;">Message Received</div>
-        <div style="font-size:0.875rem;color:var(--silver);margin-bottom:1.5rem;">We'll get back to you within 24 hours at <strong style="color:var(--text)">info@eiferone.com</strong>.</div>
-        <button id="resetFormBtn" style="background:transparent;border:1px solid var(--border);color:var(--muted);padding:0.6rem 1.5rem;border-radius:2px;cursor:pointer;font-family:'Share Tech Mono',monospace;font-size:0.72rem;">// Send another message</button>
-      </div>
-
-      <!-- REMINDER: Replace access_key value with your real Web3Forms key -->
-      <form id="contact-form" novalidate>
-        <input type="hidden" name="access_key" value="REPLACE_WITH_YOUR_WEB3FORMS_KEY">
-        <input type="hidden" name="subject" value="New EiferOne Enquiry">
-        <input type="hidden" name="from_name" value="EiferOne Website">
-        <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
-
+      <div class="contact-form-title">Request a Free Consultation</div>
+      <form id="contactForm" novalidate>
         <div class="form-group">
-          <label class="form-label" for="contact-name">Full Name *</label>
-          <input type="text" id="contact-name" name="name" class="form-input" placeholder="John Smith" required autocomplete="name">
-          <div class="field-error" id="error-name">// Please enter your full name</div>
+          <label class="form-label" for="fname">Full Name *</label>
+          <input class="form-input" type="text" id="fname" name="name" autocomplete="name" required placeholder="Jane Smith">
+          <div class="field-error" id="fnameError">Please enter your name.</div>
         </div>
         <div class="form-group">
-          <label class="form-label" for="contact-email">Email Address *</label>
-          <input type="email" id="contact-email" name="email" class="form-input" placeholder="john@company.com" required autocomplete="email">
-          <div class="field-error" id="error-email">// Please enter a valid email address</div>
+          <label class="form-label" for="femail">Work Email *</label>
+          <input class="form-input" type="email" id="femail" name="email" autocomplete="email" required placeholder="jane@company.com">
+          <div class="field-error" id="femailError">Please enter a valid email address.</div>
         </div>
         <div class="form-group">
-          <label class="form-label" for="contact-url">Website URL <span style="color:var(--muted);font-size:0.68rem;">— for free overview</span></label>
-          <input type="url" id="contact-url" name="website_url" class="form-input" placeholder="https://yoursite.com" autocomplete="url">
+          <label class="form-label" for="fcompany">Company</label>
+          <input class="form-input" type="text" id="fcompany" name="company" autocomplete="organization" placeholder="Acme Ltd">
         </div>
         <div class="form-group">
-          <label class="form-label" for="contact-service">Service Interested In</label>
-          <select id="contact-service" name="service" class="form-select">
-            <option value="">Select a service...</option>
+          <label class="form-label" for="fservice">Service Interested In</label>
+          <select class="form-select" id="fservice" name="service">
+            <option value="">Select a service…</option>
             <option>Free Website Overview</option>
             <option>Penetration Testing</option>
             <option>Security Audit</option>
             <option>Network Assessment</option>
+            <option>Application Security</option>
             <option>Compliance Consulting</option>
-            <option>Enterprise / Custom</option>
+            <option>Other / Not Sure</option>
           </select>
         </div>
         <div class="form-group">
-          <label class="form-label" for="contact-message">Tell Us About Your Needs</label>
-          <textarea id="contact-message" name="message" class="form-textarea" placeholder="Brief description of your infrastructure or concerns..."></textarea>
+          <label class="form-label" for="fmessage">Message</label>
+          <textarea class="form-textarea" id="fmessage" name="message" placeholder="Tell us about your security needs or ask us anything…"></textarea>
         </div>
-
-        <div id="form-error" style="display:none;background:rgba(200,60,60,0.08);border:1px solid rgba(200,60,60,0.2);border-radius:3px;padding:0.75rem 1rem;margin-bottom:1rem;font-size:0.78rem;color:#c06060;font-family:'Share Tech Mono',monospace;" role="alert" aria-live="assertive">
-          ⚠ Something went wrong. Please email <a href="mailto:info@eiferone.com" style="color:#c06060;">info@eiferone.com</a> directly.
-        </div>
-        <button type="submit" class="form-submit" id="submit-btn">
-          <span id="btn-text">Send Message →</span>
-          <span id="btn-loading" style="display:none;" aria-live="polite">Sending...</span>
-        </button>
-        <div class="form-note">// Free overview included — no obligations. We respond within 24 hours.</div>
+        <button type="submit" class="form-submit" id="formSubmit">Send Message →</button>
+        <div class="form-note">// We respond within 24 hours · No commitment required</div>
       </form>
     </div>
   </div>
 </section>
 
-<!-- ═══ SERVICE MODAL ═══ -->
-<!--
-  HCI FIX: Modal CTA label is service-specific (set dynamically per service).
-  Previously "Request This Service →" was identical for all 6 modals.
-  Now each modal shows e.g. "Request Penetration Testing →"
--->
-<div class="modal-overlay" id="serviceModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-  <div class="modal-box">
-    <button class="modal-close" id="modalClose" aria-label="Close modal">×</button>
-    <div class="modal-tag" id="modalTag">// Service</div>
-    <h2 class="modal-title" id="modalTitle">Service Name</h2>
-    <p class="modal-desc" id="modalDesc">Description</p>
-    <ul class="modal-benefits" id="modalBenefits"></ul>
-    <a href="#contact" class="btn-primary modal-cta" id="modalCTA">Request Service →</a>
-  </div>
-</div>
-
-<!-- ═══ FOOTER ═══ -->
-<!--
-  HCI FIX: Footer "Services" column links now open the service modal directly
-  instead of all navigating to the same #services anchor.
-  "Company" column links are distinct destinations — no circular self-links.
--->
-<footer role="contentinfo">
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <img src="./assets/footerlogo.png" alt="EiferOne cybersecurity consultancy" class="footer-logo-img" width="140" height="42">
-      <p>Professional cybersecurity consultancy. Helping businesses identify and remediate risk before attackers can exploit it.</p>
-    </div>
-    <div class="footer-col">
-      <h4>Services</h4>
-      <!-- Each link opens the relevant service modal -->
-      <a data-service="pentest" role="button" tabindex="0">Penetration Testing</a>
-      <a data-service="audit"   role="button" tabindex="0">Security Audits</a>
-      <a data-service="network" role="button" tabindex="0">Network Assessment</a>
-      <a data-service="appsec"  role="button" tabindex="0">Application Security</a>
-      <a data-service="iam"     role="button" tabindex="0">Identity & Access</a>
-      <a data-service="compliance" role="button" tabindex="0">Compliance</a>
-    </div>
-    <div class="footer-col">
-      <h4>Company</h4>
-      <a href="./assets/Eiferone Portfolioo.pdf" target="_blank" rel="noopener noreferrer">Portfolio PDF</a>
-      <a href="./assets/Eiferone Sample Prototype.pdf" target="_blank" rel="noopener noreferrer">Sample Report PDF</a>
-      <a href="#pricing">Pricing</a>
-      <a href="team.html">Our Team</a>
-    </div>
-    <div class="footer-col">
-      <h4>Legal</h4>
-      <a href="privacy-policy.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Service</a>
-      <a href="disclosure.html">Responsible Disclosure</a>
-    </div>
-    <div class="footer-col">
-      <h4>Social</h4>
-      <a href="https://linkedin.com/company/eiferone" target="_blank" rel="noopener noreferrer" aria-label="EiferOne on LinkedIn">
-        <svg class="footer-social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn
-      </a>
-      <a href="https://instagram.com/eiferone" target="_blank" rel="noopener noreferrer" aria-label="EiferOne on Instagram">
-        <svg class="footer-social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>Instagram
-      </a>
-      <a href="https://github.com/eiferone" target="_blank" rel="noopener noreferrer" aria-label="EiferOne on GitHub">
-        <svg class="footer-social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>GitHub
-      </a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <div id="footer-copyright"></div>
-    <div class="footer-bottom-links">
-      <a href="https://linkedin.com/company/eiferone" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="https://github.com/eiferone" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a href="mailto:info@eiferone.com">Email</a>
-    </div>
-  </div>
-</footer>
-
+<!-- SCRIPTS -->
+<script src="./components.js"></script>
 <script>
-// ─── Copyright year ───────────────────────────────────────────────────────────
-document.getElementById('footer-copyright').textContent =
-  '© ' + new Date().getFullYear() + ' EiferOne Ltd. All rights reserved. Registered in England & Wales.';
+(function () {
+  'use strict';
 
-// ─── Service data ─────────────────────────────────────────────────────────────
-const services = {
-  pentest: {
-    tag: '// Offensive Security',
-    title: 'Penetration Testing',
-    cta: 'Request Penetration Testing →',
-    desc: 'Our penetration testing service simulates sophisticated real-world attacks against your web applications, APIs, networks, and infrastructure. Every test is led by experienced security professionals who go beyond automated scanning to uncover genuine business risk.',
-    benefits: [
-      'Full OWASP Top-10 coverage for web and mobile applications',
-      'Manual testing by certified security professionals (OSCP/CEH)',
-      'Detailed proof-of-concept exploitation with CVSSv3 scoring',
-      'Prioritised remediation roadmap with developer-friendly guidance',
-      'Free re-test within 30 days to verify fixes',
-      'Suitable for Cyber Essentials Plus, ISO 27001, and PCI-DSS requirements'
-    ]
-  },
-  audit: {
-    tag: '// Governance & Risk',
-    title: 'Security Audits',
-    cta: 'Request a Security Audit →',
-    desc: 'A comprehensive security audit reviews your entire security posture — policies, controls, architecture, and processes — against leading frameworks. We deliver a clear gap analysis with a prioritised action plan you can take straight to the board.',
-    benefits: [
-      'Full gap analysis against ISO 27001, NIST CSF, or CIS Controls',
-      'Review of security policies, procedures, and governance documentation',
-      'Technical architecture review and threat modelling',
-      'Risk register creation with quantified business impact',
-      'Board-ready executive summary alongside technical detail',
-      'ISO 27001 / SOC 2 pre-certification preparation support'
-    ]
-  },
-  network: {
-    tag: '// Infrastructure',
-    title: 'Network Assessment',
-    cta: 'Request a Network Assessment →',
-    desc: 'Our network assessment evaluates your full infrastructure — external perimeter, internal network, cloud configurations, and firewall rule sets. We map every attack path an adversary could follow, from the internet to your crown jewels.',
-    benefits: [
-      'External perimeter reconnaissance and attack surface mapping',
-      'Internal network segmentation and lateral movement analysis',
-      'Firewall rule review and misconfiguration detection',
-      'Cloud security posture assessment (AWS / Azure / GCP)',
-      'Active Directory and domain privilege escalation paths',
-      'Full network topology diagram with risk annotations'
-    ]
-  },
-  appsec: {
-    tag: '// Application Security',
-    title: 'Application Security',
-    cta: 'Request Application Security Testing →',
-    desc: 'We perform deep application security testing covering OWASP Top 10, business logic flaws, and framework-specific vulnerabilities. Whether you have a SaaS platform, REST API, or mobile app, we test it the way attackers would.',
-    benefits: [
-      'OWASP Top-10 and OWASP API Security Top-10 coverage',
-      'Business logic and privilege escalation testing',
-      'Source code review (SAST) and dynamic analysis (DAST)',
-      'Authentication, authorisation, and session management testing',
-      'Mobile application testing (iOS and Android)',
-      'Integrates with your SDLC and CI/CD pipeline'
-    ]
-  },
-  iam: {
-    tag: '// Identity Security',
-    title: 'Identity & Access Review',
-    cta: 'Request an Identity Review →',
-    desc: 'Credential compromise is the leading cause of breaches. Our identity and access review audits your entire IAM landscape — from Active Directory to Entra ID, cloud roles to service accounts — to eliminate the risk of privilege abuse.',
-    benefits: [
-      'Active Directory security review: Kerberoasting, AS-REP roasting, delegation',
-      'Microsoft Entra ID / Azure AD configuration audit',
-      'MFA coverage analysis and bypass risk assessment',
-      'Service account privilege review and least-privilege audit',
-      'Cloud IAM policy review (AWS IAM, Azure RBAC, GCP IAM)',
-      'Privileged Access Management (PAM) recommendations'
-    ]
-  },
-  compliance: {
-    tag: '// Regulatory Compliance',
-    title: 'Compliance Consulting',
-    cta: 'Request Compliance Consulting →',
-    desc: "Navigating compliance frameworks doesn't have to be painful. Our consultants have guided companies from zero to certified across multiple frameworks. We give you a clear, practical roadmap — not a mountain of bureaucracy.",
-    benefits: [
-      'ISO 27001 gap analysis and full implementation support',
-      'Cyber Essentials and Cyber Essentials Plus preparation',
-      'GDPR data protection impact assessments (DPIA)',
-      'SOC 2 Type I and Type II readiness assessment',
-      'PCI-DSS scoping and pre-assessment support',
-      'Ongoing compliance programme management available'
-    ]
-  }
-};
-
-// ─── Modal ────────────────────────────────────────────────────────────────────
-let lastFocused = null;
-
-function getFocusable(el) {
-  return [...el.querySelectorAll('a[href],button:not([disabled]),input,textarea,select,[tabindex]:not([tabindex="-1"])')];
-}
-
-function openServiceModal(key) {
-  const s = services[key];
-  if (!s) return;
-  document.getElementById('modalTag').textContent   = s.tag;
-  document.getElementById('modalTitle').textContent = s.title;
-  document.getElementById('modalDesc').textContent  = s.desc;
-  // HCI FIX: service-specific CTA label
-  const cta = document.getElementById('modalCTA');
-  cta.textContent = s.cta;
-
-  const ul = document.getElementById('modalBenefits');
-  ul.innerHTML = '';
-  s.benefits.forEach(b => { const li = document.createElement('li'); li.textContent = b; ul.appendChild(li); });
-
-  lastFocused = document.activeElement;
-  const modal = document.getElementById('serviceModal');
-  modal.classList.add('active');
-  document.body.style.overflow = 'hidden';
-  setTimeout(() => document.getElementById('modalClose').focus(), 80);
-}
-
-function closeServiceModal() {
-  document.getElementById('serviceModal').classList.remove('active');
-  document.body.style.overflow = '';
-  if (lastFocused) lastFocused.focus();
-}
-
-// Focus trap
-document.getElementById('serviceModal').addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') { closeServiceModal(); return; }
-  if (e.key !== 'Tab') return;
-  const focusable = getFocusable(this.querySelector('.modal-box'));
-  if (!focusable.length) return;
-  const first = focusable[0], last = focusable[focusable.length - 1];
-  if (e.shiftKey ? document.activeElement === first : document.activeElement === last) {
-    e.preventDefault(); (e.shiftKey ? last : first).focus();
-  }
-});
-document.getElementById('serviceModal').addEventListener('click', e => { if (e.target === document.getElementById('serviceModal')) closeServiceModal(); });
-document.getElementById('modalClose').addEventListener('click', closeServiceModal);
-document.getElementById('modalCTA').addEventListener('click', closeServiceModal);
-
-// ─── Wire up all service triggers (cards + nav dropdown + footer) ─────────────
-function wireServiceTriggers() {
-  document.querySelectorAll('[data-service]').forEach(el => {
-    el.addEventListener('click', () => openServiceModal(el.dataset.service));
-    // keyboard support for non-button elements (footer links)
-    if (el.tagName !== 'BUTTON') {
-      el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openServiceModal(el.dataset.service); } });
+  /* ── SERVICE MODAL DATA ─── */
+  const SERVICES = {
+    pentest: {
+      tag: '// Offensive Security',
+      title: 'Penetration Testing',
+      desc: 'Simulated real-world attacks on your infrastructure, web applications, and APIs. We think like attackers to expose what automated scanners miss.',
+      benefits: [
+        'Web application & API penetration testing (OWASP Top 10)',
+        'External & internal network penetration testing',
+        'Social engineering & phishing simulations',
+        'CVSSv3-scored findings with proof-of-concept',
+        'Executive summary + technical report',
+        'Free re-test within 30 days of remediation'
+      ],
+      cta: 'Book a Penetration Test'
+    },
+    audit: {
+      tag: '// Governance & Risk',
+      title: 'Security Audits',
+      desc: 'In-depth review of your security controls, policies, and architecture against leading frameworks. We identify gaps and give you a clear roadmap to close them.',
+      benefits: [
+        'ISO 27001 gap analysis & implementation support',
+        'NIST Cybersecurity Framework assessment',
+        'CIS Benchmark review',
+        'Policy & procedure review',
+        'Risk register creation or review',
+        'Board-ready executive summary'
+      ],
+      cta: 'Request a Security Audit'
+    },
+    network: {
+      tag: '// Infrastructure Security',
+      title: 'Network Assessment',
+      desc: 'Comprehensive evaluation of your network perimeter, internal segmentation, firewall rules, and cloud infrastructure.',
+      benefits: [
+        'External attack surface mapping',
+        'Internal network segmentation review',
+        'Firewall rule analysis',
+        'Active Directory & Group Policy audit',
+        'Cloud security posture (AWS, Azure, GCP)',
+        'Prioritised remediation plan'
+      ],
+      cta: 'Request a Network Assessment'
+    },
+    appsec: {
+      tag: '// Application Security',
+      title: 'Application Security',
+      desc: 'OWASP Top-10 focused testing for web and mobile applications. We find business logic flaws and authentication bypasses that automated scanners can\'t.',
+      benefits: [
+        'Manual web application penetration testing',
+        'Mobile application security review (iOS & Android)',
+        'API security testing (REST, GraphQL, SOAP)',
+        'Source code review (SAST)',
+        'Business logic & authentication flaw testing',
+        'Secure code recommendations'
+      ],
+      cta: 'Request App Security Testing'
+    },
+    iam: {
+      tag: '// Identity Security',
+      title: 'Identity & Access Review',
+      desc: 'Audit of user privileges, MFA posture, and directory configuration. Credential-based attacks are the #1 cause of breaches — we close that door.',
+      benefits: [
+        'Active Directory privilege & configuration audit',
+        'Microsoft Entra ID / Azure AD review',
+        'MFA coverage & bypass risk assessment',
+        'Privileged Access Management (PAM) review',
+        'Least-privilege gap analysis',
+        'Zero Trust readiness assessment'
+      ],
+      cta: 'Request an IAM Review'
+    },
+    compliance: {
+      tag: '// Regulatory Compliance',
+      title: 'Compliance Consulting',
+      desc: 'Gap analysis and roadmap support for major compliance frameworks. We make certification achievable without the consultant-speak.',
+      benefits: [
+        'Cyber Essentials & Cyber Essentials Plus preparation',
+        'ISO 27001 gap analysis & certification support',
+        'SOC 2 Type I & II readiness',
+        'PCI-DSS compliance assessment',
+        'GDPR data flow mapping & DPA review',
+        'Evidence packs & policy templates'
+      ],
+      cta: 'Discuss Compliance Needs'
     }
-  });
-}
-wireServiceTriggers();
+  };
 
-// ─── Hamburger ────────────────────────────────────────────────────────────────
-const hamburger = document.getElementById('navHamburger');
-const mobileNav = document.getElementById('mobileNav');
+  /* ── MODAL ─── */
+  const overlay  = document.getElementById('serviceModal');
+  const closeBtn = document.getElementById('modalClose');
 
-hamburger.addEventListener('click', function() {
-  const open = this.getAttribute('aria-expanded') === 'true';
-  this.setAttribute('aria-expanded', String(!open));
-  mobileNav.classList.toggle('open', !open);
-  mobileNav.setAttribute('aria-hidden', String(open));
-});
-mobileNav.querySelectorAll('a').forEach(a => {
-  a.addEventListener('click', () => {
-    hamburger.setAttribute('aria-expanded', 'false');
-    mobileNav.classList.remove('open');
-    mobileNav.setAttribute('aria-hidden', 'true');
-  });
-});
-document.addEventListener('click', e => {
-  if (!hamburger.contains(e.target) && !mobileNav.contains(e.target)) {
-    hamburger.setAttribute('aria-expanded', 'false');
-    mobileNav.classList.remove('open');
-    mobileNav.setAttribute('aria-hidden', 'true');
+  function openModal(key) {
+    const s = SERVICES[key];
+    if (!s) return;
+    document.getElementById('modalTag').textContent   = s.tag;
+    document.getElementById('modalTitle').textContent = s.title;
+    document.getElementById('modalDesc').textContent  = s.desc;
+    const ul = document.getElementById('modalBenefits');
+    ul.innerHTML = s.benefits.map(b => `<li>${b}</li>`).join('');
+    const cta = document.getElementById('modalCta');
+    cta.textContent = s.cta + ' →';
+    cta.onclick = function () { overlay.classList.remove('active'); };
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    closeBtn.focus();
   }
-});
 
-// ─── Services nav dropdown ────────────────────────────────────────────────────
-const dd = document.getElementById('servicesDropdown');
-const ddLink = document.getElementById('servicesNavLink');
-if (dd) {
-  ddLink.addEventListener('click', e => {
+  function closeModal() {
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('[data-service]').forEach(function (el) {
+    el.addEventListener('click', function () { openModal(el.dataset.service); });
+  });
+
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', function (e) { if (e.target === overlay) closeModal(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
+
+  /* ── FAQ ─── */
+  document.querySelectorAll('.faq-q').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      document.querySelectorAll('.faq-q').forEach(function (b) {
+        b.setAttribute('aria-expanded', 'false');
+        b.nextElementSibling.classList.remove('open');
+      });
+      if (!expanded) {
+        btn.setAttribute('aria-expanded', 'true');
+        btn.nextElementSibling.classList.add('open');
+      }
+    });
+  });
+
+  /* ── CONTACT FORM ─── */
+  const form   = document.getElementById('contactForm');
+  const submit = document.getElementById('formSubmit');
+
+  form.addEventListener('submit', function (e) {
     e.preventDefault();
-    const open = dd.classList.contains('open');
-    dd.classList.toggle('open', !open);
-    ddLink.setAttribute('aria-expanded', String(!open));
-  });
-  document.addEventListener('click', e => {
-    if (!dd.contains(e.target)) { dd.classList.remove('open'); ddLink.setAttribute('aria-expanded', 'false'); }
-  });
-}
+    let valid = true;
 
-// ─── Form validation ──────────────────────────────────────────────────────────
-function validateField(input) {
-  const id = input.id.replace('contact-', '');
-  const err = document.getElementById('error-' + id);
-  if (!err) return true;
-  const valid = input.checkValidity();
-  input.classList.toggle('error', !valid);
-  err.classList.toggle('visible', !valid);
-  return valid;
-}
+    const name  = document.getElementById('fname');
+    const email = document.getElementById('femail');
 
-document.querySelectorAll('#contact-form input[required]').forEach(input => {
-  input.addEventListener('blur',  () => validateField(input));
-  input.addEventListener('input', () => { if (input.classList.contains('error')) validateField(input); });
-});
+    [name, email].forEach(function (f) { f.classList.remove('error'); });
+    document.querySelectorAll('.field-error').forEach(function (el) { el.classList.remove('visible'); });
 
-document.getElementById('contact-form').addEventListener('submit', async function(e) {
-  e.preventDefault();
-  let valid = true;
-  this.querySelectorAll('input[required]').forEach(i => { if (!validateField(i)) valid = false; });
-  if (!valid) return;
-
-  const btn = document.getElementById('submit-btn');
-  const txt = document.getElementById('btn-text');
-  const ld  = document.getElementById('btn-loading');
-  const err = document.getElementById('form-error');
-  btn.disabled = true; txt.style.display = 'none'; ld.style.display = 'inline'; err.style.display = 'none';
-
-  try {
-    const res = await fetch('https://api.web3forms.com/submit', {
-      method: 'POST', body: new FormData(this), headers: { 'Accept': 'application/json' }
-    });
-    if (res.ok) {
-      this.style.display = 'none';
-      document.getElementById('form-success').style.display = 'block';
-    } else throw new Error();
-  } catch {
-    err.style.display = 'block';
-    btn.disabled = false; txt.style.display = 'inline'; ld.style.display = 'none';
-  }
-});
-
-document.getElementById('resetFormBtn').addEventListener('click', () => {
-  const form = document.getElementById('contact-form');
-  form.reset();
-  form.querySelectorAll('.error').forEach(e => e.classList.remove('error'));
-  form.querySelectorAll('.field-error').forEach(e => e.classList.remove('visible'));
-  form.style.display = 'block';
-  document.getElementById('form-success').style.display = 'none';
-});
-
-// ─── FAQ ──────────────────────────────────────────────────────────────────────
-document.querySelectorAll('.faq-q').forEach(btn => {
-  btn.addEventListener('click', function() {
-    const expanded = this.getAttribute('aria-expanded') === 'true';
-    document.querySelectorAll('.faq-q').forEach(b => {
-      b.setAttribute('aria-expanded', 'false');
-      b.nextElementSibling.classList.remove('open');
-    });
-    if (!expanded) {
-      this.setAttribute('aria-expanded', 'true');
-      this.nextElementSibling.classList.add('open');
+    if (!name.value.trim()) {
+      name.classList.add('error');
+      document.getElementById('fnameError').classList.add('visible');
+      valid = false;
     }
-  });
+    if (!email.value.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+      email.classList.add('error');
+      document.getElementById('femailError').classList.add('visible');
+      valid = false;
+    }
+
+    if (!valid) return;
+    submit.disabled = true;
+    submit.textContent = 'Sending…';
+    setTimeout(function () {
+    submit.disabled = false;
+    submit.textContent = 'Send Message';
+    submit.closest('form').innerHTML = '<p style="color:var(--accent2);padding:2rem 0;font-family:\'Share Tech Mono\',monospace;">// Message sent. We\'ll be in touch shortly.</p>';
+  }, 1200);
 });
 
-// ─── Smooth scroll ────────────────────────────────────────────────────────────
-const NAV_H = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h'));
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const href = a.getAttribute('href');
-    if (!href || href === '#') return;
-    const target = document.querySelector(href);
-    if (target) { e.preventDefault(); window.scrollTo({ top: target.offsetTop - NAV_H, behavior: 'smooth' }); }
-  });
-});
+/* ── BIRD MOUSE PARALLAX ── */
+(function () {
+  var birdWrap = document.querySelector('.bird-img-wrap');
+  var birdContainer = document.querySelector('.hero-bird');
+  if (!birdWrap || !birdContainer) return;
 
-// ─── Scroll animations ────────────────────────────────────────────────────────
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)'; }
-  });
-}, { threshold: 0.08 });
+  /* Inject !important rule to fully override CSS keyframe animation */
+  var s = document.createElement('style');
+  s.textContent = '.bird-img-wrap { animation: none !important; }';
+  document.head.appendChild(s);
 
-document.querySelectorAll('.service-card, .portfolio-card, .pricing-card, .finding, .faq-item, .about-stat').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(22px)';
-  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-  obs.observe(el);
-});
+  var targetX = 0, targetY = 0, currentX = 0, currentY = 0;
+  var floatT = 0, isOver = false;
+  var SHIFT = 20, LERP = 0.09, FLOAT_AMP = 16, FLOAT_SPEED = 0.0025;
+
+  function loop() {
+    floatT += FLOAT_SPEED;
+    var floatY = isOver ? 0 : Math.sin(floatT) * FLOAT_AMP;
+    currentX += (targetX - currentX) * LERP;
+    currentY += (targetY - currentY) * LERP;
+    var tiltY = currentX * 0.6;
+    var tiltX = -currentY * 0.4;
+    birdWrap.style.transform =
+      'translateX(' + currentX + 'px) ' +
+      'translateY(' + (currentY + floatY) + 'px) ' +
+      'rotateX(' + tiltX + 'deg) ' +
+      'rotateY(' + tiltY + 'deg)';
+    requestAnimationFrame(loop);
+  }
+
+  birdContainer.addEventListener('mousemove', function (e) {
+    var rect = birdContainer.getBoundingClientRect();
+    var dx = (e.clientX - (rect.left + rect.width  / 2)) / (rect.width  / 2);
+    var dy = (e.clientY - (rect.top  + rect.height / 2)) / (rect.height / 2);
+    targetX = dx * SHIFT;
+    targetY = dy * SHIFT;
+    isOver = true;
+  });
+
+  birdContainer.addEventListener('mouseleave', function () {
+    targetX = 0; targetY = 0; isOver = false;
+  });
+
+  birdWrap.style.willChange = 'transform';
+  birdWrap.style.transformStyle = 'preserve-3d';
+  loop();
+})();
+
+}());
 </script>
 </body>
-
 </html>

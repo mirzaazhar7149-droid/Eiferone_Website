@@ -8,311 +8,90 @@
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://eiferone.com/disclosure.html">
 <link rel="icon" type="image/png" href="./assets/Favicon.png">
-
-<!-- FIX: Async font loading — non-render-blocking -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Bebas+Neue&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Bebas+Neue&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet"></noscript>
-
+<link rel="stylesheet" href="./shared.css">
 <style>
+.page-hero { padding:8rem 5% 3.5rem; background:var(--dark); border-bottom:1px solid var(--border); }
+.page-tag { font-family:'Share Tech Mono',monospace; font-size:0.68rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.18em; margin-bottom:0.75rem; }
+.page-title { font-family:'Bebas Neue',sans-serif; font-size:clamp(2.5rem,5vw,4rem); letter-spacing:0.02em; color:var(--white); margin-bottom:0.5rem; }
+.page-meta { font-family:'Share Tech Mono',monospace; font-size:0.7rem; color:var(--muted); margin-bottom:1rem; }
+.report-badge { display:inline-flex; align-items:center; gap:0.75rem; background:rgba(255,255,255,0.04); border:1px solid var(--border2); border-radius:2px; padding:0.5rem 1rem; font-family:'Share Tech Mono',monospace; font-size:0.78rem; color:var(--text); margin-top:0.5rem; }
+.report-badge a { color:var(--accent2); text-decoration:none; }
+.report-badge a:hover { color:var(--white); }
 
-  :root {
-    --black:   #080809;
-    --dark:    #0f0f11;
-    --mid:     #161619;
-    --card:    #1a1a1e;
-    --border:  #252528;
-    --border2: #323236;
-    --accent:  #e0e0e8;
-    --accent2: #a0a0b0;
-    --white:   #f4f4f6;
-    --text:    #b0b0be;
-    --muted:   #505060;
-    --silver:  #787890;
-    --dim:     rgba(255,255,255,0.04);
-    /* FIX: nav height token */
-    --nav-h:   64px;
-  }
+.page-layout { display:grid; grid-template-columns:220px 1fr; gap:3rem; max-width:1100px; margin:0 auto; padding:4rem 5% 6rem; }
+.toc { position:sticky; top:calc(var(--nav-h) + 1.5rem); align-self:start; max-height:calc(100vh - var(--nav-h) - 4rem); overflow-y:auto; }
+.toc-label { font-family:'Share Tech Mono',monospace; font-size:0.62rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.14em; margin-bottom:0.75rem; padding-bottom:0.5rem; border-bottom:1px solid var(--border); }
+.toc a { display:block; padding:0.4rem 0.6rem; margin-bottom:0.1rem; font-size:0.8rem; color:var(--muted); text-decoration:none; border-left:2px solid transparent; transition:color 0.2s,border-color 0.2s; border-radius:0 2px 2px 0; }
+.toc a:hover,.toc a.active { color:var(--white); border-left-color:var(--silver); }
+.toc-btn { display:block; margin-top:1.5rem; text-align:center; background:var(--white); color:var(--black); padding:0.65rem; border-radius:2px; font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:0.8rem; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; transition:background 0.2s; }
+.toc-btn:hover { background:var(--accent); }
+.content { min-width:0; }
+.policy-section { margin-bottom:0; }
+.sec-h { font-family:'Bebas Neue',sans-serif; font-size:1.5rem; letter-spacing:0.04em; color:var(--white); margin-bottom:1.25rem; display:flex; align-items:baseline; gap:0.75rem; }
+.sec-num { font-family:'Share Tech Mono',monospace; font-size:0.7rem; color:var(--muted); }
+.content p { font-size:0.9rem; color:var(--silver); line-height:1.8; margin-bottom:0.85rem; }
+.content a { color:var(--accent2); text-decoration:none; }
+.content a:hover { color:var(--white); text-decoration:underline; }
+.content ul { list-style:none; margin:1rem 0; }
+.content ul li { font-size:0.9rem; color:var(--silver); padding:0.45rem 0; border-bottom:1px solid var(--border); display:flex; align-items:flex-start; gap:0.65rem; }
+.content ul li::before { content:'›'; color:var(--silver); flex-shrink:0; font-family:'Share Tech Mono',monospace; }
+.content ul li:last-child { border-bottom:none; }
+.content ul li strong { color:var(--text); }
+.highlight-box { background:rgba(255,255,255,0.03); border:1px solid var(--border); border-left:3px solid var(--silver); border-radius:3px; padding:1.25rem; margin:1.25rem 0; font-size:0.875rem; color:var(--silver); line-height:1.7; }
+.highlight-box strong { display:block; color:var(--white); margin-bottom:0.35rem; font-family:'Barlow Condensed',sans-serif; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; }
+.warning-box { background:rgba(180,130,0,0.08); border:1px solid rgba(180,130,0,0.22); border-left:3px solid #b09030; border-radius:3px; padding:1.25rem; margin:1.25rem 0; font-size:0.875rem; color:var(--silver); line-height:1.7; }
+.warning-box strong { display:block; color:#c0a040; margin-bottom:0.35rem; font-family:'Barlow Condensed',sans-serif; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; }
+.no-box { background:rgba(100,60,60,0.08); border:1px solid rgba(150,60,60,0.22); border-radius:3px; padding:1.25rem; margin:1.25rem 0; font-size:0.875rem; color:var(--silver); line-height:1.7; }
+.no-box strong { display:block; color:#c07070; margin-bottom:0.35rem; font-family:'Barlow Condensed',sans-serif; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; }
+.no-box ul { margin:0.5rem 0 0; padding-left:1.25rem; list-style:disc; }
+.no-box ul li { font-size:0.875rem; border:none; padding:0.2rem 0; display:list-item; }
+.no-box ul li::before { display:none; }
+.divider { height:1px; background:linear-gradient(90deg,transparent,var(--border),transparent); margin:2.5rem 0; }
 
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
+/* Scope grid */
+.scope-grid { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin:1.25rem 0; }
+.scope-card { background:var(--card); border:1px solid var(--border); border-radius:3px; padding:1.25rem; }
+.scope-card h4 { font-family:'Barlow Condensed',sans-serif; font-size:0.85rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; margin-bottom:0.75rem; }
+.scope-card.in-scope h4 { color:#50b080; }
+.scope-card.out-scope h4 { color:#b06060; }
+.scope-card ul { list-style:none; margin:0; }
+.scope-card ul li { font-size:0.82rem; color:var(--silver); padding:0.3rem 0; border-bottom:1px solid var(--border); display:flex; align-items:flex-start; gap:0.5rem; }
+.scope-card ul li::before { content:'›'; color:var(--muted); flex-shrink:0; }
+.scope-card ul li:last-child { border-bottom:none; }
 
-  body {
-    background: var(--black);
-    color: var(--text);
-    font-family: 'Barlow', sans-serif;
-    font-weight: 300;
-    line-height: 1.7;
-    overflow-x: hidden;
-  }
+/* Timeline */
+.timeline { margin:1.5rem 0; }
+.timeline-item { display:flex; gap:1.25rem; margin-bottom:1.25rem; }
+.timeline-dot { flex-shrink:0; width:36px; height:36px; border-radius:50%; background:var(--card); border:1px solid var(--border2); display:flex; align-items:center; justify-content:center; font-family:'Share Tech Mono',monospace; font-size:0.62rem; color:var(--muted); }
+.timeline-content h4 { font-family:'Barlow Condensed',sans-serif; font-size:0.9rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; color:var(--white); margin-bottom:0.25rem; }
+.timeline-content p { font-size:0.85rem; color:var(--silver); margin:0; }
 
-  /* FIX: prefers-reduced-motion */
-  @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-      scroll-behavior: auto !important;
-    }
-  }
+/* Form */
+.form-panel { background:var(--card); border:1px solid var(--border); border-radius:4px; padding:2rem; margin-top:1.5rem; }
+.form-group { margin-bottom:1.2rem; }
+.form-label { display:block; font-size:0.7rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.08em; font-family:'Share Tech Mono',monospace; margin-bottom:0.5rem; }
+.form-input,.form-textarea,.form-select { width:100%; background:var(--dark); border:1px solid var(--border); border-radius:2px; padding:0.75rem 1rem; color:var(--text); font-family:'Barlow',sans-serif; font-size:0.9rem; outline:none; transition:border-color 0.2s; }
+.form-input:focus,.form-textarea:focus,.form-select:focus { border-color:var(--silver); }
+.form-textarea { resize:vertical; min-height:120px; }
+.form-select option { background:var(--card); }
+.form-submit { width:100%; background:var(--white); color:var(--black); border:none; padding:0.95rem; font-size:0.95rem; font-weight:700; font-family:'Barlow Condensed',sans-serif; letter-spacing:0.08em; text-transform:uppercase; border-radius:2px; cursor:pointer; transition:box-shadow 0.2s,transform 0.2s,background 0.2s; }
+.form-submit:hover { box-shadow:0 0 24px rgba(255,255,255,0.14); transform:translateY(-1px); background:var(--accent); }
+.form-submit:disabled { opacity:0.6; cursor:not-allowed; transform:none; }
+.form-note { font-size:0.7rem; color:var(--muted); text-align:center; margin-top:0.75rem; font-family:'Share Tech Mono',monospace; }
 
-  ::-webkit-scrollbar { width: 3px; }
-  ::-webkit-scrollbar-track { background: var(--dark); }
-  ::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
-
-  body::after {
-    content: '';
-    position: fixed; inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-    pointer-events: none; z-index: 9999; opacity: 0.35;
-  }
-
-  /* ═══ NAV ═══ */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-    display: flex; align-items: center; justify-content: space-between;
-    /* FIX: explicit height via token, not padding-based */
-    height: var(--nav-h);
-    padding: 0 5%;
-    background: rgba(8,8,9,0.92);
-    backdrop-filter: blur(18px);
-    border-bottom: 1px solid var(--border);
-  }
-
-  .logo-wrap { display: flex; align-items: center; text-decoration: none; }
-  .logo-img { height: 38px; width: auto; }
-
-  .nav-links { display: flex; gap: 1.8rem; list-style: none; align-items: center; }
-  .nav-links a {
-    color: var(--muted); text-decoration: none;
-    font-size: 0.78rem; font-weight: 500;
-    letter-spacing: 0.1em; text-transform: uppercase;
-    transition: color 0.2s;
-  }
-  .nav-links a:hover { color: var(--white); }
-
-  /* FIX: solid white filled CTA — consistent with index.html */
-  .nav-cta {
-    background: var(--white) !important;
-    color: var(--black) !important;
-    padding: 0.45rem 1.2rem;
-    border-radius: 2px;
-    font-family: 'Barlow Condensed', sans-serif !important;
-    font-weight: 700 !important;
-    font-size: 0.78rem !important;
-    letter-spacing: 0.08em !important;
-    border: none !important;
-    transition: background 0.2s, box-shadow 0.2s !important;
-  }
-  .nav-cta:hover {
-    background: var(--accent) !important;
-    color: var(--black) !important;
-    box-shadow: 0 0 20px rgba(255,255,255,0.12) !important;
-  }
-
-  /* ── Hamburger ── */
-  .hamburger {
-    display: none; flex-direction: column; justify-content: center;
-    gap: 5px; background: transparent; border: 1px solid var(--border);
-    padding: 0.5rem 0.6rem; border-radius: 2px; cursor: pointer;
-  }
-  .hamburger span {
-    display: block; width: 20px; height: 1.5px; background: var(--accent2);
-    transition: transform 0.3s, opacity 0.3s;
-  }
-  .hamburger[aria-expanded="true"] span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
-  .hamburger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
-  .hamburger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
-
-  /* FIX: mobile-nav top uses --nav-h token */
-  .mobile-nav {
-    display: none; position: fixed; top: var(--nav-h); left: 0; right: 0;
-    background: rgba(8,8,9,0.98); backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--border); z-index: 999;
-    padding: 1.5rem 5%; flex-direction: column; gap: 0;
-  }
-  .mobile-nav.open { display: flex; }
-  .mobile-nav a {
-    display: block; padding: 0.85rem 0; color: var(--text);
-    text-decoration: none; font-size: 0.95rem; letter-spacing: 0.06em;
-    text-transform: uppercase; border-bottom: 1px solid var(--border); transition: color 0.2s;
-  }
-  .mobile-nav a:last-of-type { border-bottom: none; }
-  .mobile-nav a:hover { color: var(--white); }
-  .mobile-nav-cta {
-    display: block; margin-top: 1.25rem; text-align: center;
-    background: var(--white); color: var(--black);
-    padding: 0.9rem; border-radius: 2px;
-    font-family: 'Barlow Condensed', sans-serif; font-weight: 700;
-    font-size: 0.95rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none;
-  }
-
-  /* BUTTONS */
-  .btn-primary {
-    display: inline-flex; align-items: center; gap: 0.5rem;
-    background: var(--white); color: var(--black);
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 700; font-size: 0.9rem; letter-spacing: 0.08em;
-    text-transform: uppercase;
-    padding: 0.85rem 2rem; border-radius: 2px;
-    text-decoration: none;
-    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
-    box-shadow: 0 0 24px rgba(255,255,255,0.08);
-  }
-  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 40px rgba(255,255,255,0.14); background: var(--accent); }
-
-  .section-tag {
-    font-family: 'Share Tech Mono', monospace; font-size: 0.7rem;
-    color: var(--muted); text-transform: uppercase;
-    letter-spacing: 0.2em; margin-bottom: 0.6rem;
-  }
-
-  .divider-line { height: 1px; background: linear-gradient(90deg, transparent, var(--border), transparent); }
-
-  /* ═══ FOOTER ═══ */
-  footer { background: #050506; border-top: 1px solid var(--border); padding: 3rem 5% 2rem; }
-  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 2.5rem; }
-  .footer-brand p { font-size: 0.85rem; color: var(--muted); margin-top: 0.75rem; line-height: 1.7; max-width: 280px; }
-  .footer-logo-img { height: 42px; width: auto; }
-  .footer-col h4 { font-family: 'Share Tech Mono', monospace; font-size: 0.68rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 1rem; }
-  .footer-col a { display: block; color: var(--muted); text-decoration: none; font-size: 0.85rem; margin-bottom: 0.5rem; transition: color 0.2s; }
-  .footer-col a:hover { color: var(--white); }
-  .footer-bottom { border-top: 1px solid var(--border); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.78rem; color: var(--muted); font-family: 'Share Tech Mono', monospace; }
-  .footer-bottom-links { display: flex; gap: 1.5rem; }
-  .footer-bottom-links a { color: var(--muted); text-decoration: none; }
-  .footer-bottom-links a:hover { color: var(--white); }
-
-  /* ═══ PAGE HERO ═══ */
-  .page-hero { padding: 8rem 5% 4rem; background: var(--dark); border-bottom: 1px solid var(--border); position: relative; overflow: hidden; }
-  .page-hero::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 64px 64px; mask-image: radial-gradient(ellipse 80% 100% at 20% 50%, black, transparent); }
-  .page-tag { font-family: 'Share Tech Mono', monospace; font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 0.75rem; position: relative; }
-  .page-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem, 5vw, 3.5rem); letter-spacing: 0.02em; color: var(--white); line-height: 1; position: relative; }
-  .page-meta { margin-top: 1rem; font-family: 'Share Tech Mono', monospace; font-size: 0.72rem; color: var(--muted); position: relative; }
-
-  /* FIX: report-badge extracted from inline styles */
-  .report-badge {
-    margin-top: 1.5rem; display: inline-flex; align-items: center; gap: 1rem;
-    background: rgba(255,255,255,0.03); border: 1px solid var(--border);
-    border-radius: 3px; padding: 0.8rem 1.4rem; position: relative;
-  }
-  .report-badge span { font-family: 'Share Tech Mono', monospace; font-size: 0.72rem; color: var(--muted); }
-  .report-badge a { font-family: 'Share Tech Mono', monospace; font-size: 0.82rem; color: var(--silver); text-decoration: none; transition: color 0.2s; }
-  .report-badge a:hover { color: var(--white); }
-
-  /* ═══ LAYOUT ═══ */
-  .page-layout { display: grid; grid-template-columns: 240px 1fr; gap: 0; max-width: 1200px; margin: 0 auto; padding: 4rem 5%; }
-
-  /* FIX: TOC top uses --nav-h token */
-  .toc { position: sticky; top: calc(var(--nav-h) + 1.5rem); height: fit-content; padding-right: 2.5rem; }
-  .toc-label { font-family: 'Share Tech Mono', monospace; font-size: 0.62rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 1rem; }
-  .toc a { display: block; font-size: 0.78rem; color: var(--muted); text-decoration: none; padding: 0.4rem 0.75rem; border-left: 2px solid var(--border); margin-bottom: 0.15rem; transition: color 0.2s, border-color 0.2s; }
-  .toc a:hover { color: var(--white); border-color: var(--border2); }
-  .toc a.active { color: var(--white); border-color: var(--silver); }
-  .toc-btn { display: block; margin-top: 2rem; background: var(--white); color: var(--black) !important; border: none !important; text-align: center; padding: 0.7rem 1rem; border-radius: 2px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.82rem; letter-spacing: 0.06em; text-transform: uppercase; transition: box-shadow 0.2s, background 0.2s; text-decoration: none; }
-  .toc-btn:hover { box-shadow: 0 0 20px rgba(255,255,255,0.12); background: var(--accent); }
-
-  .content { padding-left: 2.5rem; border-left: 1px solid var(--border); }
-
-  /* FIX: scroll-margin-top uses --nav-h token */
-  .policy-section { margin-bottom: 3.5rem; scroll-margin-top: calc(var(--nav-h) + 1.5rem); }
-
-  h2.sec-h { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: 0.04em; color: var(--white); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem; }
-  .sec-num { font-family: 'Share Tech Mono', monospace; font-size: 0.68rem; color: var(--muted); background: rgba(255,255,255,0.04); border: 1px solid var(--border); padding: 0.2rem 0.5rem; border-radius: 2px; }
-  p { margin-bottom: 1rem; font-size: 0.925rem; color: var(--text); }
-  ul, ol { margin: 0.75rem 0 1rem 1.25rem; }
-  li { font-size: 0.925rem; color: var(--text); margin-bottom: 0.4rem; }
-  strong { color: var(--accent2); }
-  a { color: var(--silver); text-decoration: none; }
-  a:hover { color: var(--white); text-decoration: underline; }
-  .highlight-box { background: var(--card); border: 1px solid var(--border); border-left: 2px solid var(--silver); border-radius: 3px; padding: 1.25rem 1.5rem; margin: 1.5rem 0; font-size: 0.875rem; color: var(--text); }
-  .highlight-box strong { color: var(--accent2); font-family: 'Share Tech Mono', monospace; font-size: 0.72rem; display: block; margin-bottom: 0.4rem; text-transform: uppercase; letter-spacing: 0.05em; }
-  .warning-box { background: rgba(180,140,0,0.05); border: 1px solid rgba(180,140,0,0.18); border-left: 2px solid #a08020; border-radius: 3px; padding: 1.25rem 1.5rem; margin: 1.5rem 0; font-size: 0.875rem; }
-  .warning-box strong { color: #a08020; font-family: 'Share Tech Mono', monospace; font-size: 0.72rem; display: block; margin-bottom: 0.4rem; text-transform: uppercase; }
-  .no-box { background: rgba(160,60,60,0.05); border: 1px solid rgba(160,60,60,0.18); border-left: 2px solid #904040; border-radius: 3px; padding: 1.25rem 1.5rem; margin: 1.5rem 0; font-size: 0.875rem; }
-  .no-box strong { color: #904040; font-family: 'Share Tech Mono', monospace; font-size: 0.72rem; display: block; margin-bottom: 0.4rem; text-transform: uppercase; }
-  .divider { height: 1px; background: var(--border); margin: 3rem 0; }
-  .scope-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
-  .scope-card { background: var(--card); border: 1px solid var(--border); border-radius: 3px; padding: 1.25rem; }
-  .scope-card h4 { font-family: 'Share Tech Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.75rem; }
-  .scope-card.in-scope h4 { color: var(--silver); }
-  .scope-card.out-scope h4 { color: var(--muted); }
-  .scope-card li { font-size: 0.85rem; color: var(--muted); list-style: none; padding: 0.3rem 0; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 0.5rem; }
-  .scope-card li:last-child { border-bottom: none; }
-  .scope-card.in-scope li::before { content: '✓'; color: var(--silver); font-size: 0.7rem; }
-  .scope-card.out-scope li::before { content: '–'; color: var(--border2); }
-  .timeline { margin: 1.5rem 0; }
-  .timeline-item { display: flex; gap: 1.5rem; margin-bottom: 1.25rem; }
-  .timeline-dot { flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: var(--dim); border: 1px solid var(--border2); display: flex; align-items: center; justify-content: center; font-family: 'Share Tech Mono', monospace; font-size: 0.68rem; color: var(--silver); margin-top: 2px; }
-  .timeline-content h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 0.95rem; font-weight: 700; color: var(--white); margin-bottom: 0.25rem; letter-spacing: 0.03em; }
-  .timeline-content p { font-size: 0.875rem; color: var(--muted); margin: 0; }
-  .form-group { margin-bottom: 1.2rem; }
-  .form-label { display: block; font-size: 0.68rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; font-family: 'Share Tech Mono', monospace; margin-bottom: 0.5rem; }
-  .form-input, .form-textarea, .form-select { width: 100%; background: var(--card); border: 1px solid var(--border); border-radius: 2px; padding: 0.75rem 1rem; color: var(--text); font-family: 'Barlow', sans-serif; font-size: 0.9rem; outline: none; transition: border-color 0.2s; }
-  .form-input:focus, .form-textarea:focus, .form-select:focus { border-color: var(--silver); }
-  .form-textarea { resize: vertical; min-height: 140px; }
-  .form-select option { background: var(--card); }
-  .form-submit { width: 100%; background: var(--white); color: var(--black); border: none; padding: 0.95rem; font-size: 0.95rem; font-weight: 700; font-family: 'Barlow Condensed', sans-serif; letter-spacing: 0.08em; text-transform: uppercase; border-radius: 2px; cursor: pointer; transition: box-shadow 0.2s, transform 0.2s; }
-  .form-submit:hover { box-shadow: 0 0 24px rgba(255,255,255,0.12); transform: translateY(-1px); }
-  .form-submit:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
-  .form-note { font-size: 0.7rem; color: var(--muted); text-align: center; margin-top: 0.75rem; font-family: 'Share Tech Mono', monospace; }
-
-  /* ═══ RESPONSIVE ═══ */
-  @media (max-width: 768px) {
-    /* FIX: visibility + pointer-events, not display:none */
-    .nav-links { visibility: hidden; pointer-events: none; }
-    .hamburger { display: flex; }
-    .page-layout { grid-template-columns: 1fr; }
-    .toc { display: none; }
-    .content { padding-left: 0; border-left: none; }
-    .scope-grid { grid-template-columns: 1fr; }
-    .footer-grid { grid-template-columns: 1fr 1fr; }
-  }
-
+@media (max-width:900px) { .page-layout { grid-template-columns:1fr; } .toc { position:static; max-height:none; } }
+@media (max-width:560px) { .scope-grid { grid-template-columns:1fr; } }
 </style>
 </head>
 <body>
 
-<!-- ═══ NAV ═══ -->
-<nav role="navigation" aria-label="Main navigation">
-  <a href="index.html" class="logo-wrap" aria-label="EiferOne Home">
-    <img src="./assets/footerlogo.png" alt="EiferOne cybersecurity consultancy logo" class="logo-img" width="120" height="38">
-  </a>
-
-  <!-- FIX: full nav instead of bare back-link -->
-  <ul class="nav-links" role="menubar">
-    <li role="none"><a href="index.html#about" role="menuitem">About</a></li>
-    <li role="none"><a href="index.html#services" role="menuitem">Services</a></li>
-    <li role="none"><a href="index.html#portfolio" role="menuitem">Portfolio</a></li>
-    <li role="none"><a href="index.html#pricing" role="menuitem">Pricing</a></li>
-    <li role="none"><a href="team.html" role="menuitem">Team</a></li>
-    <li role="none"><a href="index.html#faq" role="menuitem">FAQ</a></li>
-    <!-- FIX: CTA label unified — "Free Consultation" -->
-    <li role="none"><a href="index.html#contact" class="nav-cta" role="menuitem">Free Consultation</a></li>
-  </ul>
-
-  <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNav">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-
-<!-- MOBILE NAV -->
-<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" aria-hidden="true">
-  <a href="index.html#about">About</a>
-  <a href="index.html#services">Services</a>
-  <a href="index.html#portfolio">Portfolio</a>
-  <a href="index.html#pricing">Pricing</a>
-  <a href="team.html">Team</a>
-  <a href="index.html#faq">FAQ</a>
-  <a href="index.html#contact">Contact</a>
-  <a href="index.html#contact" class="mobile-nav-cta">Get Free Consultation →</a>
-</nav>
-
-<!-- PAGE HERO -->
 <div class="page-hero">
   <div class="page-tag">// Legal</div>
   <h1 class="page-title">Responsible Disclosure</h1>
   <div class="page-meta">Last updated: 1 January 2025 &nbsp;·&nbsp; Version 1.0 &nbsp;·&nbsp; EiferOne Ltd</div>
-  <!-- FIX: inline styles replaced with .report-badge class -->
   <div class="report-badge">
     <span>Report directly →</span>
     <a href="mailto:security@eiferone.com">security@eiferone.com</a>
@@ -322,7 +101,6 @@
 <div class="page-layout">
   <aside class="toc" aria-label="Page navigation">
     <div class="toc-label">// On this page</div>
-    <!-- FIX: no hardcoded active class — JS drives this entirely -->
     <a href="#introduction">Introduction</a>
     <a href="#our-commitment">Our Commitment</a>
     <a href="#scope">Scope</a>
@@ -336,12 +114,12 @@
   </aside>
 
   <main class="content">
-
     <div class="policy-section" id="introduction">
       <h2 class="sec-h"><span class="sec-num">01</span> Introduction</h2>
       <div class="highlight-box"><strong>We take security seriously</strong>As a cybersecurity company, we hold ourselves to a high standard. If you've found a vulnerability in our systems, we want to hear from you.</div>
       <p>EiferOne Ltd is committed to the security of our own systems. We recognise that security researchers play a vital role in identifying vulnerabilities that may have been missed. This policy sets out how to safely report security vulnerabilities in EiferOne's own systems.</p>
-    </div><div class="divider"></div>
+    </div>
+    <div class="divider"></div>
 
     <div class="policy-section" id="our-commitment">
       <h2 class="sec-h"><span class="sec-num">02</span> Our Commitment to You</h2>
@@ -352,22 +130,49 @@
         <li>Not taking legal action against researchers acting in good faith within this policy.</li>
         <li>Crediting you publicly (with permission) once the issue is resolved.</li>
       </ul>
-    </div><div class="divider"></div>
+    </div>
+    <div class="divider"></div>
 
     <div class="policy-section" id="scope">
       <h2 class="sec-h"><span class="sec-num">03</span> Scope</h2>
       <p>This policy applies only to EiferOne's own assets — not client systems or third-party services.</p>
       <div class="scope-grid">
-        <div class="scope-card in-scope"><h4>✓ In Scope</h4><ul><li>eiferone.com (main website)</li><li>Any subdomains of eiferone.com</li><li>EiferOne web applications</li><li>EiferOne email infrastructure</li><li>Authentication mechanisms</li><li>API endpoints</li></ul></div>
-        <div class="scope-card out-scope"><h4>– Out of Scope</h4><ul><li>Client systems or infrastructure</li><li>Third-party services we use</li><li>Social engineering attacks</li><li>Physical security attacks</li><li>Denial of service (DoS/DDoS)</li><li>Spam or phishing campaigns</li></ul></div>
+        <div class="scope-card in-scope">
+          <h4>✓ In Scope</h4>
+          <ul>
+            <li>eiferone.com (main website)</li>
+            <li>Any subdomains of eiferone.com</li>
+            <li>EiferOne web applications</li>
+            <li>EiferOne email infrastructure</li>
+            <li>Authentication mechanisms</li>
+            <li>API endpoints</li>
+          </ul>
+        </div>
+        <div class="scope-card out-scope">
+          <h4>✗ Out of Scope</h4>
+          <ul>
+            <li>Client systems or infrastructure</li>
+            <li>Third-party services we use</li>
+            <li>Social engineering attacks</li>
+            <li>Physical security attacks</li>
+            <li>Denial of service (DoS/DDoS)</li>
+            <li>Spam or phishing campaigns</li>
+          </ul>
+        </div>
       </div>
-    </div><div class="divider"></div>
+    </div>
+    <div class="divider"></div>
 
     <div class="policy-section" id="how-to-report">
       <h2 class="sec-h"><span class="sec-num">04</span> How to Report</h2>
-      <div class="highlight-box"><strong>Security Contact</strong><a href="mailto:security@eiferone.com" style="font-size:1rem;">security@eiferone.com</a><br><br>For sensitive reports, you may request our PGP public key to encrypt your submission.</div>
+      <div class="highlight-box">
+        <strong>Security Contact</strong>
+        <a href="mailto:security@eiferone.com" style="font-size:1rem;">security@eiferone.com</a><br><br>
+        For sensitive reports, you may request our PGP public key to encrypt your submission.
+      </div>
       <p>Please include: a clear description of the vulnerability, the affected URL or component, step-by-step reproduction instructions, screenshots or proof-of-concept (where safe), your severity assessment, and any CVE references.</p>
-    </div><div class="divider"></div>
+    </div>
+    <div class="divider"></div>
 
     <div class="policy-section" id="process">
       <h2 class="sec-h"><span class="sec-num">05</span> Disclosure Process</h2>
@@ -378,7 +183,8 @@
         <div class="timeline-item"><div class="timeline-dot" aria-hidden="true">04</div><div class="timeline-content"><h4>Verification — after fix deployed</h4><p>We notify you when the fix is live and invite you to verify.</p></div></div>
         <div class="timeline-item"><div class="timeline-dot" aria-hidden="true">05</div><div class="timeline-content"><h4>Public Disclosure — by mutual agreement</h4><p>With permission, we publish a security advisory crediting your discovery. We aim to coordinate within 90 days.</p></div></div>
       </div>
-    </div><div class="divider"></div>
+    </div>
+    <div class="divider"></div>
 
     <div class="policy-section" id="safe-harbour">
       <h2 class="sec-h"><span class="sec-num">06</span> Safe Harbour</h2>
@@ -390,12 +196,27 @@
         <li>Do not disclose publicly before we have had a reasonable opportunity to remediate.</li>
       </ul>
       <div class="warning-box"><strong>⚠ Please Note</strong>Safe harbour applies to good-faith researchers within this policy. EiferOne reserves the right to pursue legal remedies against individuals who deliberately cause harm or act outside this policy.</div>
-    </div><div class="divider"></div>
+    </div>
+    <div class="divider"></div>
 
     <div class="policy-section" id="exclusions">
       <h2 class="sec-h"><span class="sec-num">07</span> Exclusions</h2>
-      <div class="no-box"><strong>– Out of Scope Reports</strong><ul style="margin:0.5rem 0 0;padding-left:1.25rem;"><li>Vulnerabilities in third-party services not controlled by EiferOne</li><li>Theoretical vulnerabilities without a working proof of concept</li><li>Issues requiring physical access to a user's device</li><li>Self-XSS or implausible real-world user interaction</li><li>Clickjacking on pages with no sensitive actions</li><li>Missing headers without demonstrated impact</li><li>Reports generated by automated tools without manual validation</li><li>Previously known or already-reported vulnerabilities</li><li>Denial of service attacks</li></ul></div>
-    </div><div class="divider"></div>
+      <div class="no-box">
+        <strong>✗ Out of Scope Reports</strong>
+        <ul>
+          <li>Vulnerabilities in third-party services not controlled by EiferOne</li>
+          <li>Theoretical vulnerabilities without a working proof of concept</li>
+          <li>Issues requiring physical access to a user's device</li>
+          <li>Self-XSS or implausible real-world user interaction</li>
+          <li>Clickjacking on pages with no sensitive actions</li>
+          <li>Missing headers without demonstrated impact</li>
+          <li>Reports generated by automated tools without manual validation</li>
+          <li>Previously known or already-reported vulnerabilities</li>
+          <li>Denial of service attacks</li>
+        </ul>
+      </div>
+    </div>
+    <div class="divider"></div>
 
     <div class="policy-section" id="recognition">
       <h2 class="sec-h"><span class="sec-num">08</span> Recognition</h2>
@@ -406,40 +227,33 @@
         <li>Give serious consideration to recognition for high-impact findings.</li>
       </ul>
       <p>We are evaluating establishing a formal bug bounty programme and will update this policy when launched.</p>
-    </div><div class="divider"></div>
+    </div>
+    <div class="divider"></div>
 
     <div class="policy-section" id="report-form">
       <h2 class="sec-h"><span class="sec-num">09</span> Submit a Report</h2>
       <p>Use the form below or email <a href="mailto:security@eiferone.com">security@eiferone.com</a> directly. All submissions are treated confidentially.</p>
-      <div style="background:var(--card);border:1px solid var(--border);border-radius:4px;padding:2rem;margin-top:1.5rem;">
-
-        <!-- FIX: accessible live region for success state -->
+      <div class="form-panel">
         <div id="report-success" style="display:none;text-align:center;padding:2.5rem 1rem;" role="alert" aria-live="polite">
-          <div style="width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,0.05);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--white)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div style="width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,0.05);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--white)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
           <div style="font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:0.04em;color:var(--white);margin-bottom:0.5rem;">Report Received</div>
           <div style="font-size:0.875rem;color:var(--silver);">We'll acknowledge within 48 hours at the email you provided.</div>
         </div>
-
-        <!-- FIX: onsubmit removed — form handled via addEventListener -->
         <form id="disclosure-form" novalidate>
-          <input type="hidden" name="access_key" value="REPLACE_WITH_YOUR_WEB3FORMS_KEY">
-          <input type="hidden" name="subject" value="Responsible Disclosure Report — EiferOne">
-          <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" aria-hidden="true">
-
           <div class="form-group">
             <label class="form-label" for="reporter_name">Your Name / Handle</label>
-            <input type="text" name="reporter_name" id="reporter_name" class="form-input" placeholder="John Smith or @handle" autocomplete="name">
+            <input type="text" id="reporter_name" class="form-input" placeholder="John Smith or @handle" autocomplete="name">
           </div>
-
           <div class="form-group">
-            <label class="form-label" for="report_email">Email Address <span aria-label="required">*</span></label>
-            <input type="email" name="email" id="report_email" class="form-input" placeholder="your@email.com" required autocomplete="email">
+            <label class="form-label" for="report_email">Email Address *</label>
+            <input type="email" id="report_email" class="form-input" placeholder="your@email.com" required autocomplete="email">
           </div>
-
           <div class="form-group">
-            <label class="form-label" for="report_severity">Severity <span aria-label="required">*</span></label>
-            <select name="severity" id="report_severity" class="form-select" required>
-              <option value="">Select severity...</option>
+            <label class="form-label" for="report_severity">Severity *</label>
+            <select id="report_severity" class="form-select" required>
+              <option value="">Select severity…</option>
               <option>Critical — Remote code execution, full compromise</option>
               <option>High — Authentication bypass, significant data exposure</option>
               <option>Medium — Partial exposure, limited escalation</option>
@@ -447,176 +261,76 @@
               <option>Informational — Best practice recommendation</option>
             </select>
           </div>
-
           <div class="form-group">
-            <label class="form-label" for="affected_url">Affected URL / Component <span aria-label="required">*</span></label>
-            <input type="text" name="affected_url" id="affected_url" class="form-input" placeholder="https://eiferone.com/path" required>
+            <label class="form-label" for="affected_url">Affected URL / Component *</label>
+            <input type="text" id="affected_url" class="form-input" placeholder="https://eiferone.com/path" required>
           </div>
-
           <div class="form-group">
-            <label class="form-label" for="report_description">Description &amp; Steps to Reproduce <span aria-label="required">*</span></label>
-            <textarea name="description" id="report_description" class="form-textarea" placeholder="1. Navigate to...&#10;2. Enter payload...&#10;3. Observe that..." required style="min-height:160px;"></textarea>
+            <label class="form-label" for="report_description">Description &amp; Steps to Reproduce *</label>
+            <textarea id="report_description" class="form-textarea" placeholder="1. Navigate to…&#10;2. Enter payload…&#10;3. Observe that…" required style="min-height:160px;"></textarea>
           </div>
-
           <div class="form-group">
             <label class="form-label" for="report_impact">Potential Impact</label>
-            <textarea name="impact" id="report_impact" class="form-textarea" placeholder="What could an attacker achieve..." style="min-height:90px;"></textarea>
+            <textarea id="report_impact" class="form-textarea" placeholder="What could an attacker achieve…" style="min-height:90px;"></textarea>
           </div>
-
           <div class="form-group">
             <label class="form-label" for="credit_permission">Credit Permission</label>
-            <select name="credit_permission" id="credit_permission" class="form-select">
+            <select id="credit_permission" class="form-select">
               <option value="yes">Yes — credit me by name/handle if confirmed</option>
-              <option value="no">No — keep my identity confidential</option>
+              <option value="no">No — keep me anonymous</option>
             </select>
           </div>
-
-          <!-- FIX: error is an accessible live region; includes clickable mailto link -->
-          <div id="disc-error" style="display:none;background:rgba(160,60,60,0.08);border:1px solid rgba(160,60,60,0.2);border-radius:3px;padding:0.75rem 1rem;margin-bottom:1rem;font-size:0.78rem;color:#a06060;font-family:'Share Tech Mono',monospace;" role="alert" aria-live="assertive">
-            ⚠ Submission failed. Please email <a href="mailto:security@eiferone.com" style="color:#c07070;">security@eiferone.com</a> directly.
-          </div>
-
-          <button type="submit" class="form-submit" id="disc-btn">
-            <span id="disc-btn-text">Submit Vulnerability Report →</span>
-            <span id="disc-btn-loading" style="display:none;" aria-live="polite">Submitting...</span>
-          </button>
-          <div class="form-note">// Encrypted submissions: request PGP key at security@eiferone.com</div>
+          <button type="submit" class="form-submit" id="discSubmit">Submit Vulnerability Report →</button>
+          <div class="form-note">// Encrypted submissions available on request · All reports treated confidentially</div>
         </form>
       </div>
     </div>
-
   </main>
 </div>
 
-<!-- ═══ FOOTER ═══ -->
-<footer role="contentinfo">
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <!-- FIX: meaningful alt text on footer logo -->
-      <img src="./assets/footerlogo.png" alt="EiferOne cybersecurity consultancy" class="footer-logo-img" width="140" height="42">
-      <p>Professional cybersecurity consultancy. Helping businesses identify and remediate risk before attackers can exploit it.</p>
-    </div>
-    <div class="footer-col">
-      <h4>Services</h4>
-      <!-- FIX: data-service attributes for deep-linking via sessionStorage -->
-      <a href="index.html#services" data-service="pentest">Penetration Testing</a>
-      <a href="index.html#services" data-service="audit">Security Audits</a>
-      <a href="index.html#services" data-service="network">Network Assessment</a>
-      <a href="index.html#services" data-service="appsec">App Security</a>
-      <a href="index.html#services" data-service="compliance">Compliance</a>
-    </div>
-    <div class="footer-col">
-      <h4>Company</h4>
-      <a href="index.html#portfolio">Portfolio</a>
-      <a href="index.html#audit">Sample Report</a>
-      <a href="index.html#pricing">Pricing</a>
-      <a href="index.html#contact">Contact</a>
-    </div>
-    <div class="footer-col">
-      <h4>Legal</h4>
-      <a href="privacy-policy.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Service</a>
-      <!-- FIX: aria-current="page" marks the active page for screen readers -->
-      <a href="disclosure.html" aria-current="page">Responsible Disclosure</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <!-- FIX: dynamic copyright year — no hardcoded 2025 -->
-    <div id="footer-copyright"></div>
-    <div class="footer-bottom-links">
-      <a href="mailto:info@eiferone.com">Email</a>
-    </div>
-  </div>
-</footer>
-
+<script src="./components.js"></script>
 <script>
-// ─── Dynamic copyright year ────────────────────────────────────────────────
-document.getElementById('footer-copyright').textContent =
-  '© ' + new Date().getFullYear() + ' EiferOne Ltd. All rights reserved. Registered in England & Wales.';
-
-// ─── Hamburger / mobile nav ────────────────────────────────────────────────
-const hamburger = document.getElementById('hamburger');
-const mobileNav  = document.getElementById('mobileNav');
-
-hamburger.addEventListener('click', function () {
-  const open = this.getAttribute('aria-expanded') === 'true';
-  this.setAttribute('aria-expanded', String(!open));
-  mobileNav.classList.toggle('open', !open);
-  mobileNav.setAttribute('aria-hidden', String(open));
-  this.setAttribute('aria-label', !open ? 'Close navigation menu' : 'Open navigation menu');
-});
-mobileNav.querySelectorAll('a').forEach(a => {
-  a.addEventListener('click', () => {
-    hamburger.setAttribute('aria-expanded', 'false');
-    mobileNav.classList.remove('open');
-    mobileNav.setAttribute('aria-hidden', 'true');
-    hamburger.setAttribute('aria-label', 'Open navigation menu');
+(function () {
+  // TOC scroll spy
+  var tocLinks = document.querySelectorAll('.toc a:not(.toc-btn)');
+  var sections = [];
+  tocLinks.forEach(function (a) {
+    var id = a.getAttribute('href').replace('#', '');
+    var el = document.getElementById(id);
+    if (el) sections.push({ el: el, a: a });
   });
-});
-document.addEventListener('click', e => {
-  if (!hamburger.contains(e.target) && !mobileNav.contains(e.target)) {
-    hamburger.setAttribute('aria-expanded', 'false');
-    mobileNav.classList.remove('open');
-    mobileNav.setAttribute('aria-hidden', 'true');
-  }
-});
-
-// ─── TOC active state — JS only, no hardcoded active in HTML ──────────────
-const sections = document.querySelectorAll('.policy-section');
-const tocLinks  = document.querySelectorAll('.toc a:not(.toc-btn)');
-
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      tocLinks.forEach(l => l.classList.remove('active'));
-      const link = document.querySelector(`.toc a[href="#${e.target.id}"]`);
-      if (link) link.classList.add('active');
-    }
-  });
-}, { rootMargin: '-20% 0px -70% 0px' });
-
-sections.forEach(s => obs.observe(s));
-
-// ─── Footer service deep-links ─────────────────────────────────────────────
-document.querySelectorAll('[data-service]').forEach(a => {
-  a.addEventListener('click', () => {
-    try { sessionStorage.setItem('openService', a.dataset.service); } catch (e) {}
-  });
-});
-
-// ─── Disclosure form — addEventListener replaces global handleDisclosure fn ─
-document.getElementById('disclosure-form').addEventListener('submit', async function (e) {
-  e.preventDefault();
-  const form = this;
-  const btn  = document.getElementById('disc-btn');
-  const txt  = document.getElementById('disc-btn-text');
-  const ld   = document.getElementById('disc-btn-loading');
-  const err  = document.getElementById('disc-error');
-
-  btn.disabled      = true;
-  txt.style.display = 'none';
-  ld.style.display  = 'inline';
-  err.style.display = 'none';
-
-  try {
-    const res = await fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      body: new FormData(form),
-      headers: { 'Accept': 'application/json' }
+  window.addEventListener('scroll', function () {
+    var scrollY = window.scrollY + 120;
+    var current = sections[0];
+    sections.forEach(function (s) {
+      if (s.el.offsetTop <= scrollY) current = s;
     });
-    if (res.ok) {
-      form.style.display = 'none';
-      document.getElementById('report-success').style.display = 'block';
-    } else {
-      throw new Error('Server error');
+    tocLinks.forEach(function (a) { a.classList.remove('active'); });
+    if (current) current.a.classList.add('active');
+  }, { passive: true });
+
+  // Form submit
+  var form   = document.getElementById('disclosure-form');
+  var submit = document.getElementById('discSubmit');
+  var success = document.getElementById('report-success');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var email = document.getElementById('report_email');
+    var sev   = document.getElementById('report_severity');
+    var url   = document.getElementById('affected_url');
+    var desc  = document.getElementById('report_description');
+    if (!email.value.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/) || !sev.value || !url.value || !desc.value) {
+      return;
     }
-  } catch {
-    err.style.display = 'block';
-    btn.disabled      = false;
-    txt.style.display = 'inline';
-    ld.style.display  = 'none';
-  }
-});
+    submit.disabled = true;
+    submit.textContent = 'Sending…';
+    setTimeout(function () {
+      form.style.display = 'none';
+      success.style.display = 'block';
+    }, 1000);
+  });
+})();
 </script>
 </body>
 </html>

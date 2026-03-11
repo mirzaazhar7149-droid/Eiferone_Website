@@ -6,10 +6,8 @@
 <title>Our Team — EiferOne Cybersecurity Consultancy</title>
 <meta name="description" content="Meet the EiferOne team — experienced cybersecurity professionals dedicated to protecting businesses through penetration testing, security audits, and compliance consulting.">
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#080809">
+<meta name="theme-color" content="#0d0d10">
 <link rel="canonical" href="https://eiferone.com/team.html">
-
-<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://eiferone.com/team.html">
 <meta property="og:title" content="Our Team — EiferOne Cybersecurity Consultancy">
@@ -17,585 +15,165 @@
 <meta property="og:image" content="https://eiferone.com/assets/og-image.png">
 <meta property="og:site_name" content="EiferOne">
 <meta property="og:locale" content="en_GB">
-
 <link rel="icon" type="image/png" href="./assets/Favicon.png">
-
-<!-- FIX: Async font loading — non-render-blocking -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Bebas+Neue&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Bebas+Neue&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet"></noscript>
 
-<!-- JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "AboutPage",
-  "name": "EiferOne Team",
-  "url": "https://eiferone.com/team.html",
-  "description": "Meet the EiferOne cybersecurity team",
-  "publisher": {
-    "@type": "Organization",
-    "name": "EiferOne Ltd",
-    "url": "https://eiferone.com"
-  }
-}
-</script>
+<link rel="stylesheet" href="./shared.css">
 
 <style>
-  /* ═══ TOKENS ═══ */
-  :root {
-    --black:   #080809;
-    --dark:    #0f0f11;
-    --mid:     #161619;
-    --card:    #1a1a1e;
-    --border:  #252528;
-    --border2: #323236;
-    --accent:  #e0e0e8;
-    --accent2: #a0a0b0;
-    --white:   #f4f4f6;
-    --text:    #b0b0be;
-    --muted:   #505060;
-    --silver:  #787890;
-    --dim:     rgba(255,255,255,0.04);
-    --nav-h:   64px;
-  }
+/* PAGE-SPECIFIC */
+.page-header {
+  padding: 9rem 5% 5rem;
+  background: var(--dark);
+  position: relative; overflow: hidden;
+  border-bottom: 1px solid var(--border);
+}
+.page-header::before {
+  content: ''; position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 80% 80% at 20% 50%, black 30%, transparent 100%);
+}
+.page-header-inner { position: relative; z-index: 1; }
+.page-lead { font-size: 1rem; color: var(--silver); max-width: 540px; margin-top: 1rem; line-height: 1.8; }
 
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
+/* TEAM GRID */
+.team-section { background: var(--black); }
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
 
-  body {
-    background: var(--black);
-    color: var(--text);
-    font-family: 'Barlow', sans-serif;
-    font-weight: 300;
-    line-height: 1.7;
-    overflow-x: hidden;
-  }
+.team-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 3px; overflow: hidden;
+  transition: border-color 0.25s, transform 0.25s;
+}
+.team-card:hover { border-color: var(--border2); transform: translateY(-3px); }
 
-  /* FIX: prefers-reduced-motion */
-  @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-      scroll-behavior: auto !important;
-    }
-  }
+.card-photo-placeholder {
+  height: 180px;
+  background: linear-gradient(135deg, var(--mid), var(--dark));
+  display: flex; align-items: center; justify-content: center;
+  border-bottom: 1px solid var(--border);
+}
+.placeholder-initials {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem; letter-spacing: 0.1em;
+  color: var(--border2);
+}
 
-  ::-webkit-scrollbar { width: 3px; }
-  ::-webkit-scrollbar-track { background: var(--dark); }
-  ::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
+.card-body { padding: 1.5rem; }
+.card-role {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.68rem; color: var(--muted);
+  text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.35rem;
+}
+.card-name { font-size: 1.15rem; margin-bottom: 0.75rem; }
+.card-bio { font-size: 0.875rem; color: var(--silver); line-height: 1.65; margin-bottom: 1rem; }
 
-  body::after {
-    content: '';
-    position: fixed; inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-    pointer-events: none; z-index: 9999; opacity: 0.35;
-  }
+.card-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem; }
+.card-tag {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.62rem; color: var(--muted);
+  background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+  padding: 0.18rem 0.55rem; border-radius: 2px;
+}
 
-  /* ═══ NAV ═══ */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 0 5%;
-    height: var(--nav-h);
-    background: rgba(8,8,9,0.92);
-    backdrop-filter: blur(18px);
-    border-bottom: 1px solid var(--border);
-  }
+.card-links { display: flex; gap: 0.75rem; }
+.card-link {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.7rem; color: var(--muted); text-decoration: none;
+  border: 1px solid var(--border); padding: 0.3rem 0.7rem; border-radius: 2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.card-link:hover { color: var(--white); border-color: var(--silver); }
 
-  .logo-wrap { display: flex; align-items: center; text-decoration: none; }
-  .logo-img { height: 38px; width: auto; }
+/* Hire card */
+.hire-card {
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+  text-align: center; min-height: 380px;
+}
+.hire-card-body { padding: 2.5rem 2rem; }
+.hire-plus {
+  width: 56px; height: 56px; border: 1px dashed var(--border2);
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 1.5rem; color: var(--muted);
+}
+.hire-card-btn {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  background: transparent; border: 1px solid var(--border2);
+  color: var(--silver); padding: 0.6rem 1.4rem; border-radius: 2px;
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 700;
+  font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase;
+  text-decoration: none; transition: border-color 0.2s, color 0.2s;
+}
+.hire-card-btn:hover { border-color: var(--white); color: var(--white); }
 
-  .nav-links { display: flex; gap: 1.8rem; list-style: none; align-items: center; }
-  .nav-links a {
-    color: var(--muted); text-decoration: none;
-    font-size: 0.78rem; font-weight: 500;
-    letter-spacing: 0.1em; text-transform: uppercase;
-    transition: color 0.2s;
-  }
-  .nav-links a:hover, .nav-links a.active { color: var(--white); }
+/* VALUES STRIP */
+.values-strip { background: var(--dark); border-top: 1px solid var(--border); }
+.values-inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+.value-item { text-align: center; }
+.value-icon {
+  width: 32px; height: 32px; color: var(--silver);
+  margin: 0 auto 1rem;
+}
+.value-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.9rem; font-weight: 700;
+  letter-spacing: 0.05em; text-transform: uppercase;
+  color: var(--white); margin-bottom: 0.5rem;
+}
+.value-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.65; }
 
-  /* Services dropdown */
-  .nav-dropdown { position: relative; }
-  .nav-dropdown > a { display: flex; align-items: center; gap: 0.3rem; cursor: pointer; }
-  .nav-dropdown > a::after {
-    content: '';
-    width: 0; height: 0;
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-top: 4px solid var(--muted);
-    transition: transform 0.2s, border-top-color 0.2s;
-    flex-shrink: 0; margin-top: 1px;
-  }
-  .nav-dropdown:hover > a::after,
-  .nav-dropdown.open > a::after { transform: rotate(180deg); border-top-color: var(--white); }
+/* JOIN CTA */
+.join-section { background: var(--black); text-align: center; }
+.join-lead { font-size: 1rem; color: var(--silver); max-width: 540px; margin: 0 auto 2.5rem; }
 
-  .dropdown-menu {
-    display: none;
-    position: absolute; top: calc(100% + 0.75rem); left: 50%;
-    transform: translateX(-50%);
-    background: rgba(15,15,17,0.98);
-    backdrop-filter: blur(20px);
-    border: 1px solid var(--border2);
-    border-radius: 4px;
-    min-width: 240px;
-    padding: 0.5rem 0;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
-    animation: dropIn 0.2s ease;
-  }
-  .nav-dropdown:hover .dropdown-menu,
-  .nav-dropdown.open .dropdown-menu { display: block; }
-
-  @keyframes dropIn {
-    from { opacity: 0; transform: translateX(-50%) translateY(-8px); }
-    to   { opacity: 1; transform: translateX(-50%) translateY(0); }
-  }
-
-  .dropdown-menu a {
-    display: flex; align-items: center; gap: 0.75rem;
-    padding: 0.65rem 1.2rem;
-    color: var(--text) !important;
-    font-size: 0.82rem !important;
-    text-transform: none !important;
-    letter-spacing: 0.02em !important;
-    font-weight: 400 !important;
-    border-bottom: 1px solid var(--border);
-    transition: background 0.15s, color 0.15s, padding-left 0.15s !important;
-  }
-  .dropdown-menu a:last-child { border-bottom: none; }
-  .dropdown-menu a:hover { background: var(--dim); color: var(--white) !important; padding-left: 1.5rem; }
-  .dropdown-menu a .dmicon { color: var(--muted); flex-shrink: 0; }
-
-  /* FIX: solid white CTA — consistent with index.html */
-  .nav-cta {
-    background: var(--white) !important;
-    color: var(--black) !important;
-    padding: 0.45rem 1.2rem;
-    border-radius: 2px;
-    font-family: 'Barlow Condensed', sans-serif !important;
-    font-weight: 700 !important;
-    font-size: 0.78rem !important;
-    letter-spacing: 0.08em !important;
-    transition: background 0.2s, box-shadow 0.2s !important;
-    border: none !important;
-  }
-  .nav-cta:hover {
-    background: var(--accent) !important;
-    color: var(--black) !important;
-    box-shadow: 0 0 20px rgba(255,255,255,0.12) !important;
-  }
-
-  /* ── Hamburger ── */
-  .hamburger {
-    display: none; flex-direction: column; justify-content: center;
-    gap: 5px; background: transparent; border: 1px solid var(--border);
-    padding: 0.5rem 0.6rem; border-radius: 2px; cursor: pointer; z-index: 1100;
-  }
-  .hamburger span {
-    display: block; width: 20px; height: 1.5px; background: var(--accent2);
-    transition: transform 0.3s, opacity 0.3s;
-  }
-  .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
-  .hamburger.open span:nth-child(2) { opacity: 0; }
-  .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
-
-  /* FIX: mobile-nav uses top: var(--nav-h) — matches exact nav height */
-  .mobile-nav {
-    display: none; position: fixed; top: var(--nav-h); left: 0; right: 0;
-    background: rgba(8,8,9,0.98); backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--border); z-index: 999;
-    padding: 1.5rem 5%; flex-direction: column; gap: 0;
-  }
-  .mobile-nav.open { display: flex; }
-  .mobile-nav a {
-    display: block; padding: 0.85rem 0;
-    color: var(--text); text-decoration: none;
-    font-size: 0.95rem; letter-spacing: 0.06em; text-transform: uppercase;
-    border-bottom: 1px solid var(--border); transition: color 0.2s;
-  }
-  .mobile-nav a:last-of-type { border-bottom: none; }
-  .mobile-nav a:hover { color: var(--white); }
-  .mobile-nav-cta {
-    display: block; margin-top: 1.25rem; text-align: center;
-    background: var(--white); color: var(--black);
-    padding: 0.9rem; border-radius: 2px;
-    font-family: 'Barlow Condensed', sans-serif; font-weight: 700;
-    font-size: 0.95rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none;
-  }
-
-  /* ═══ PAGE HEADER ═══ */
-  .page-header {
-    padding: 10rem 5% 5rem;
-    position: relative; overflow: hidden;
-    border-bottom: 1px solid var(--border);
-  }
-  .page-header::before {
-    content: '';
-    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-    background:
-      radial-gradient(ellipse 60% 50% at 80% 50%, rgba(120,120,180,0.05) 0%, transparent 70%),
-      radial-gradient(ellipse 40% 40% at 20% 80%, rgba(80,80,120,0.04) 0%, transparent 60%);
-    pointer-events: none;
-  }
-  .page-header-inner { max-width: 800px; }
-
-  .section-tag {
-    font-family: 'Share Tech Mono', monospace; font-size: 0.7rem;
-    color: var(--muted); text-transform: uppercase;
-    letter-spacing: 0.2em; margin-bottom: 0.6rem;
-  }
-
-  h1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(3rem, 8vw, 6rem);
-    letter-spacing: 0.03em; color: var(--white);
-    line-height: 1; margin-bottom: 1.5rem;
-  }
-  h1 em { font-style: normal; color: var(--accent2); }
-
-  .page-lead { font-size: 1.05rem; color: var(--silver); max-width: 560px; line-height: 1.8; }
-
-  /* ═══ TEAM SECTION ═══ */
-  .team-section { padding: 5rem 5% 7rem; position: relative; }
-  .team-section::before {
-    content: '';
-    position: absolute; inset: 0;
-    background-image:
-      linear-gradient(var(--border) 1px, transparent 1px),
-      linear-gradient(90deg, var(--border) 1px, transparent 1px);
-    background-size: 60px 60px;
-    opacity: 0.3; pointer-events: none;
-  }
-
-  .team-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    position: relative; z-index: 1;
-  }
-
-  /* ═══ TEAM CARD ═══ */
-  .team-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 3px;
-    overflow: hidden;
-    position: relative;
-    transition: border-color 0.3s, transform 0.3s;
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  .team-card.visible {
-    opacity: 1; transform: translateY(0);
-    transition: opacity 0.5s ease, transform 0.5s ease, border-color 0.3s, box-shadow 0.3s;
-  }
-  .team-card:hover {
-    border-color: var(--border2);
-    transform: translateY(-4px);
-    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-  }
-
-  /* Scan-line overlay */
-  .team-card::before {
-    content: '';
-    position: absolute; inset: 0;
-    background: repeating-linear-gradient(
-      0deg, transparent, transparent 2px,
-      rgba(255,255,255,0.012) 2px, rgba(255,255,255,0.012) 4px
-    );
-    pointer-events: none; z-index: 2;
-    opacity: 0; transition: opacity 0.3s;
-  }
-  .team-card:hover::before { opacity: 1; }
-
-  /* Top accent bar */
-  .team-card::after {
-    content: '';
-    position: absolute; top: 0; left: 0; right: 0; height: 2px;
-    background: linear-gradient(90deg, transparent, var(--border2), transparent);
-    transition: background 0.3s;
-  }
-  .team-card:hover::after {
-    background: linear-gradient(90deg, transparent, var(--accent2), transparent);
-  }
-
-  .card-photo { width: 100%; aspect-ratio: 1/1; overflow: hidden; position: relative; background: var(--mid); }
-  .card-photo img {
-    width: 100%; height: 100%; object-fit: cover; object-position: center top;
-    transition: transform 0.5s ease, filter 0.4s ease;
-    filter: grayscale(20%);
-  }
-  .team-card:hover .card-photo img { transform: scale(1.04); filter: grayscale(0%); }
-
-  .card-photo-placeholder {
-    width: 100%; aspect-ratio: 1/1;
-    background: var(--mid);
-    display: flex; align-items: center; justify-content: center;
-    position: relative; overflow: hidden;
-  }
-  .card-photo-placeholder::after {
-    content: '';
-    position: absolute; inset: 0;
-    background: radial-gradient(circle at 50% 70%, rgba(120,120,180,0.08), transparent 70%);
-  }
-
-  .placeholder-initials {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 4rem; color: var(--border2);
-    letter-spacing: 0.05em;
-    position: relative; z-index: 1;
-    transition: color 0.3s;
-  }
-  .team-card:hover .placeholder-initials { color: var(--muted); }
-
-  .card-body { padding: 1.5rem; position: relative; }
-
-  .card-role {
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 0.65rem; color: var(--muted);
-    text-transform: uppercase; letter-spacing: 0.15em;
-    margin-bottom: 0.4rem; transition: color 0.3s;
-  }
-  .team-card:hover .card-role { color: var(--accent2); }
-
-  .card-name {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.5rem; letter-spacing: 0.05em;
-    color: var(--white); line-height: 1; margin-bottom: 0.75rem;
-  }
-
-  .card-bio { font-size: 0.82rem; color: var(--silver); line-height: 1.65; margin-bottom: 1.25rem; }
-
-  .card-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.25rem; }
-
-  .card-tag {
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 0.6rem; color: var(--muted);
-    border: 1px solid var(--border);
-    padding: 0.2rem 0.5rem; border-radius: 2px;
-    letter-spacing: 0.05em; transition: border-color 0.2s, color 0.2s;
-  }
-  .team-card:hover .card-tag { border-color: var(--border2); color: var(--silver); }
-
-  .card-links {
-    display: flex; gap: 0.75rem;
-    padding-top: 1rem; border-top: 1px solid var(--border);
-  }
-
-  .card-link {
-    display: flex; align-items: center; gap: 0.4rem;
-    color: var(--muted); text-decoration: none;
-    font-size: 0.75rem;
-    font-family: 'Share Tech Mono', monospace;
-    letter-spacing: 0.05em; transition: color 0.2s;
-  }
-  .card-link:hover { color: var(--white); }
-  .card-link svg { flex-shrink: 0; }
-
-  /* FIX: "We're Hiring" card — inline hover replaced with CSS class */
-  .hire-card-btn {
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 0.7rem; color: var(--accent2);
-    text-decoration: none;
-    border: 1px solid var(--border2);
-    padding: 0.4rem 1rem; border-radius: 2px;
-    transition: color 0.2s, border-color 0.2s;
-    display: inline-block;
-  }
-  .hire-card-btn:hover { color: var(--white); border-color: var(--accent2); }
-
-  /* ═══ VALUES STRIP ═══ */
-  .values-strip {
-    padding: 4rem 5%;
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-    background: var(--dark);
-  }
-  .values-inner { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
-
-  .value-item {
-    text-align: center; padding: 1.5rem 1rem;
-    opacity: 0; transform: translateY(12px);
-    transition: opacity 0.4s ease, transform 0.4s ease;
-  }
-  .value-item.visible { opacity: 1; transform: translateY(0); }
-
-  .value-icon { width: 40px; height: 40px; margin: 0 auto 1rem; color: var(--border2); transition: color 0.3s; }
-  .value-item:hover .value-icon { color: var(--accent2); }
-
-  .value-label {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.15rem; letter-spacing: 0.05em;
-    color: var(--white); margin-bottom: 0.4rem;
-  }
-  .value-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
-
-  /* ═══ JOIN CTA ═══ */
-  .join-section {
-    padding: 6rem 5%; text-align: center;
-    position: relative; overflow: hidden;
-  }
-  .join-section::before {
-    content: ''; position: absolute; inset: 0;
-    background: radial-gradient(ellipse 50% 60% at 50% 50%, rgba(100,100,160,0.06), transparent 70%);
-    pointer-events: none;
-  }
-
-  h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(2.2rem, 4.5vw, 3.5rem);
-    letter-spacing: 0.03em; color: var(--white);
-    line-height: 1; margin-bottom: 1rem;
-  }
-
-  .join-lead { font-size: 1rem; color: var(--silver); max-width: 480px; margin: 0 auto 2.5rem; line-height: 1.8; }
-
-  .btn-primary {
-    display: inline-flex; align-items: center; gap: 0.5rem;
-    background: var(--white); color: var(--black);
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 700; font-size: 0.9rem; letter-spacing: 0.08em; text-transform: uppercase;
-    padding: 0.85rem 2rem; border-radius: 2px; text-decoration: none;
-    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
-    box-shadow: 0 0 24px rgba(255,255,255,0.08);
-  }
-  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 40px rgba(255,255,255,0.14); background: var(--accent); }
-
-  /* ═══ FOOTER ═══ */
-  footer { background: #050506; border-top: 1px solid var(--border); padding: 3rem 5% 2rem; }
-  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 2.5rem; margin-bottom: 2.5rem; }
-  .footer-brand p { font-size: 0.85rem; color: var(--muted); margin-top: 0.75rem; line-height: 1.7; max-width: 280px; }
-  .footer-logo-img { height: 42px; width: auto; }
-  .footer-col h4 { font-family: 'Share Tech Mono', monospace; font-size: 0.68rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 1rem; }
-  .footer-col a { display: flex; align-items: center; gap: 0.5rem; color: var(--muted); text-decoration: none; font-size: 0.85rem; margin-bottom: 0.5rem; transition: color 0.2s; }
-  .footer-col a:hover { color: var(--white); }
-  .footer-social-icon { width: 16px; height: 16px; flex-shrink: 0; }
-  .footer-bottom { border-top: 1px solid var(--border); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.78rem; color: var(--muted); font-family: 'Share Tech Mono', monospace; }
-  .footer-bottom-links { display: flex; gap: 1.5rem; }
-  .footer-bottom-links a { color: var(--muted); text-decoration: none; }
-  .footer-bottom-links a:hover { color: var(--white); }
-
-  /* ═══ DIVIDER ═══ */
-  .divider-line { height: 1px; background: linear-gradient(90deg, transparent, var(--border), transparent); }
-
-  /* ═══ RESPONSIVE ═══ */
-  @media (max-width: 1024px) {
-    .team-grid { grid-template-columns: repeat(2, 1fr); }
-    .values-inner { grid-template-columns: repeat(2, 1fr); }
-    .footer-grid { grid-template-columns: 1fr 1fr 1fr; }
-  }
-
-  @media (max-width: 768px) {
-    /* FIX: visibility + pointer-events, not display:none */
-    .nav-links { visibility: hidden; pointer-events: none; }
-    .hamburger { display: flex; }
-    .team-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
-    .values-inner { grid-template-columns: 1fr 1fr; }
-    .footer-grid { grid-template-columns: 1fr 1fr; }
-    h1 { font-size: clamp(2.5rem, 12vw, 4rem); }
-  }
-
-  @media (max-width: 480px) {
-    .values-inner { grid-template-columns: 1fr; }
-    .footer-grid { grid-template-columns: 1fr; }
-  }
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .values-inner { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .values-inner { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: 1fr; }
+}
 </style>
 </head>
 <body>
 
-<!-- ═══ NAV ═══ -->
-<nav role="navigation" aria-label="Main navigation">
-  <a href="index.html" class="logo-wrap" aria-label="EiferOne Home">
-    <img src="./assets/footerlogo.png" alt="EiferOne cybersecurity consultancy logo" class="logo-img" width="120" height="38">
-  </a>
-
-  <ul class="nav-links" role="menubar">
-    <li role="none"><a href="index.html#about" role="menuitem">About</a></li>
-    <li class="nav-dropdown" role="none" id="servicesDropdown">
-      <a href="index.html#services" role="menuitem" aria-haspopup="true" aria-expanded="false" id="servicesNavLink">Services</a>
-      <div class="dropdown-menu" role="menu" aria-label="Services submenu">
-        <a href="index.html#services" role="menuitem" data-service="pentest">
-          <svg class="dmicon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          Penetration Testing
-        </a>
-        <a href="index.html#services" role="menuitem" data-service="audit">
-          <svg class="dmicon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          Security Audits
-        </a>
-        <a href="index.html#services" role="menuitem" data-service="network">
-          <svg class="dmicon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-          Network Assessment
-        </a>
-        <a href="index.html#services" role="menuitem" data-service="appsec">
-          <svg class="dmicon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-          Application Security
-        </a>
-        <a href="index.html#services" role="menuitem" data-service="iam">
-          <svg class="dmicon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          Identity &amp; Access Review
-        </a>
-        <a href="index.html#services" role="menuitem" data-service="compliance">
-          <svg class="dmicon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4-7 4z"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
-          Compliance Consulting
-        </a>
-      </div>
-    </li>
-    <li role="none"><a href="index.html#portfolio" role="menuitem">Portfolio</a></li>
-    <li role="none"><a href="index.html#faq" role="menuitem">FAQ</a></li>
-    <li role="none"><a href="index.html#pricing" role="menuitem">Pricing</a></li>
-    <!-- FIX: aria-current="page" for current page link -->
-    <li role="none"><a href="team.html" role="menuitem" class="active" aria-current="page">Team</a></li>
-    <!-- FIX: CTA label unified — "Free Consultation" -->
-    <li role="none"><a href="index.html#contact" class="nav-cta" role="menuitem">Free Consultation</a></li>
-  </ul>
-
-  <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNav">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-
-<!-- MOBILE NAV -->
-<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" aria-hidden="true">
-  <a href="index.html#about">About</a>
-  <a href="index.html#services">Services</a>
-  <a href="index.html#portfolio">Portfolio</a>
-  <a href="index.html#faq">FAQ</a>
-  <a href="index.html#pricing">Pricing</a>
-  <a href="team.html" aria-current="page">Team</a>
-  <a href="index.html#contact">Contact</a>
-  <a href="index.html#contact" class="mobile-nav-cta">Get Free Consultation →</a>
-</nav>
-
 <!-- PAGE HEADER -->
 <header class="page-header" aria-label="Team page header">
   <div class="page-header-inner">
-    <div class="section-tag">// 01 — The People</div>
+    <div class="section-tag">// The People</div>
     <h1>Meet the<br><em>Team</em></h1>
     <p class="page-lead">Experienced security professionals driven by one goal: finding your weaknesses before attackers do. We combine technical depth with clear, actionable reporting.</p>
   </div>
 </header>
 
-<div class="divider-line"></div>
+<div class="divider-line" role="separator"></div>
 
 <!-- TEAM GRID -->
 <section class="team-section" aria-label="Team members">
   <div class="team-grid" id="teamGrid">
-
-    <!-- CEO -->
     <article class="team-card" aria-label="Team member: Chief Executive Officer">
-      <div class="card-photo-placeholder" aria-hidden="true">
-        <span class="placeholder-initials">CE</span>
-      </div>
+      <div class="card-photo-placeholder" aria-hidden="true"><span class="placeholder-initials">CE</span></div>
       <div class="card-body">
         <div class="card-role">Chief Executive Officer</div>
         <h3 class="card-name">CEO Name</h3>
         <p class="card-bio">Leads EiferOne's strategic direction and client relationships. Combines a background in enterprise security with a focus on making professional cybersecurity accessible to businesses of all sizes.</p>
-        <div class="card-tags">
-          <span class="card-tag">Strategy</span>
-          <span class="card-tag">Client Relations</span>
-          <span class="card-tag">ISO 27001</span>
-        </div>
+        <div class="card-tags"><span class="card-tag">Strategy</span><span class="card-tag">Client Relations</span><span class="card-tag">ISO 27001</span></div>
         <div class="card-links">
           <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer" class="card-link" aria-label="CEO LinkedIn profile">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
@@ -605,20 +183,13 @@
       </div>
     </article>
 
-    <!-- CTO -->
     <article class="team-card" aria-label="Team member: Chief Technology Officer">
-      <div class="card-photo-placeholder" aria-hidden="true">
-        <span class="placeholder-initials">CT</span>
-      </div>
+      <div class="card-photo-placeholder" aria-hidden="true"><span class="placeholder-initials">CT</span></div>
       <div class="card-body">
         <div class="card-role">Chief Technology Officer</div>
         <h3 class="card-name">CTO Name</h3>
         <p class="card-bio">Architecting EiferOne's technical methodology and tooling. Specialises in infrastructure penetration testing and vulnerability research, with a strong offensive security background.</p>
-        <div class="card-tags">
-          <span class="card-tag">Offensive Security</span>
-          <span class="card-tag">OSCP</span>
-          <span class="card-tag">Infrastructure</span>
-        </div>
+        <div class="card-tags"><span class="card-tag">Offensive Security</span><span class="card-tag">OSCP</span><span class="card-tag">Infrastructure</span></div>
         <div class="card-links">
           <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer" class="card-link" aria-label="CTO LinkedIn profile">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
@@ -628,20 +199,13 @@
       </div>
     </article>
 
-    <!-- Security Lead -->
     <article class="team-card" aria-label="Team member: Security Lead">
-      <div class="card-photo-placeholder" aria-hidden="true">
-        <span class="placeholder-initials">SL</span>
-      </div>
+      <div class="card-photo-placeholder" aria-hidden="true"><span class="placeholder-initials">SL</span></div>
       <div class="card-body">
         <div class="card-role">Security Lead</div>
         <h3 class="card-name">Security Lead</h3>
         <p class="card-bio">Leads technical engagements across web application testing and red team operations. Holds multiple industry certifications and brings hands-on experience securing complex environments.</p>
-        <div class="card-tags">
-          <span class="card-tag">Red Team</span>
-          <span class="card-tag">Web AppSec</span>
-          <span class="card-tag">OWASP</span>
-        </div>
+        <div class="card-tags"><span class="card-tag">Red Team</span><span class="card-tag">Web AppSec</span><span class="card-tag">OWASP</span></div>
         <div class="card-links">
           <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer" class="card-link" aria-label="Security Lead LinkedIn profile">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
@@ -651,26 +215,19 @@
       </div>
     </article>
 
-    <!-- Engineering Lead -->
     <article class="team-card" aria-label="Team member: Engineering Lead">
-      <div class="card-photo-placeholder" aria-hidden="true">
-        <span class="placeholder-initials">EL</span>
-      </div>
+      <div class="card-photo-placeholder" aria-hidden="true"><span class="placeholder-initials">EL</span></div>
       <div class="card-body">
         <div class="card-role">Engineering Lead</div>
         <h3 class="card-name">Engineering Lead</h3>
         <p class="card-bio">Drives development of EiferOne's internal tooling and automation workflows. Combines software engineering expertise with a security-first mindset to improve testing efficiency and reporting quality.</p>
-        <div class="card-tags">
-          <span class="card-tag">Tooling</span>
-          <span class="card-tag">Automation</span>
-          <span class="card-tag">Python</span>
-        </div>
+        <div class="card-tags"><span class="card-tag">Tooling</span><span class="card-tag">Automation</span><span class="card-tag">Python</span></div>
         <div class="card-links">
           <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer" class="card-link" aria-label="Engineering Lead LinkedIn profile">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
             LinkedIn
           </a>
-          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="card-link" aria-label="Engineering Lead GitHub profile">
+          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="card-link" aria-label="Engineering Lead GitHub">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
             GitHub
           </a>
@@ -678,20 +235,13 @@
       </div>
     </article>
 
-    <!-- Marketing Lead -->
     <article class="team-card" aria-label="Team member: Marketing Lead">
-      <div class="card-photo-placeholder" aria-hidden="true">
-        <span class="placeholder-initials">ML</span>
-      </div>
+      <div class="card-photo-placeholder" aria-hidden="true"><span class="placeholder-initials">ML</span></div>
       <div class="card-body">
         <div class="card-role">Marketing Lead</div>
         <h3 class="card-name">Marketing Lead</h3>
         <p class="card-bio">Shapes EiferOne's brand voice and go-to-market strategy. Translates complex security concepts into clear messaging that resonates with business owners and technical decision-makers alike.</p>
-        <div class="card-tags">
-          <span class="card-tag">Brand</span>
-          <span class="card-tag">Content</span>
-          <span class="card-tag">SEO</span>
-        </div>
+        <div class="card-tags"><span class="card-tag">Brand</span><span class="card-tag">Content</span><span class="card-tag">SEO</span></div>
         <div class="card-links">
           <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer" class="card-link" aria-label="Marketing Lead LinkedIn profile">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
@@ -701,55 +251,43 @@
       </div>
     </article>
 
-    <!-- Hiring card — FIX: inline onmouseover/onmouseout replaced with .hire-card-btn CSS class -->
-    <article class="team-card" style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;min-height:400px;cursor:default;" aria-label="Open position">
-      <div style="padding:2.5rem 2rem;">
-        <div style="width:56px;height:56px;border:1px dashed var(--border2);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" style="color:var(--muted)"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+    <!-- Hiring card -->
+    <article class="team-card hire-card" aria-label="Open position">
+      <div class="hire-card-body">
+        <div class="hire-plus" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </div>
         <div class="card-role" style="margin-bottom:0.5rem;">Open Position</div>
-        <h3 class="card-name" style="margin-bottom:0.75rem;font-size:1.25rem;">We're Hiring</h3>
+        <h3 class="card-name" style="margin-bottom:0.75rem;">We're Hiring</h3>
         <p style="font-size:0.82rem;color:var(--muted);line-height:1.65;margin-bottom:1.5rem;">Interested in joining EiferOne? We're always open to conversations with talented security professionals.</p>
-        <a href="index.html#contact" class="hire-card-btn">Get in touch →</a>
+        <a href="./index.html#contact" class="hire-card-btn">Get in touch →</a>
       </div>
     </article>
-
   </div>
 </section>
 
-<!-- VALUES STRIP -->
+<div class="divider-line" role="separator"></div>
+
+<!-- VALUES -->
 <section class="values-strip" aria-label="Team values">
   <div class="values-inner">
     <div class="value-item">
-      <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-      </svg>
+      <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
       <div class="value-label">Security First</div>
       <p class="value-desc">Every engagement is approached with attacker mindset and defender accountability.</p>
     </div>
     <div class="value-item">
-      <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-        <circle cx="12" cy="12" r="10"/>
-        <line x1="12" y1="8" x2="12" y2="12"/>
-        <line x1="12" y1="16" x2="12.01" y2="16"/>
-      </svg>
+      <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
       <div class="value-label">Transparency</div>
       <p class="value-desc">Clear communication throughout — no jargon, no surprises, just honest findings.</p>
     </div>
     <div class="value-item">
-      <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-      </svg>
+      <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
       <div class="value-label">Continuous Learning</div>
       <p class="value-desc">The threat landscape evolves — so does our methodology and tooling.</p>
     </div>
     <div class="value-item">
-      <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-        <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
-        <circle cx="9" cy="7" r="4"/>
-        <path d="M23 21v-2a4 4 0 00-3-3.87"/>
-        <path d="M16 3.13a4 4 0 010 7.75"/>
-      </svg>
+      <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
       <div class="value-label">Client Partnership</div>
       <p class="value-desc">We work with you, not just for you — building security posture that lasts.</p>
     </div>
@@ -761,155 +299,12 @@
   <div class="section-tag">// Join Us</div>
   <h2>Work With<br>the Best</h2>
   <p class="join-lead">We're always open to meeting skilled security professionals. If you're passionate about offensive security, compliance, or engineering — reach out.</p>
-  <a href="index.html#contact" class="btn-primary">
+  <a href="./index.html#contact" class="btn-primary">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
     Get in Touch
   </a>
 </section>
 
-<!-- FOOTER -->
-<footer role="contentinfo">
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <img src="./assets/footerlogo.png" alt="EiferOne cybersecurity consultancy" class="footer-logo-img" width="140" height="42">
-      <p>Professional cybersecurity consultancy. Helping businesses identify and remediate risk before attackers can exploit it.</p>
-    </div>
-    <div class="footer-col">
-      <h4>Services</h4>
-      <!-- FIX: data-service attributes for deep-linking via sessionStorage -->
-      <a href="index.html#services" data-service="pentest">Penetration Testing</a>
-      <a href="index.html#services" data-service="audit">Security Audits</a>
-      <a href="index.html#services" data-service="network">Network Assessment</a>
-      <a href="index.html#services" data-service="appsec">App Security</a>
-      <a href="index.html#services" data-service="compliance">Compliance</a>
-    </div>
-    <div class="footer-col">
-      <h4>Company</h4>
-      <a href="index.html#portfolio">Portfolio</a>
-      <a href="index.html#audit">Sample Report</a>
-      <a href="index.html#pricing">Pricing</a>
-      <!-- FIX: aria-current="page" on active page -->
-      <a href="team.html" aria-current="page">Our Team</a>
-      <a href="index.html#contact">Contact</a>
-    </div>
-    <div class="footer-col">
-      <h4>Legal</h4>
-      <a href="privacy-policy.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Service</a>
-      <a href="disclosure.html">Responsible Disclosure</a>
-    </div>
-    <div class="footer-col">
-      <h4>Social</h4>
-      <a href="https://linkedin.com/company/eiferone" target="_blank" rel="noopener noreferrer" aria-label="EiferOne on LinkedIn">
-        <svg class="footer-social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        LinkedIn
-      </a>
-      <a href="https://instagram.com/eiferone" target="_blank" rel="noopener noreferrer" aria-label="EiferOne on Instagram">
-        <svg class="footer-social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-        Instagram
-      </a>
-      <a href="https://github.com/eiferone" target="_blank" rel="noopener noreferrer" aria-label="EiferOne on GitHub">
-        <svg class="footer-social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-        GitHub
-      </a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <!-- FIX: Dynamic copyright year — no hardcoded 2025 -->
-    <div id="footer-copyright"></div>
-    <div class="footer-bottom-links">
-      <a href="mailto:info@eiferone.com">Email</a>
-    </div>
-  </div>
-</footer>
-
-<script>
-// ─── Dynamic copyright year ────────────────────────────────────────────────
-document.getElementById('footer-copyright').textContent =
-  '© ' + new Date().getFullYear() + ' EiferOne Ltd. All rights reserved. Registered in England & Wales.';
-
-// ─── Hamburger ────────────────────────────────────────────────────────────
-const hamburger = document.getElementById('hamburger');
-const mobileNav = document.getElementById('mobileNav');
-
-hamburger.addEventListener('click', function () {
-  const open = this.classList.toggle('open');
-  mobileNav.classList.toggle('open', open);
-  this.setAttribute('aria-expanded', String(open));
-  mobileNav.setAttribute('aria-hidden', String(!open));
-  this.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
-});
-
-// Close mobile nav when a link is clicked
-mobileNav.querySelectorAll('a').forEach(a => {
-  a.addEventListener('click', () => {
-    hamburger.classList.remove('open');
-    mobileNav.classList.remove('open');
-    hamburger.setAttribute('aria-expanded', 'false');
-    mobileNav.setAttribute('aria-hidden', 'true');
-    hamburger.setAttribute('aria-label', 'Open navigation menu');
-  });
-});
-
-// Close on outside click
-document.addEventListener('click', e => {
-  if (!hamburger.contains(e.target) && !mobileNav.contains(e.target)) {
-    hamburger.classList.remove('open');
-    mobileNav.classList.remove('open');
-    hamburger.setAttribute('aria-expanded', 'false');
-    mobileNav.setAttribute('aria-hidden', 'true');
-  }
-});
-
-// ─── Services dropdown ─────────────────────────────────────────────────────
-const dropdown = document.getElementById('servicesDropdown');
-const dropLink = document.getElementById('servicesNavLink');
-if (dropdown && dropLink) {
-  dropLink.addEventListener('click', e => {
-    e.preventDefault();
-    const open = dropdown.classList.toggle('open');
-    dropLink.setAttribute('aria-expanded', String(open));
-  });
-  document.addEventListener('click', e => {
-    if (!dropdown.contains(e.target)) {
-      dropdown.classList.remove('open');
-      dropLink.setAttribute('aria-expanded', 'false');
-    }
-  });
-}
-
-// ─── Footer service deep-links: store target for index.html ───────────────
-document.querySelectorAll('[data-service]').forEach(a => {
-  a.addEventListener('click', () => {
-    try { sessionStorage.setItem('openService', a.dataset.service); } catch (e) {}
-  });
-});
-
-// ─── Scroll reveal — staggered team cards & values ────────────────────────
-const cards  = document.querySelectorAll('.team-card');
-const values = document.querySelectorAll('.value-item');
-
-const revealObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      revealObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.1 });
-
-// FIX: respect prefers-reduced-motion — skip stagger delays if user prefers
-const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-cards.forEach((card, i) => {
-  if (!prefersReducedMotion) card.style.transitionDelay = `${i * 80}ms`;
-  revealObserver.observe(card);
-});
-
-values.forEach((val, i) => {
-  if (!prefersReducedMotion) val.style.transitionDelay = `${i * 100}ms`;
-  revealObserver.observe(val);
-});
-</script>
+<script src="./components.js"></script>
 </body>
 </html>
