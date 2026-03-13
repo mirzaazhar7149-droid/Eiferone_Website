@@ -19,22 +19,22 @@
       <a href="./index.html#services" role="menuitem" aria-haspopup="true" aria-expanded="false">Services</a>
       <div class="dropdown-menu" role="menu" aria-label="Services submenu">
         <a role="menuitem" href="./index.html#services" data-service="pentest">
-          <svg class="dmicon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Penetration Testing
+          <svg class="dmicon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Web App Penetration Testing
         </a>
-        <a role="menuitem" href="./index.html#services" data-service="audit">
-          <svg class="dmicon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>Security Audits
+        <a role="menuitem" href="./index.html#services" data-service="api">
+          <svg class="dmicon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>API Security Assessment
         </a>
         <a role="menuitem" href="./index.html#services" data-service="network">
-          <svg class="dmicon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Network Assessment
-        </a>
-        <a role="menuitem" href="./index.html#services" data-service="appsec">
-          <svg class="dmicon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>Application Security
-        </a>
-        <a role="menuitem" href="./index.html#services" data-service="iam">
-          <svg class="dmicon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Identity &amp; Access Review
+          <svg class="dmicon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Network Vulnerability Assessment
         </a>
         <a role="menuitem" href="./index.html#services" data-service="compliance">
-          <svg class="dmicon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4-7 4z"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>Compliance Consulting
+          <svg class="dmicon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4-7 4z"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>Compliance Gap Analysis
+        </a>
+        <a role="menuitem" href="./index.html#services" data-service="architecture">
+          <svg class="dmicon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>Security Architecture Review
+        </a>
+        <a role="menuitem" href="./index.html#services" data-service="remediation">
+          <svg class="dmicon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>Remediation &amp; Re-testing
         </a>
       </div>
     </li>
@@ -66,36 +66,36 @@
   const FOOTER_HTML = `
 <footer class="site-footer" role="contentinfo">
   <div class="footer-grid">
+
     <div class="footer-brand">
       <img src="./assets/footerlogo.png" alt="EiferOne" class="footer-logo-img" width="120" height="42">
       <p>UK-based cybersecurity consultancy specialising in penetration testing, security audits, and compliance consulting for businesses that take security seriously.</p>
+      <div class="footer-address">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>80 Kingsway North, Hollington<br>St Leonards-on-Sea, TN38 0JR<br>England &amp; Wales, United Kingdom</span>
+      </div>
     </div>
+
     <div class="footer-col">
       <h4>Services</h4>
-      <a href="./index.html#services" data-service="pentest">Penetration Testing</a>
-      <a href="./index.html#services" data-service="audit">Security Audits</a>
-      <a href="./index.html#services" data-service="network">Network Assessment</a>
-      <a href="./index.html#services" data-service="appsec">Application Security</a>
-      <a href="./index.html#services" data-service="iam">Identity &amp; Access Review</a>
-      <a href="./index.html#services" data-service="compliance">Compliance Consulting</a>
+      <a href="./index.html#services" data-service="pentest">Web App Penetration Testing</a>
+      <a href="./index.html#services" data-service="api">API Security Assessment</a>
+      <a href="./index.html#services" data-service="network">Network Vulnerability Assessment</a>
+      <a href="./index.html#services" data-service="compliance">Compliance Gap Analysis</a>
+      <a href="./index.html#services" data-service="architecture">Security Architecture Review</a>
+      <a href="./index.html#services" data-service="remediation">Remediation &amp; Re-testing</a>
     </div>
+
     <div class="footer-col">
       <h4>Company</h4>
       <a href="./index.html#about">About EiferOne</a>
       <a href="./team.html">Our Team</a>
       <a href="./index.html#portfolio">Portfolio</a>
-      <a href="./assets/Eiferone Portfolioo.pdf" target="_blank" rel="noopener noreferrer">Portfolio PDF</a>
-      <a href="./assets/Eiferone Sample Prototype.pdf" target="_blank" rel="noopener noreferrer">Sample Audit PDF</a>
       <a href="./index.html#pricing">Pricing</a>
       <a href="./index.html#faq">FAQ</a>
       <a href="./index.html#contact">Contact</a>
     </div>
-    <div class="footer-col">
-      <h4>Legal</h4>
-      <a href="./privacy-policy.html">Privacy Policy</a>
-      <a href="./terms.html">Terms of Service</a>
-      <a href="./disclosure.html">Responsible Disclosure</a>
-    </div>
+
     <div class="footer-col">
       <h4>Connect</h4>
       <a href="https://www.linkedin.com/company/eiferone1/" target="_blank" rel="noopener noreferrer">
@@ -115,19 +115,67 @@
         +44 7804 474 366
       </a>
     </div>
+
   </div>
   <div class="footer-bottom">
-    <span>© <span id="footerYear"></span> EiferOne Ltd. Registered in England &amp; Wales. All rights reserved.</span>
+    <span>© <span id="footerYear"></span> EiferOne Ltd. Registered in England &amp; Wales · Company No. [reg no.] · All rights reserved.</span>
     <div class="footer-bottom-links">
       <a href="./privacy-policy.html">Privacy</a>
       <a href="./terms.html">Terms</a>
       <a href="./disclosure.html">Disclosure</a>
+      <a href="./disclosure.html">Report a Vulnerability</a>
     </div>
   </div>
 </footer>`;
 
+  /* ── FOOTER STYLES (injected once) ───────────────────── */
+  const FOOTER_EXTRA_CSS = `
+<style id="footer-extra-styles">
+.footer-address {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-top: 1.25rem;
+  font-family: 'Barlow', 'Share Tech Mono', monospace;
+  font-size: 0.78rem;
+  color: #9CA3AF;
+  line-height: 1.65;
+}
+.footer-address svg {
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+  color: #6B7280;
+}
+.footer-vuln-link {
+  display: flex !important;
+  align-items: center;
+  gap: 0.45rem;
+  color: #c87070 !important;
+  border: 1px solid rgba(180,50,50,0.2);
+  background: rgba(180,50,50,0.06);
+  border-radius: 2px;
+  padding: 0.3rem 0.6rem !important;
+  margin-top: 0.4rem;
+  font-size: 0.78rem !important;
+  transition: border-color 0.2s, background 0.2s !important;
+}
+.footer-vuln-link:hover {
+  border-color: rgba(180,50,50,0.45) !important;
+  background: rgba(180,50,50,0.12) !important;
+  color: #e08080 !important;
+}
+.footer-vuln-link svg {
+  flex-shrink: 0;
+}
+</style>`;
+
   /* ── INJECT ───────────────────────────────────────────── */
   function inject() {
+    // Inject extra footer styles into <head>
+    if (!document.getElementById('footer-extra-styles')) {
+      document.head.insertAdjacentHTML('beforeend', FOOTER_EXTRA_CSS);
+    }
+
     // Nav: insert before first child of body
     const navContainer = document.createElement('div');
     navContainer.innerHTML = NAV_HTML;

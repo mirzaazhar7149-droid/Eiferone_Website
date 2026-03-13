@@ -81,6 +81,7 @@
   font-size:0.875rem; color:var(--silver); line-height:1.7;
 }
 .highlight-box strong { display:block; color:var(--white); margin-bottom:0.35rem; font-family:'Barlow Condensed',sans-serif; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; }
+.highlight-box.warn { border-left-color:#c09030; background:rgba(180,130,0,0.04); }
 
 .data-table { width:100%; border-collapse:collapse; margin:1.25rem 0; font-size:0.85rem; }
 .data-table th { background:var(--card); color:var(--white); padding:0.65rem 1rem; text-align:left; font-family:'Barlow Condensed',sans-serif; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; font-size:0.8rem; border-bottom:1px solid var(--border2); }
@@ -88,12 +89,23 @@
 .data-table tr:last-child td { border-bottom:none; }
 .data-table tr:hover td { background:rgba(255,255,255,0.02); }
 
+.ret-table { width:100%; border-collapse:collapse; margin:1.25rem 0; font-size:0.85rem; }
+.ret-table th { background:var(--card); color:var(--white); padding:0.65rem 1rem; text-align:left; font-family:'Barlow Condensed',sans-serif; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; font-size:0.8rem; border-bottom:1px solid var(--border2); }
+.ret-table td { padding:0.7rem 1rem; color:var(--silver); border-bottom:1px solid var(--border); vertical-align:top; line-height:1.65; }
+.ret-table tr:last-child td { border-bottom:none; }
+.ret-table tr:hover td { background:rgba(255,255,255,0.02); }
+.ret-badge { display:inline-block; font-family:'Share Tech Mono',monospace; font-size:0.62rem; padding:0.15rem 0.5rem; border-radius:2px; white-space:nowrap; margin-top:0.25rem; }
+.ret-badge.critical { background:rgba(180,50,50,0.13); color:#c87070; border:1px solid rgba(180,50,50,0.25); }
+.ret-badge.safe    { background:rgba(40,130,80,0.13);  color:#50b080; border:1px solid rgba(40,130,80,0.25); }
+.ret-badge.legal   { background:rgba(100,100,120,0.13); color:#9CA3AF; border:1px solid rgba(100,100,120,0.25); }
+
 .divider { height:1px; background:linear-gradient(90deg,transparent,var(--border),transparent); margin:2.5rem 0; }
 
-/* Responsive */
 @media (max-width:900px) {
   .page-layout { grid-template-columns: 1fr; }
   .toc { position: static; max-height: none; }
+  .ret-table { font-size:0.78rem; }
+  .ret-table th, .ret-table td { padding:0.55rem 0.65rem; }
 }
 </style>
 </head>
@@ -102,7 +114,7 @@
 <div class="page-hero">
   <div class="page-tag">// Legal</div>
   <h1 class="page-title">Privacy Policy</h1>
-  <div class="page-meta">Last updated: 1 January 2025 &nbsp;·&nbsp; Version 1.0 &nbsp;·&nbsp; EiferOne Ltd</div>
+  <div class="page-meta">Last updated: 13 March 2025 &nbsp;·&nbsp; Version 1.1 &nbsp;·&nbsp; EiferOne Ltd</div>
 </div>
 
 <div class="page-layout">
@@ -122,14 +134,20 @@
   </aside>
 
   <main class="content">
+
+    <!-- 01 OVERVIEW -->
     <div class="policy-section" id="overview">
       <h2 class="sec-h"><span class="sec-num">01</span> Overview</h2>
-      <div class="highlight-box"><strong>Summary</strong>EiferOne Ltd is committed to protecting your privacy. We only collect what we need, we don't sell your data, and we comply fully with UK GDPR and the Data Protection Act 2018.</div>
+      <div class="highlight-box">
+        <strong>Summary</strong>
+        EiferOne Ltd is committed to protecting your privacy. We only collect what we need, we don't sell your data, and we comply fully with UK GDPR and the Data Protection Act 2018.
+      </div>
       <p>This Privacy Policy explains how EiferOne Ltd ("EiferOne", "we", "us") collects, uses, stores, and protects information about you when you visit our website, contact us, or engage our services.</p>
-      <p>EiferOne Ltd is the data controller. Registered in England and Wales, 80 Kingsway North, Hollington, United Kingdom. Contact: <a href="mailto:info@eiferone.com">info@eiferone.com</a></p>
+      <p>EiferOne Ltd is the data controller. Registered in England and Wales, 80 Kingsway North, Hollington, St Leonards-on-Sea, TN38 0JR, United Kingdom. Contact: <a href="mailto:info@eiferone.com">info@eiferone.com</a></p>
     </div>
     <div class="divider"></div>
 
+    <!-- 02 DATA WE COLLECT -->
     <div class="policy-section" id="data-we-collect">
       <h2 class="sec-h"><span class="sec-num">02</span> Data We Collect</h2>
       <table class="data-table">
@@ -139,117 +157,186 @@
           <tr><td>Contact Data</td><td>Email address, phone number</td><td>You, via forms or email</td></tr>
           <tr><td>Technical Data</td><td>IP address, browser type</td><td>Automatically via server logs</td></tr>
           <tr><td>Usage Data</td><td>Pages visited, time on site</td><td>Automatically via analytics</td></tr>
-          <tr><td>Enquiry Data</td><td>Service enquiries, website URLs</td><td>You, via contact form</td></tr>
-          <tr><td>Client Data</td><td>Infrastructure details during engagements</td><td>You, under signed contract</td></tr>
+          <tr><td>Enquiry Data</td><td>Service enquiries, website URLs submitted for scoping</td><td>You, via contact or scope form</td></tr>
+          <tr><td>Client Engagement Data</td><td>Vulnerability findings, Proof of Concept evidence, infrastructure maps, raw scan output — held under strict isolation and short-window retention (see Section 06)</td><td>You, under signed contract and NDA only</td></tr>
         </tbody>
       </table>
       <p>We do not knowingly collect data from individuals under 18. Our services are directed at businesses and professionals.</p>
     </div>
     <div class="divider"></div>
 
+    <!-- 03 HOW WE USE -->
     <div class="policy-section" id="how-we-use">
       <h2 class="sec-h"><span class="sec-num">03</span> How We Use Your Data</h2>
       <ul>
-        <li>To respond to enquiries and provide quotes for our cybersecurity services</li>
+        <li>To respond to enquiries and provide fixed-price quotes for our cybersecurity services</li>
         <li>To deliver contracted penetration testing, auditing, and consulting services</li>
-        <li>To send service-related communications (reports, re-test notifications)</li>
-        <li>To maintain records and comply with legal obligations</li>
+        <li>To send service-related communications (reports, re-test notifications, 6-month monitoring alerts)</li>
+        <li>To maintain records and comply with our legal obligations</li>
         <li>To improve our website and understand how visitors use it</li>
         <li>To detect and prevent fraud or misuse of our systems</li>
       </ul>
-      <p>We will never use your data for unsolicited marketing without explicit consent, and we will never sell your data to third parties.</p>
+      <p>We will never use your data for unsolicited marketing without explicit consent, and we will never sell your data to third parties. Client engagement data — including vulnerability findings and infrastructure details — is used solely to deliver the contracted service and is never used for any other purpose.</p>
     </div>
     <div class="divider"></div>
 
+    <!-- 04 LEGAL BASIS -->
     <div class="policy-section" id="legal-basis">
       <h2 class="sec-h"><span class="sec-num">04</span> Legal Basis for Processing</h2>
       <ul>
-        <li><strong>Contract:</strong> Processing necessary to perform a contract or take pre-contractual steps.</li>
-        <li><strong>Legitimate Interests:</strong> Processing necessary for our legitimate business interests, not overridden by your rights.</li>
-        <li><strong>Legal Obligation:</strong> Processing required to comply with a legal obligation.</li>
-        <li><strong>Consent:</strong> Where we have obtained your explicit consent.</li>
+        <li><strong>Contract:</strong> Processing necessary to perform a contract or take pre-contractual steps at your request.</li>
+        <li><strong>Legitimate Interests:</strong> Processing necessary for our legitimate business interests, provided those interests are not overridden by your rights and freedoms.</li>
+        <li><strong>Legal Obligation:</strong> Processing required to comply with a legal obligation, including financial record-keeping under UK company and tax law.</li>
+        <li><strong>Consent:</strong> Where we have obtained your explicit consent, which you may withdraw at any time without affecting prior processing.</li>
       </ul>
+      <p>Where we process sensitive client engagement data (vulnerability findings, infrastructure maps, Proof of Concept evidence), the legal basis is <strong>Contract</strong> — that data exists solely to fulfil the agreed engagement and is subject to the strict retention and destruction schedule in Section 06.</p>
     </div>
     <div class="divider"></div>
 
+    <!-- 05 SHARING -->
     <div class="policy-section" id="sharing">
       <h2 class="sec-h"><span class="sec-num">05</span> Data Sharing</h2>
-      <p>We do not sell, trade, or rent your personal data. We may share only in these circumstances:</p>
+      <p>We do not sell, trade, or rent your personal data. We may share data only in these limited circumstances:</p>
       <ul>
-        <li><strong>Service Providers:</strong> Trusted third-party tools (e.g., form processing, email hosting) acting as data processors under contract.</li>
+        <li><strong>Service Providers:</strong> Trusted third-party tools (e.g., form processing, email hosting) acting as data processors under written contract. These processors are contractually prohibited from using your data for any purpose other than providing their service to us.</li>
         <li><strong>Legal Requirements:</strong> If required by law, court order, or regulatory authority.</li>
-        <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale of assets.</li>
+        <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale of assets — you will be notified in advance of any transfer of your data.</li>
       </ul>
-      <div class="highlight-box"><strong>Client Engagement Data</strong>Technical data, credentials, or infrastructure information shared during an engagement is strictly confidential and governed by your signed engagement agreement and NDA.</div>
+      <div class="highlight-box">
+        <strong>Client Engagement Data — Strict Isolation</strong>
+        Vulnerability findings, Proof of Concept evidence, infrastructure maps, credentials, and all technical assessment data are never transmitted to, stored in, or processed by third-party SaaS platforms (including cloud document editors, CRMs, or project management tools). This data is held exclusively in access-controlled, encrypted internal storage and governed by your signed engagement agreement and NDA.
+      </div>
     </div>
     <div class="divider"></div>
 
+    <!-- 06 RETENTION — FULLY HARDENED -->
     <div class="policy-section" id="retention">
       <h2 class="sec-h"><span class="sec-num">06</span> Data Retention</h2>
-      <ul>
-        <li><strong>Enquiry data:</strong> Up to 12 months from last contact if no engagement follows.</li>
-        <li><strong>Client engagement data:</strong> Up to 5 years from end of engagement.</li>
-        <li><strong>Financial and contractual records:</strong> 6 years, per UK tax and company law.</li>
-        <li><strong>Website analytics:</strong> Aggregated and anonymised; retained indefinitely.</li>
-      </ul>
-      <p>When data is no longer required, we securely delete or anonymise it.</p>
+
+      <div class="highlight-box warn">
+        <strong>Our Approach to Sensitive Engagement Data</strong>
+        As a cybersecurity firm, we hold some of the most operationally sensitive data that exists about your organisation — exploit code, infrastructure maps, authentication details, and confirmed vulnerability details. We apply a strict minimal-retention policy to this data. The longer it is held, the greater the risk to you if we ourselves were ever compromised. We do not retain sensitive engagement data a single day longer than is necessary to fulfil the contracted service.
+      </div>
+
+      <table class="ret-table">
+        <thead>
+          <tr>
+            <th style="width:30%">Data Type</th>
+            <th style="width:28%">Retention Period</th>
+            <th style="width:24%">Destruction Method</th>
+            <th style="width:18%">Classification</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Technical engagement data</strong><br><span style="font-size:0.8rem;opacity:0.8;">Vulnerability findings, Proof of Concept exploits, infrastructure maps, raw scan output, session recordings, credentials — all raw data produced or received during an engagement</span></td>
+            <td>Maximum <strong>90 days</strong> from delivery of the final report, or completion of re-testing, whichever is later. Destruction completed within 7 days of this window closing.</td>
+            <td>Secure, irreversible wipe per NIST SP 800-88 / DoD 5220.22-M. Written confirmation available on request.</td>
+            <td><span class="ret-badge critical">● CRITICAL<br>90-DAY MAX</span></td>
+          </tr>
+          <tr>
+            <td><strong>Final PDF report</strong><br><span style="font-size:0.8rem;opacity:0.8;">Summary findings, CVSSv3 scores, and remediation roadmap only — contains no raw PoC data, no credentials, no infrastructure maps</span></td>
+            <td>Up to <strong>5 years</strong> from end of engagement, in encrypted, access-controlled storage.</td>
+            <td>Secure deletion on expiry.</td>
+            <td><span class="ret-badge legal">LEGAL RECORD</span></td>
+          </tr>
+          <tr>
+            <td><strong>Enquiry and scope data</strong><br><span style="font-size:0.8rem;opacity:0.8;">Pre-engagement contact, scope request submissions, where no contract was signed</span></td>
+            <td>Up to <strong>12 months</strong> from last contact.</td>
+            <td>Secure deletion on expiry.</td>
+            <td><span class="ret-badge safe">LOW SENSITIVITY</span></td>
+          </tr>
+          <tr>
+            <td><strong>Financial &amp; contractual records</strong><br><span style="font-size:0.8rem;opacity:0.8;">Invoices, statements of work, signed engagement agreements</span></td>
+            <td><strong>6 years</strong> from end of the relevant financial year, per UK tax and company law.</td>
+            <td>Secure deletion on expiry.</td>
+            <td><span class="ret-badge legal">LEGAL OBLIGATION</span></td>
+          </tr>
+          <tr>
+            <td><strong>Website analytics</strong></td>
+            <td>Aggregated and anonymised — retained indefinitely. No personal data is retained in analytics.</td>
+            <td>N/A — no personally identifiable information.</td>
+            <td><span class="ret-badge safe">ANONYMISED</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>When data reaches the end of its retention period, it is securely and irreversibly destroyed. For critical engagement data, destruction is completed within 7 days of the 90-day window closing. Written confirmation of destruction is available upon request.</p>
     </div>
     <div class="divider"></div>
 
+    <!-- 07 YOUR RIGHTS — with erasure carve-out -->
     <div class="policy-section" id="your-rights">
       <h2 class="sec-h"><span class="sec-num">07</span> Your Rights</h2>
       <ul>
-        <li><strong>Right of Access:</strong> Request a copy of the personal data we hold.</li>
-        <li><strong>Right to Rectification:</strong> Ask us to correct inaccurate data.</li>
-        <li><strong>Right to Erasure:</strong> Request deletion in certain circumstances.</li>
-        <li><strong>Right to Restrict Processing:</strong> Ask us to limit how we use your data.</li>
-        <li><strong>Right to Data Portability:</strong> Receive your data in a machine-readable format.</li>
-        <li><strong>Right to Object:</strong> Object to processing based on legitimate interests.</li>
-        <li><strong>Right to Withdraw Consent:</strong> Withdraw consent at any time where applicable.</li>
+        <li><strong>Right of Access (Article 15):</strong> Request a copy of the personal data we hold about you.</li>
+        <li><strong>Right to Rectification (Article 16):</strong> Ask us to correct inaccurate or incomplete data.</li>
+        <li><strong>Right to Erasure (Article 17):</strong> Request deletion of your personal data in certain circumstances.</li>
+        <li><strong>Right to Restrict Processing (Article 18):</strong> Ask us to limit how we use your data while a dispute is resolved.</li>
+        <li><strong>Right to Data Portability (Article 20):</strong> Receive your data in a structured, machine-readable format.</li>
+        <li><strong>Right to Object (Article 21):</strong> Object to processing based on legitimate interests or for direct marketing purposes.</li>
+        <li><strong>Right to Withdraw Consent (Article 7):</strong> Withdraw consent at any time where processing is based on consent — withdrawal does not affect prior lawful processing.</li>
       </ul>
-      <p>Email <a href="mailto:info@eiferone.com">info@eiferone.com</a> to exercise any right. We respond within 30 days. Complaints can be lodged with the <a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer">ICO</a>.</p>
+      <div class="highlight-box">
+        <strong>Right to Erasure — Legal Retention Carve-Out</strong>
+        While we will honour erasure requests to the fullest extent possible, certain data cannot be deleted where retention is required by law. Financial records, signed contracts, and statements of work must be retained for 6 years under the Limitation Act 1980 and UK tax law, regardless of an erasure request. Where this applies, we will inform you in writing, delete everything that can be deleted, and restrict all further processing of any retained records strictly to legal compliance purposes only — no other use will be made of that data.
+      </div>
+      <p>To exercise any right, email <a href="mailto:info@eiferone.com">info@eiferone.com</a>. We respond within 30 calendar days. If you believe we have handled your data unlawfully, you have the right to lodge a complaint with the <a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer">Information Commissioner's Office (ICO)</a> at <a href="https://ico.org.uk/make-a-complaint" target="_blank" rel="noopener noreferrer">ico.org.uk/make-a-complaint</a>.</p>
     </div>
     <div class="divider"></div>
 
+    <!-- 08 COOKIES -->
     <div class="policy-section" id="cookies">
       <h2 class="sec-h"><span class="sec-num">08</span> Cookies</h2>
-      <p>Our website uses minimal cookies — no tracking or advertising cookies. We may use:</p>
+      <p>Our website uses minimal cookies — no tracking or advertising cookies are set. We may use:</p>
       <ul>
-        <li><strong>Essential cookies:</strong> Necessary for the website to function correctly.</li>
-        <li><strong>Analytics cookies:</strong> Anonymous usage data; no personally identifiable information collected.</li>
+        <li><strong>Essential cookies:</strong> Strictly necessary for the website to function correctly. These cannot be disabled.</li>
+        <li><strong>Analytics cookies:</strong> Anonymous aggregate usage data only. No personally identifiable information is collected or stored.</li>
       </ul>
-      <p>You can control and delete cookies through your browser settings.</p>
+      <p>You can control, block, or delete cookies at any time through your browser settings without affecting your ability to use this website.</p>
     </div>
     <div class="divider"></div>
 
+    <!-- 09 SECURITY — HARDENED with specifics -->
     <div class="policy-section" id="security">
-      <h2 class="sec-h"><span class="sec-num">09</span> Security</h2>
+      <h2 class="sec-h"><span class="sec-num">09</span> Security of Processing</h2>
+      <p>As a cybersecurity consultancy, we hold ourselves to a materially higher standard than a generic privacy policy requires. The following technical and organisational measures are applied to all personal data and client engagement data we hold:</p>
       <ul>
-        <li>Encrypted communications (TLS/HTTPS) for all data in transit</li>
-        <li>Access controls and least-privilege principles for internal systems</li>
-        <li>Regular security reviews of our own infrastructure</li>
-        <li>Secure handling and destruction of sensitive client data</li>
+        <li><strong>Encryption in transit:</strong> All data transferred to and from our systems uses TLS 1.2 or higher. Unencrypted connections (plain HTTP) are rejected at the server level.</li>
+        <li><strong>Encryption at rest:</strong> All client engagement data and personal data is stored encrypted at rest using AES-256 or equivalent. Unencrypted storage of sensitive data is prohibited by internal policy.</li>
+        <li><strong>Access controls:</strong> Least-privilege access is enforced across all internal systems. Client engagement data is accessible only to the specific personnel working on that engagement — not to the broader team.</li>
+        <li><strong>Secure destruction:</strong> Data destruction follows NIST SP 800-88 guidelines (or DoD 5220.22-M equivalent for digital media). Written confirmation of destruction is available on request for all engagement data.</li>
+        <li><strong>Internal security reviews:</strong> We conduct regular reviews of our own infrastructure — we do not exempt ourselves from the standards we apply to clients.</li>
+        <li><strong>Third-party processor controls:</strong> Any processor handling personal data on our behalf is required to maintain equivalent security standards under a written data processing agreement.</li>
+        <li><strong>Incident response:</strong> We maintain a documented breach response procedure. In the event of a confirmed breach, internal escalation begins immediately.</li>
       </ul>
-      <p>In the event of a data breach affecting your rights, we will notify you and the ICO within 72 hours as required by law.</p>
+      <div class="highlight-box">
+        <strong>Breach Notification</strong>
+        In the event of a personal data breach likely to result in a risk to your rights and freedoms, we will notify you and the ICO within 72 hours of becoming aware of the breach, as required by Article 33 of UK GDPR. You will receive clear information about what data was affected, the likely consequences, and the steps we have taken.
+      </div>
     </div>
     <div class="divider"></div>
 
+    <!-- 10 CONTACT -->
     <div class="policy-section" id="contact-us">
       <h2 class="sec-h"><span class="sec-num">10</span> Contact Us</h2>
       <div class="highlight-box">
         <strong>Data Controller</strong>
         EiferOne Ltd<br>
-        80 Kingsway North, Hollington, United Kingdom<br>
+        80 Kingsway North, Hollington<br>
+        St Leonards-on-Sea, TN38 0JR<br>
+        England &amp; Wales, United Kingdom<br><br>
         <a href="mailto:info@eiferone.com">info@eiferone.com</a> &nbsp;·&nbsp; +44 7804 474 366
       </div>
-      <p>We aim to respond to all data-related requests within 30 calendar days. For urgent matters, please contact us directly by phone.</p>
+      <p>We aim to respond to all data-related requests within 30 calendar days. For urgent matters relating to a potential data breach, please contact us immediately by phone.</p>
+      <p>If you are dissatisfied with our response, you can contact the ICO at <a href="https://ico.org.uk/make-a-complaint" target="_blank" rel="noopener noreferrer">ico.org.uk/make-a-complaint</a> or by calling 0303 123 1113.</p>
     </div>
+
   </main>
 </div>
 
 <script src="./components.js"></script>
 <script>
-// TOC scroll spy
 (function () {
   var tocLinks = document.querySelectorAll('.toc a:not(.toc-btn)');
   var sections = [];
