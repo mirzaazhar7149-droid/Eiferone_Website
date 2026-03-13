@@ -32,11 +32,11 @@
 .policy-section { margin-bottom:0; }
 .sec-h { font-family:'Bebas Neue',sans-serif; font-size:1.5rem; letter-spacing:0.04em; color:var(--white); margin-bottom:1.25rem; display:flex; align-items:baseline; gap:0.75rem; }
 .sec-num { font-family:'Share Tech Mono',monospace; font-size:0.7rem; color:var(--muted); }
-.content p { font-size:0.9rem; color:var(--silver); line-height:1.8; margin-bottom:0.85rem; }
+.content p { font-size:0.9rem; color:var(--text); line-height:1.8; margin-bottom:0.85rem; }
 .content a { color:var(--accent2); text-decoration:none; }
 .content a:hover { color:var(--white); text-decoration:underline; }
 .content ul { list-style:none; margin:1rem 0; }
-.content ul li { font-size:0.9rem; color:var(--silver); padding:0.45rem 0; border-bottom:1px solid var(--border); display:flex; align-items:flex-start; gap:0.65rem; }
+.content ul li { font-size:0.9rem; color:var(--text); padding:0.45rem 0; border-bottom:1px solid var(--border); display:flex; align-items:flex-start; gap:0.65rem; }
 .content ul li::before { content:'›'; color:var(--silver); flex-shrink:0; font-family:'Share Tech Mono',monospace; }
 .content ul li:last-child { border-bottom:none; }
 .content ul li strong { color:var(--text); }
@@ -94,7 +94,7 @@
   <div class="page-meta">Last updated: 1 January 2025 &nbsp;·&nbsp; Version 1.0 &nbsp;·&nbsp; EiferOne Ltd</div>
   <div class="report-badge">
     <span>Report directly →</span>
-    <a href="mailto:security@eiferone.com">security@eiferone.com</a>
+    <a href="/cdn-cgi/l/email-protection#7605131503041f020f36131f1013041918135815191b"><span class="__cf_email__" data-cfemail="81f2e4e2f4f3e8f5f8c1e4e8e7e4f3eeefe4afe2eeec">[email&#160;protected]</span></a>
   </div>
 </div>
 
@@ -167,7 +167,7 @@
       <h2 class="sec-h"><span class="sec-num">04</span> How to Report</h2>
       <div class="highlight-box">
         <strong>Security Contact</strong>
-        <a href="mailto:security@eiferone.com" style="font-size:1rem;">security@eiferone.com</a><br><br>
+        <a href="/cdn-cgi/l/email-protection#85f6e0e6f0f7ecf1fcc5e0ece3e0f7eaebe0abe6eae8" style="font-size:1rem;"><span class="__cf_email__" data-cfemail="6615030513140f121f26030f0003140908034805090b">[email&#160;protected]</span></a><br><br>
         For sensitive reports, you may request our PGP public key to encrypt your submission.
       </div>
       <p>Please include: a clear description of the vulnerability, the affected URL or component, step-by-step reproduction instructions, screenshots or proof-of-concept (where safe), your severity assessment, and any CVE references.</p>
@@ -232,7 +232,7 @@
 
     <div class="policy-section" id="report-form">
       <h2 class="sec-h"><span class="sec-num">09</span> Submit a Report</h2>
-      <p>Use the form below or email <a href="mailto:security@eiferone.com">security@eiferone.com</a> directly. All submissions are treated confidentially.</p>
+      <p>Use the form below or email <a href="/cdn-cgi/l/email-protection#9ceff9ffe9eef5e8e5dcf9f5faf9eef3f2f9b2fff3f1"><span class="__cf_email__" data-cfemail="c0b3a5a3b5b2a9b4b980a5a9a6a5b2afaea5eea3afad">[email&#160;protected]</span></a> directly. All submissions are treated confidentially.</p>
       <div class="form-panel">
         <div id="report-success" style="display:none;text-align:center;padding:2.5rem 1rem;" role="alert" aria-live="polite">
           <div style="width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,0.05);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;" aria-hidden="true">
@@ -288,7 +288,7 @@
   </main>
 </div>
 
-<script src="./components.js"></script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="./components.js"></script>
 <script>
 (function () {
   // TOC scroll spy
@@ -317,20 +317,4 @@
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     var email = document.getElementById('report_email');
-    var sev   = document.getElementById('report_severity');
-    var url   = document.getElementById('affected_url');
-    var desc  = document.getElementById('report_description');
-    if (!email.value.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/) || !sev.value || !url.value || !desc.value) {
-      return;
-    }
-    submit.disabled = true;
-    submit.textContent = 'Sending…';
-    setTimeout(function () {
-      form.style.display = 'none';
-      success.style.display = 'block';
-    }, 1000);
-  });
-})();
-</script>
-</body>
-</html>
+    var sev   =

@@ -122,7 +122,6 @@
     <div class="footer-bottom-links">
       <a href="./privacy-policy.html">Privacy</a>
       <a href="./terms.html">Terms</a>
-      <a href="./disclosure.html">Disclosure</a>
       <a href="./disclosure.html">Report a Vulnerability</a>
     </div>
   </div>
@@ -192,6 +191,35 @@
     // Set year
     const yrEl = document.getElementById('footerYear');
     if (yrEl) yrEl.textContent = new Date().getFullYear();
+
+    // Scroll FAB button (shared on all pages)
+    var fab = document.createElement('button');
+    fab.className = 'scroll-fab';
+    fab.setAttribute('aria-label', 'Scroll to bottom');
+    fab.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>';
+    document.body.appendChild(fab);
+
+    var atBottom = false;
+    function updateFab() {
+      var scrollY = window.scrollY || window.pageYOffset;
+      var docH = document.documentElement.scrollHeight;
+      var winH = window.innerHeight;
+      var show = scrollY > 200;
+      fab.classList.toggle('visible', show);
+      atBottom = scrollY + winH >= docH - 80;
+      fab.classList.toggle('at-bottom', atBottom);
+      fab.setAttribute('aria-label', atBottom ? 'Scroll to top' : 'Scroll to bottom');
+    }
+    window.addEventListener('scroll', updateFab, { passive: true });
+    updateFab();
+
+    fab.addEventListener('click', function () {
+      if (atBottom) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' });
+      }
+    });
 
     // Highlight active nav link
     const path = window.location.pathname.split('/').pop() || 'index.html';
